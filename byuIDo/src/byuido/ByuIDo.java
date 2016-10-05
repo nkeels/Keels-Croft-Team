@@ -16,6 +16,8 @@ public class ByuIDo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        // Create instances for each class
     }
     
 }
