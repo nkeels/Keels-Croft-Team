@@ -5,6 +5,8 @@
  */
 package byui.pkgdo;
 
+import byui.cit260.BYUIDO.model.Player;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -15,10 +17,14 @@ public class BYUIDo implements Serializable{
 
     //class instance variables
     private String name;
+    
+      public static void main(String[] args) {
+       
+        Player player1  = new Player();
 
-    public BYUIDo() {
-    }
- 
+   
+      }
+      
     public String getName() {
         return name;
     }
@@ -52,16 +58,11 @@ public class BYUIDo implements Serializable{
             return false;
         }
         final BYUIDo other = (BYUIDo) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.name, other.name);
+    }    
+//        return true;
     }    
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
-}
+ 
