@@ -5,6 +5,7 @@
  */
 package byui.pkgdo;
 
+import byui.cit260.BYUIDO.model.Player;
 import java.util.Objects;
 
 /**
@@ -61,7 +62,13 @@ public class BYUIDo implements Serializable{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Player playerOne = new Player();
+        
+        playerOne.setName("Nicholas Cage");
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
+        
     }
     
 }
