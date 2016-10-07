@@ -6,6 +6,7 @@
 package byui.pkgdo;
 
 import byui.cit260.BYUIDO.model.Player;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -14,60 +15,17 @@ import java.util.Objects;
  */
 public class BYUIDo implements Serializable{
 
-    //class instance variables
-    private String name;
-
-    public BYUIDo() {
-    }
- 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "BYUIDo{" + "name=" + name + '}';
-    }
     
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + Objects.hashCode(this.name);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final BYUIDo other = (BYUIDo) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return true;
+    
+      public static void main(String[] args) {
+            
+          Player playerOne = new Player();
+           
+          playerOne.setName("Nicholas Cage");
+          
+          
+          System.out.println("\nPlayer one:" + playerOne.toString());
+       
+      }
     }    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Player playerOne = new Player();
-        
-        playerOne.setName("Nicholas Cage");
-        
-        String playerInfo = playerOne.toString();
-        System.out.println("\nPlayer One: " + playerOne.toString());
-        
-    }
     
-}
