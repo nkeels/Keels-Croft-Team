@@ -54,7 +54,7 @@ public class RandomScene extends Scene implements Serializable {
 
     @Override
     public String toString() {
-        return "RandomScene{" + "title=" + title + '}';
+        return "RandomScene{" + super.toString() + "title=" + title + '}';
     }
     
     
