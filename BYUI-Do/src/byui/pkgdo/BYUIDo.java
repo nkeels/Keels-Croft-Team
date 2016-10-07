@@ -15,54 +15,17 @@ import java.util.Objects;
  */
 public class BYUIDo implements Serializable{
 
-    //class instance variables
-    private String name;
+    
     
       public static void main(String[] args) {
+            
+          Player playerOne = new Player();
+           
+          playerOne.setName("Nicholas Cage");
+          
+          
+          System.out.println("\nPlayer one:" + playerOne.toString());
        
-        Player player1  = new Player();
-
-   
       }
-      
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + Objects.hashCode(this.name);
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "BYUIDo{" + "name=" + name + '}';
-    }
+    }    
     
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final BYUIDo other = (BYUIDo) obj;
-        return Objects.equals(this.name, other.name);
-    }    
-//        return true;
-    }    
-    /**
-     * @param args the command line arguments
-     */
- 
