@@ -29,17 +29,16 @@ public class BYUIDo implements Serializable{
     }
 
     @Override
+    public String toString() {
+        return "BYUIDo{" + "name=" + name + '}';
+    }
+    
+    @Override
     public int hashCode() {
         int hash = 5;
         hash = 79 * hash + Objects.hashCode(this.name);
         return hash;
     }
-
-    @Override
-    public String toString() {
-        return "BYUIDo{" + "name=" + name + '}';
-    }
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -67,7 +66,7 @@ public class BYUIDo implements Serializable{
         playerOne.setName("Nicholas Cage");
         
         String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
+        System.out.println("\nPlayer One: " + playerOne.toString());
         
     }
     

@@ -5,10 +5,30 @@
  */
 package byui.cit260.BYUIDO.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Scotty
  */
-public class Player {
+public class Player implements Serializable{
+    
+    private String name;
+
+    public Player() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+
+
+    }
+    
     
 }
