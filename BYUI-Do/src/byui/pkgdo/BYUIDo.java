@@ -25,34 +25,36 @@ public class BYUIDo implements Serializable{
     
       public static void main(String[] args) {
             
-         
+         //set all values for classes
           Player playerOne = new Player();
           playerOne.setName("Nicholas Cage");
           System.out.println("\nPlayer one:" + playerOne.toString());
           
-          Character playerTwo = new Character();
-          playerTwo.setCharName("Katy Perry");
-          System.out.println("\nPlayer two:" + playerTwo.toString());
+          Character zelda = new Character();
+          zelda.setCharName("Katy Perry");
+          System.out.println("\nPlayer two:" + zelda.toString());
           
-          Game playerThree = new Game();
-          playerThree.setPlayerName("Rachel McAdams");
-          System.out.println("\nPlayer three:" + playerThree.toString());
+          Game bYUIdo = new Game();
+          bYUIdo.setPlayerName("Rachel McAdams");
+          System.out.println("\nPlayer three:" + bYUIdo.toString());
           
-          Location playerFour = new Location();
-          playerFour.setTitle("Natalie Portman");
-          System.out.println("\nPlayer Four:" + playerFour.toString());
+          Location location = new Location();
+          location.setTitle("Natalie Portman");
+          System.out.println("\nPlayer Four:" + location.toString());
           
-          Map playerFive = new Map();
-          playerFive.setRowCount(0.5);
-          System.out.println("\nPlayer Five:" + playerFive.toString());
+          Map map = new Map();
+          map.setRowCount(0.5);
+          System.out.println("\nPlayer Five:" + map.toString());
           
-          Scene playerSix = new Scene();
-          playerSix.setDescription("Jennifer Lawrence");
-          System.out.println("\nPlayer Six:" + playerSix.toString());
+          Scene scene = new Scene();
+          scene.setDescription("Jennifer Lawrence");
+          System.out.println("\nPlayer Six:" + scene.toString());
           
-          RandomScene playerSeven = new RandomScene();
-          playerSeven.setTitle("Jennifer Anniston");
-          System.out.println("\nPlayer Seven:" + playerSeven.toString());
+          RandomScene randomscene = new RandomScene();
+          randomscene.setTitle("Jennifer Anniston");
+          randomscene.setDescription("hello");
+          randomscene.setDisplaySymbol("North");
+          System.out.println("\nPlayer Seven:" + randomscene.toString());
           
        
       }
