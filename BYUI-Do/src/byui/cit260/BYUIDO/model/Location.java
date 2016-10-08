@@ -16,7 +16,7 @@ import java.util.Objects;
 public class Location implements Serializable {
     
     private String title;
-    private Date time;
+    private String time;
     private Double coordinate;
 
     public Location() {
@@ -30,11 +30,11 @@ public class Location implements Serializable {
         this.title = title;
     }
 
-    public Date getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
