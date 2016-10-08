@@ -15,8 +15,8 @@ import java.util.Objects;
 public class Character implements Serializable {
     
     private String charName;
-    private Double stress;
-    private Double confide;
+    private Integer stress;
+    private Integer confide;
     private String gender;
     private Integer personalityQual;
     
@@ -29,11 +29,11 @@ public class Character implements Serializable {
         return charName;
     }
 
-    public Double getStress() {
+    public Integer getStress() {
         return stress;
     }
 
-    public Double getConfide() {
+    public Integer getConfide() {
         return confide;
     }
 
@@ -49,11 +49,11 @@ public class Character implements Serializable {
         this.charName = charName;
     }
 
-    public void setStress(Double stress) {
+    public void setStress(Integer stress) {
         this.stress = stress;
     }
 
-    public void setConfide(Double confide) {
+    public void setConfide(Integer confide) {
         this.confide = confide;
     }
 

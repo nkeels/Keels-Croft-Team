@@ -6,20 +6,19 @@
 package byui.cit260.BYUIDO.model;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Objects;
 
 /**
  *
- * @author Nick
+ * @author Scotty
  */
-public class Location implements Serializable {
+public class DateScene extends Scene implements Serializable{
     
     private String title;
-    private Date time;
-    private Double coordinate;
+    private String interaction;
+    private String foodbased;
 
-    public Location() {
+    public DateScene() {
     }
 
     public String getTitle() {
@@ -30,28 +29,28 @@ public class Location implements Serializable {
         this.title = title;
     }
 
-    public Date getTime() {
-        return time;
+    public String getInteraction() {
+        return interaction;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setInteraction(String interaction) {
+        this.interaction = interaction;
     }
 
-    public Double getCoordinate() {
-        return coordinate;
+    public String getFoodbased() {
+        return foodbased;
     }
 
-    public void setCoordinate(Double coordinate) {
-        this.coordinate = coordinate;
+    public void setFoodbased(String foodbased) {
+        this.foodbased = foodbased;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 23 * hash + Objects.hashCode(this.title);
-        hash = 23 * hash + Objects.hashCode(this.time);
-        hash = 23 * hash + Objects.hashCode(this.coordinate);
+        int hash = 3;
+        hash = 29 * hash + Objects.hashCode(this.title);
+        hash = 29 * hash + Objects.hashCode(this.interaction);
+        hash = 29 * hash + Objects.hashCode(this.foodbased);
         return hash;
     }
 
@@ -66,14 +65,14 @@ public class Location implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Location other = (Location) obj;
+        final DateScene other = (DateScene) obj;
         if (!Objects.equals(this.title, other.title)) {
             return false;
         }
-        if (!Objects.equals(this.time, other.time)) {
+        if (!Objects.equals(this.interaction, other.interaction)) {
             return false;
         }
-        if (!Objects.equals(this.coordinate, other.coordinate)) {
+        if (!Objects.equals(this.foodbased, other.foodbased)) {
             return false;
         }
         return true;
@@ -81,10 +80,8 @@ public class Location implements Serializable {
 
     @Override
     public String toString() {
-        return "Location{" + "title=" + title + ", time=" + time + ", coordinate=" + coordinate + '}';
+        return "DateScene{" + super.toString() + "title=" + title + ", interaction=" + interaction + ", foodbased=" + foodbased + '}';
     }
-    
-    
     
     
 }
