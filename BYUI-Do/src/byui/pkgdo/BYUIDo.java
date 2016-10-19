@@ -75,18 +75,30 @@ public class BYUIDo implements Serializable {
         System.out.println("\nWhat happened:" + randomscene.toString());
 
         Girl old = new Girl();
+        old.setCharName("Jamie Snow");
+        old.setStress(12);
+        old.setConfide(64);
+        old.setGender("Female");
+        old.setPersonalityQual(100);
         old.setAge(24);
         old.setInterest("likes sports");
         System.out.println("\nAge of the girl: " + old.toString());
 
 
         Friend grade = new Friend();
+        grade.setCharName("Samson Grayson");
+        grade.setStress(95);
+        grade.setConfide(50);
+        grade.setGender("Male");
+        grade.setPersonalityQual(12);
         grade.setGrade("sophmore");
         grade.setAge(19);
         System.out.println("\nWhat grade is he? " + grade.toString()
         );
         
         DateScene place = new DateScene();
+        place.setDescription("You go on a date with Jennifer Lawrence");
+        place.setDisplaySymbol("W");
         place.setTitle("The Craze");
         place.setInteraction("You go bowling!");
         place.setFoodbased("true");
