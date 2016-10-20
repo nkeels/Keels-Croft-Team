@@ -72,23 +72,58 @@ public class StatControlTest {
         result = instance.dateAgree(stress, charisma, confide);
         assertEquals(expResult, result);
     }
-}
+
     /**
      * Test of relationPoint method, of class StatControl.
-     
+     */
     @Test
     public void testRelationPoint() {
         System.out.println("relationPoint");
-        int fun = 0;
-        int date = 0;
-        int days = 0;
+        System.out.println("\tTest Case 1");
+        int fun = 1;
+        int date = 4;
+        int days = 8;
+        int expResult = 12;        
         StatControl instance = new StatControl();
-        int expResult = 0;
+       
         int result = instance.relationPoint(fun, date, days);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    
+        System.out.println("\tTest Case 2");
+        fun = -1;
+        date = 3;
+        days = 2;
+        expResult = -1;        
+        result = instance.relationPoint(fun, date, days);
+        assertEquals(expResult, result);
+        
+        System.out.println("\tTest Case 3");
+        fun = 0;
+        date = -3;
+        days = 3;
+        expResult = -1;        
+        result = instance.relationPoint(fun, date, days);
+        assertEquals(expResult, result);
+       
+        System.out.println("\tTest Case 4");
+        fun = 1;
+        date = 3;
+        days = -5;
+        expResult = 12;        
+        result = instance.relationPoint(fun, date, days);
+        assertEquals(expResult, result);
+        
+        System.out.println("\tTest Case 5");
+        fun = 0;
+        date = 0;
+        days = 0;
+        expResult = 0;        
+        result = instance.relationPoint(fun, date, days);
+        assertEquals(expResult, result);
     }
+    
+}
 
     /**
      * Test of proposal method, of class StatControl.
