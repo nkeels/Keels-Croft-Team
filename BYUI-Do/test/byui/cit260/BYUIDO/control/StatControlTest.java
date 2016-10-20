@@ -110,7 +110,7 @@ public class StatControlTest {
         fun = 1;
         date = 3;
         days = -5;
-        expResult = 12;        
+        expResult = -1;        
         result = instance.relationPoint(fun, date, days);
         assertEquals(expResult, result);
         
