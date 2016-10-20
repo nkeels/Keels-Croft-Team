@@ -5,6 +5,8 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import static jdk.nashorn.internal.objects.NativeMath.exp;
+
 /**
  *
  * @author Nick
@@ -51,5 +53,19 @@ public int relationPoint(int fun,int date,int days) {
     int points = ((fun * date)+ days);
     return points;
     }
+
+public int proposal(int points, int trust, int stress) {
+    if (points < 0) {
+            return -1;
+    }
+    if (trust < 0) {
+        return -1;
+    }
+    if (stress < 0) {
+        return -1;
+    }
     
+    int response = (int)((points * trust)/Math.pow(stress, 2));
+    return response;
+}    
 }
