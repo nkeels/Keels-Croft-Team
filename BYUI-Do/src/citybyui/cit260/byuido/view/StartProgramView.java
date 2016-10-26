@@ -31,4 +31,8 @@ public class StartProgramView {
       + "\n*                                        "          
         );
     }
+
+    public void displayStartProgramView() {
+        System.out.println("\n*** displayStartProgram() function called ***");
+    }
 }
