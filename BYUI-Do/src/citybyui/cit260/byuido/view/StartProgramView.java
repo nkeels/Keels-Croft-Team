@@ -24,7 +24,6 @@ public class StartProgramView {
         
         System.out.println(
         "\n**********************************************"
-      + "\n*                                             "
       + "\n* This is the game of BYU-I DO!!!             " 
       + "\n* In this game you will help your character   "
       + "\n* experience the joys of dating in Rexburg.   "
@@ -37,10 +36,33 @@ public class StartProgramView {
       + "\n* spending time with her. Eventually, you'll  "  
       + "\n* want to ask her to join in matrimony.       " 
       + "\n* When you've won her hand in marriage,       "
-      + "\n* You will be prepared for eternal happiness! "  );
+      + "\n* You will be prepared for eternal happiness! "
+      + "\n**********************************************"  );
     }
 
     public void displayStartProgramView() {
-        System.out.println("\n*** displayStartProgram() function called ***");
+        
+        boolean done = false; //set flag to not done
+        do {
+            //prompt for and get players name
+            String playersName = this.getPlayersName();
+            if (playersName.toUpperCase().equals('Q')) // user wants to quit
+                return; //exit the game
+            
+            //do the requested action and display the next view
+            done = this.doAction(playersName);
+            
+        }
+        while (!done);  
+    }
+
+    private String getPlayersName() {
+        System.out.println("\n*** getPlayersName() called ***");
+        return "Joe";
+    }
+
+    private boolean doAction(String playersName) {
+        System.out.println("\n*** doAction() called ***");
+        return true;
     }
 }
