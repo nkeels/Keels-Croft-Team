@@ -5,6 +5,8 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.GameControl;
+import byui.cit260.BYUIDO.model.Player;
 import java.util.Scanner;
 
 /**
@@ -95,7 +97,29 @@ public class StartProgramView {
     }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n*** doAction() called ***");
+        if (playersName.length() < 2){
+        System.out.println("\nInvalid players name: "
+                    + "The name must be greater than one character in length");
+        return false;
+    }
+        Player player = GameControl.createPlayer(playersName);
+        
+        if (player == null) {
+            System.out.println("\nError creating the player.");
+            return false;
+        }
+        
+        this.displayNextView(player);
         return true;
+
+    }
+    private void displayNextView(Player player) {
+        System.out.println("\n=========================================="
+                         + "\n Welcome to the school of BYUI " + player.getName()
+                         + "\n ! May your dreams of marriage ever be in your favor!"
+                         + "\n==========================================");
+    MainMenuView mainMenuView = new MainMenuView();
+    
+    mainMenuView.displayMainMenuView();
     }
 }

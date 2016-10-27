@@ -24,6 +24,25 @@ import java.util.Objects;
  * @author Scotty
  */
 public class BYUIDo implements Serializable {
+    
+    private static Game currentGame = null;
+    private static Player player = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        BYUIDo.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        BYUIDo.player = player;
+    }
 
     public static void main(String[] args) {
 

@@ -5,10 +5,27 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import byui.cit260.BYUIDO.model.Player;
+import byui.pkgdo.BYUIDo;
+
 /**
  *
  * @author Nick
  */
 public class GameControl {
+
+    public static Player createPlayer(String name) {
+        
+        if(name == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        BYUIDo.setPlayer(player);
+        
+        return player;
+    }
     
 }
