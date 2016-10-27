@@ -5,6 +5,8 @@
  */
 package citybyui.cit260.byuido.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Nick
@@ -57,8 +59,39 @@ public class StartProgramView {
     }
 
     private String getPlayersName() {
-        System.out.println("\n*** getPlayersName() called ***");
-        return "Joe";
+        /*
+        While valid value has not been entered
+            Display promptmessage
+        Get the value entered from keyboard
+        Trim front and trailing blanks off the name
+        
+        If the length of the value is blank then
+            display "Invalid value: the value cannot be blank"
+        continue
+        ENDIF
+        
+        Break
+        
+        Endwhile
+        Return name
+        */
+        Scanner keyboard = new Scanner(System.in);
+        String value = "";
+        boolean valid = false;
+        
+        while (!valid) {
+            System.out.println("\n" + this.promptMessage);
+            
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if (value.length() < 1) {
+                System.out.println("\nInvalid value: value cannot be blank");
+                continue;
+            }
+        break;
+        }
+        return value;        
     }
 
     private boolean doAction(String playersName) {
