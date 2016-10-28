@@ -12,7 +12,8 @@ package citybyui.cit260.byuido.view;
 public class MainMenuView {
 
     void displayMainMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("\n*** displayMenu() function called **");
+       
     }
     
 }
