@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -28,6 +28,8 @@ public class MainMenuView {
                   + "\nQ - Quit"
                   + "\n----------------------------------------------------";
     }
+   
+    
     
     public void displayMainMenuView() {
         
@@ -74,6 +76,8 @@ public class MainMenuView {
                 break;
             case "H":
                 this.displayHelpMenu();
+                HelpMenuView helpMenu = new HelpMenuView();
+                helpMenu.displayHelpMenuView();
                 break;
             case "S":
                 this.saveGame();
@@ -91,6 +95,8 @@ public class MainMenuView {
     
     GameMenuView gameMenu = new GameMenuView();
     gameMenu.displayMenu();
+    
+    
     }
 
     private void startExistingGame() {
