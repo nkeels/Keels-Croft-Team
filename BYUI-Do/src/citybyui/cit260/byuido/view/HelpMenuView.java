@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -92,8 +92,10 @@ public class HelpMenuView {
     private void startNewGame() {
     GameControl.createNewGame(BYUIDo.getPlayer());
     
-    GameMenuView helpMenu = new GameMenuView();
-    helpMenu.displayMenu();
+    GameMenuView gameMenu = new GameMenuView();
+    gameMenu.displayGameMenuView();
+    
+ 
     }
 
     private void goalOfGame() {
@@ -115,3 +117,4 @@ public class HelpMenuView {
     private void goBack() {
     System.out.println("\n ***goBack is called***");    }
 }
+

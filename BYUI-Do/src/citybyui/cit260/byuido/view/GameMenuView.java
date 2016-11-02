@@ -21,6 +21,7 @@ public class GameMenuView {
                   + "\n----------------------------------------------------"
                   + "\nN - Name of Character"
                   + "\nY - Confirm"
+                  + "\nW - whatever"
                   + "\nQ - Main Menu"
                   + "\n----------------------------------------------------";
     }
@@ -70,6 +71,8 @@ public class GameMenuView {
             case "Y":
                 this. confirm();
                 break;
+            case "W":
+                this.actionMenuView();
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -83,6 +86,11 @@ public class GameMenuView {
 
     private void confirm() {
         System.out.println("\n*** The confirm function was called ***");
+    }
+
+    private void actionMenuView() {
+        ActionMenuView actionMenu = new ActionMenuView();
+        actionMenu.displayActionMenuView();
     }
 
     }

@@ -115,8 +115,8 @@ public class CharNameView {
     }
     private void displayNextView(Player player) {
         System.out.println("\n=========================================="
-                         + "\n Welcome to the school of BYUI " + player.getName()
-                         + "\n ! May your dreams of marriage ever be in your favor!"
+                         + "\nWelcome to the school of BYUI " + player.getName()
+                + "\n! May your dreams of marriage ever be in your favor!"
                          + "\n==========================================");
     MainMenuView mainMenuView = new MainMenuView();
     
