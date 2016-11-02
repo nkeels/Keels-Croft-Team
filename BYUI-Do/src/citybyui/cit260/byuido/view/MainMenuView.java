@@ -94,7 +94,7 @@ public class MainMenuView {
     GameControl.createNewGame(BYUIDo.getPlayer());
     
     GameMenuView gameMenu = new GameMenuView();
-    gameMenu.displayMenu();
+    gameMenu.displayGameMenuView();
     
     
     }
