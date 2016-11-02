@@ -5,6 +5,8 @@
  */
 package citybyui.cit260.byuido.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Nick
@@ -40,10 +42,72 @@ public class ActionMenuView {
     }
 
     private String getMenuOption() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Scanner keyboard = new Scanner (System.in);
+        String value = "";
+        boolean valid = false;
+    
+            while(!valid) {
+                System.out.println("\n" + this.menu);
+                
+                value = keyboard.nextLine();
+                value = value.trim();
+                
+            if (value.length() < 1) {
+                System.out.println("\nInvalid value: value cannot be blank");
+                continue;
+            }
+            break;
+            }
+            return value;
+                }
+
+    
+    private boolean doAction(String choice) {
+        
+        choice = choice.toUpperCase();
+        
+        switch (choice) {
+            case "T":
+                this.talkTo();
+                break;
+            case "F":
+                this.flirtWith();
+                break;
+            case "A":
+                this.askDate();
+                break;
+            case "K":
+                this.kissGirl();
+                break;
+            case "P":
+                this.proposeTo();
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
+                
+        }
+        return false;
     }
 
-    private boolean doAction(String menuOption) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void talkTo() {
+        System.out.println("\n*** talkTo function called ***"); 
     }
-}
+
+    private void flirtWith() {
+        System.out.println("\n*** flirtWith function called ***");  
+    }
+
+    private void askDate() {
+        System.out.println("\n*** askDate function called ***");    
+    }
+
+    private void kissGirl() {
+        System.out.println("\n*** kissGirl function called ***");   
+    }
+
+    private void proposeTo() {
+        System.out.println("\n*** proposeTo function called ***"); 
+    }
+ }
+
