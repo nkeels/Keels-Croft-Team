@@ -5,13 +5,86 @@
  */
 package citybyui.cit260.byuido.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Scotty
  */
 public class GameMenuView {
-    void displayMenu() {
-        System.out.println("\n*** displayMenu function called ***");
+    private String menu;
+
+    public GameMenuView() {
+        this.menu = "\n"
+                  + "\n----------------------------------------------------"
+                  + "\n| Game Menu                                        |"
+                  + "\n----------------------------------------------------"
+                  + "\nN - Name of Character"
+                  + "\nY - Confirm"
+                  + "\nQ - Main Menu"
+                  + "\n----------------------------------------------------";
+    }
+   
+    
+    
+    public void displayGameMenuView() {
+        
+        boolean done = false;
+        do{
+        String menuOption = this.getMenuOption();
+        if (menuOption.toUpperCase().equals("Q"))
+            return;
+        
+        done = this.doAction(menuOption);
+    }    while (!done);
+    }
+    private String getMenuOption() {
+        Scanner keyboard = new Scanner(System.in);
+        String value = "";
+        boolean valid = false;
+        
+        while (!valid) {
+            System.out.println("\n" + this.menu);
+            
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if (value.length() < 1) {
+                System.out.println("\nInvalid value: value cannot be blank");
+                continue;
+            }
+        break;
+        }
+        return value;        
     }
     
-}
+
+    private boolean doAction(String choice) {
+        
+        choice = choice.toUpperCase();
+        
+        switch (choice) {
+            case "N":
+                this.charaName();
+                break;
+            case "Y":
+                this. confirm();
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
+        }
+        return false;
+    }
+
+    private void charaName() {
+        System.out.println("\n*** The charaName function was called ***");
+    }
+
+    private void confirm() {
+        System.out.println("\n*** The confirm function was called ***");
+    }
+
+    }
+    
+
