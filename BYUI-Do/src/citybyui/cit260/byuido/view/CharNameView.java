@@ -89,7 +89,7 @@ public class CharNameView {
             return false;
         }
         
-        System.out.println(playersName + "was saved correctly.");
+        System.out.println(playersName + " was saved correctly.");
         return true;
 
         }
