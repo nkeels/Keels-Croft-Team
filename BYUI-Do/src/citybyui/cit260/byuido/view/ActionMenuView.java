@@ -20,12 +20,12 @@ public class ActionMenuView {
                   + "\n----------------------------------------------------"
                   + "\n|What do you do?                                    |"
                   + "\n----------------------------------------------------"
-                  + "\nT - Talk"
-                  + "\nF - Flirt"
-                  + "\nA - Ask for a date"
-                  + "\nK - Kiss"
-                  + "\nP - Propose"
-                  + "\nQ - Quit"
+                  + "\nT - Talk                                            |"
+                  + "\nF - Flirt                                           |"
+                  + "\nA - Ask for a date                                  |"
+                  + "\nK - Kiss                                            |"
+                  + "\nP - Propose                                         |"
+                  + "\nQ - Quit                                            |"
                   + "\n----------------------------------------------------";
         
         

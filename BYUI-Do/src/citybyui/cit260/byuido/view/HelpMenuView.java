@@ -22,11 +22,11 @@ public class HelpMenuView {
                   + "\n----------------------------------------------------"
                   + "\n| Help Menu                                         |"
                   + "\n----------------------------------------------------"
-                  + "\nG - What is the goal of the game"
-                  + "\nM - How to move"
-                  + "\nL - List meanings of stats "
-                  + "\nH - How to gain stats"
-                  + "\nQ - Quit"
+                  + "\nG - What is the goal of the game                    |"
+                  + "\nM - How to move                                     |"
+                  + "\nL - List meanings of stats                          |"
+                  + "\nH - How to gain stats                               |"
+                  + "\nQ - Quit                                            |"
                   + "\n----------------------------------------------------";
     }
     
