@@ -19,11 +19,11 @@ public class GameMenuView {
                   + "\n----------------------------------------------------"
                   + "\n| Game Menu                                        |"
                   + "\n----------------------------------------------------"
-                  + "\nN - Name of Character"
-                  + "\nY - Confirm"
-                  + "\nW - whatever"
-                  + "\nO -Old Man Guessing Game"
-                  + "\nQ - Main Menu"
+                  + "\nN - Name of Character                              |"                             
+                  + "\nY - Confirm                                        |"
+                  + "\nW - whatever                                       |"
+                  + "\nO -Old Man Guessing Game                           |"
+                  + "\nQ - Main Menu                                      |"
                   + "\n----------------------------------------------------";
     }
    
