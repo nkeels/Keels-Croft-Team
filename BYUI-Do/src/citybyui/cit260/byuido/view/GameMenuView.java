@@ -22,6 +22,7 @@ public class GameMenuView {
                   + "\nN - Name of Character"
                   + "\nY - Confirm"
                   + "\nW - whatever"
+                  + "\nO -Old Man Guessing Game"
                   + "\nQ - Main Menu"
                   + "\n----------------------------------------------------";
     }
@@ -71,6 +72,9 @@ public class GameMenuView {
             case "Y":
                 this. confirm();
                 break;
+            case "O":
+                this. olMan();
+                break;
             case "W":
                 this.actionMenuView();
             default:
@@ -92,6 +96,10 @@ public class GameMenuView {
         ActionMenuView actionMenu = new ActionMenuView();
         actionMenu.displayActionMenuView();
     }
+
+    private void olMan() {
+        NumberGuessView  numberGuess = new NumberGuessView();
+        numberGuess.displayNumberGuessView();}
 
     }
     
