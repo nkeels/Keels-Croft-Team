@@ -81,7 +81,7 @@ public class CharNameView {
         System.out.println("\nInvalid players name: "
                     + "The name must be greater than one character in length");
         return false;
-    }
+        }
         int player = SaveControl.createCharName(playersName);
         
         if (player < 0) {
@@ -89,20 +89,21 @@ public class CharNameView {
             return false;
         }
         
-        System.out.println(playersName + "was saved correctly.");
+        System.out.println(playersName + " was saved correctly.");
         return true;
 
-    }
+        }
     private void displayNextView(Player player) {
         System.out.println("\n=========================================="
                          + "\n The Name " + player.getName()
                          + "\n has been saved."
                          + "\n==========================================");
-    GameMenuView gameMenuView = new GameMenuView();
     
-    gameMenuView.displayGameMenuView();
-    }
+        CharNameView nameMenu = new CharNameView();
+        nameMenu.displayCharNameView();
     
+        return;
+    } 
 }
     
 
