@@ -5,6 +5,7 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.GameControl;
 import static java.lang.Integer.parseInt;
 import java.util.Scanner;
 
@@ -65,25 +66,25 @@ public class NumberGuessView {
     private boolean doAction(String playersNumber) {
         
         int numberChoice = parseInt(playersNumber);
-        int actualNumber = (int) (Math.random() * 10);
+        int number = GameControl.numberGuessingGame(numberChoice);
         
-        if (numberChoice < 1 || numberChoice > 10){
-        System.out.println("\nInvalid: please enter a whole number between 1 and 10 ");
-        return false;
-        }else if (numberChoice < actualNumber) {
-            System.out.println("\nNope");
-        }else if (numberChoice > actualNumber) {
-                        System.out.println("\nNope");
-
-        }else {
-            System.out.println("\nYou got it!!!");
-            return true;
+        
+        if (number < 0){
+            System.out.println("\nThat's not the right number");
+            return false;
+        } 
+        if (number == 0){
+            System.out.println("\nToo low");
+            return false;
         }
-        return false;
-    } 
+        if (number == 1) {
+            System.out.println("\nToo High");
+            return false;
+        }
+        if (number == 3) {
+            System.out.println("\nYou got it");
+            return true;
+        }  
+       return true;
+    }
 }
-    
-        
-    
-    
-
