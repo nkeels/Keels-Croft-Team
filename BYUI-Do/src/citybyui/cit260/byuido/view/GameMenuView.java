@@ -77,6 +77,7 @@ public class GameMenuView {
                 break;
             case "W":
                 this.actionMenuView();
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -85,7 +86,8 @@ public class GameMenuView {
     }
 
     private void charaName() {
-        System.out.println("\n*** The charaName function was called ***");
+        CharNameView nameMenu = new CharNameView();
+        nameMenu.displayCharNameView();
     }
 
     private void confirm() {
@@ -100,7 +102,7 @@ public class GameMenuView {
     private void olMan() {
         NumberGuessView  numberGuess = new NumberGuessView();
         numberGuess.displayNumberGuessView();}
-
+    
     }
     
 
