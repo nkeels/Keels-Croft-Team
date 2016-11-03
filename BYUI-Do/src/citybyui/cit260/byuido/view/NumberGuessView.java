@@ -68,15 +68,15 @@ public class NumberGuessView {
         int actualNumber = (int) (Math.random() * 10);
         
         if (numberChoice < 1 || numberChoice > 10){
-        System.out.println("\nInvalid: please enter a number between 1 and 10 ");
+        System.out.println("\nInvalid: please enter a whole number between 1 and 10 ");
         return false;
         }else if (numberChoice < actualNumber) {
-            System.out.println("\nSorry you chose too low");
+            System.out.println("\nNope");
         }else if (numberChoice > actualNumber) {
-                        System.out.println("\nSorry you chose too high");
+                        System.out.println("\nNope");
 
         }else {
-            System.out.println("\nYou're Correct!!!");
+            System.out.println("\nYou got it!!!");
             return true;
         }
         return false;
