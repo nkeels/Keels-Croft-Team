@@ -21,11 +21,11 @@ public class MainMenuView {
                   + "\n----------------------------------------------------"
                   + "\n| Main Menu                                        |"
                   + "\n----------------------------------------------------"
-                  + "\n|N - start new game                                 |"
-                  + "\n|G - get and start saved game                       |"
-                  + "\n|H - Get help on how to play the game               |"
-                  + "\n|S - Save game                                      |"
-                  + "\n|Q - Quit                                           |"
+                  + "\n|N - start new game                                |"
+                  + "\n|G - get and start saved game                      |"
+                  + "\n|H - Get help on how to play the game              |"
+                  + "\n|S - Save game                                     |"
+                  + "\n|Q - Quit                                          |"
                   + "\n----------------------------------------------------";
     }
    
