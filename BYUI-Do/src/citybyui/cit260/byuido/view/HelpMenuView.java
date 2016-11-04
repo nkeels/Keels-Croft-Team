@@ -117,8 +117,8 @@ public class HelpMenuView {
 
     private void gainStats() {
     System.out.println("\nYou can gain or lose stat points by going"
-                     + "\non dates, making choices on events and actions."
-                     + "\nevent you do, or interaction you  choose affects stats.");  
+                     + "\non dates, making choices on events and actions. Every"
+                     + "\nevent you do, or interaction you do choose affects stats.");  
     }
 
     private void goBack() {
