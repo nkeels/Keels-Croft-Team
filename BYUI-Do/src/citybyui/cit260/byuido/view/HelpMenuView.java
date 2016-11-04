@@ -126,10 +126,6 @@ public class HelpMenuView {
                      + "\nevent you do, or interaction you do choose affects stats.");  
     }
 
-    private void goBack() {
-        System.out.println("\n goBack has been called");
-    }
-
     private void helpBack() {
         System.out.println("\n In any menu, simply select the Q option."
                      + "\n this selection will either take you to the" 
