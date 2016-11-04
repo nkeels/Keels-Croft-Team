@@ -99,7 +99,10 @@ public class HelpMenuView {
     }
 
     private void goalOfGame() {
-        System.out.println("\n ***goalOfGame is called***");
+        System.out.println("\n The goal if the game is to "
+                          +"\n find a girl, go on dates, foster emotion, and"
+                          + "\ncommit her to marriage. You win by recieving a "
+                          + "\nmarriage certificate.");
     }
 
     private void howToMove() {
