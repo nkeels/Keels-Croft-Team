@@ -112,7 +112,9 @@ public class HelpMenuView {
     }
 
     private void listStats() {
-    System.out.println("\n ***ListStats is called***");
+    System.out.println("\n Navigate through the character Menu. Within that"
+                     + "\n Within that menu, there will be an option that lists"
+                     + "\n your characters stat points");
     }
 
     private void gainStats() {
@@ -122,6 +124,8 @@ public class HelpMenuView {
     }
 
     private void goBack() {
-    System.out.println("\n ***goBack is called***");    }
+    System.out.println("\n In any menu, simply select the Q option."
+                     + "\n this selection will either take you to the" 
+                     + "\n previous menu, or the start game menu ");    }
 }
 
