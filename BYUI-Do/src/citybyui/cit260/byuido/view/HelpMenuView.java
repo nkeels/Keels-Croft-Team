@@ -26,7 +26,6 @@ public class HelpMenuView {
                   + "\nM - How to move                                     |"
                   + "\nL - List meanings of stats                          |"
                   + "\nH - How to gain stats                               |"
-                  + "\nP - Previous Menu                                   |"
                   + "\nQ - Quit                                            |"
                   + "\n----------------------------------------------------";
     }
@@ -80,8 +79,6 @@ public class HelpMenuView {
             case "H":
                 this.gainStats();
                 break;
-            case "P":
-                this.helpBack();
             case "Q":
                 this.goBack();
                 break;
@@ -126,10 +123,9 @@ public class HelpMenuView {
                      + "\nevent you do, or interaction you do choose affects stats.");  
     }
 
-    private void helpBack() {
-        System.out.println("\n In any menu, simply select the Q option."
+    private void goBack() {
+    System.out.println("\n In any menu, simply select the Q option."
                      + "\n this selection will either take you to the" 
-                     + "\n previous menu, or the start game menu ");
-    }
+                     + "\n previous menu, or the start game menu ");    }
 }
 
