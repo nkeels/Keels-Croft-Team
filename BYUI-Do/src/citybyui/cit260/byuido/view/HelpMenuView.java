@@ -81,7 +81,7 @@ public class HelpMenuView {
                 this.gainStats();
                 break;
             case "P":
-                this.goBack();
+                this.helpBack();
             case "Q":
                 this.goBack();
                 break;
@@ -127,8 +127,13 @@ public class HelpMenuView {
     }
 
     private void goBack() {
-    System.out.println("\n In any menu, simply select the Q option."
+        System.out.println("\n goBack has been called");
+    }
+
+    private void helpBack() {
+        System.out.println("\n In any menu, simply select the Q option."
                      + "\n this selection will either take you to the" 
-                     + "\n previous menu, or the start game menu ");    }
+                     + "\n previous menu, or the start game menu ");
+    }
 }
 
