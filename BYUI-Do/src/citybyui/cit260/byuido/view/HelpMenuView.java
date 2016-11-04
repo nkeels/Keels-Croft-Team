@@ -26,6 +26,7 @@ public class HelpMenuView {
                   + "\nM - How to move                                     |"
                   + "\nL - List meanings of stats                          |"
                   + "\nH - How to gain stats                               |"
+                  + "\nP - Previous Menu                               |"
                   + "\nQ - Quit                                            |"
                   + "\n----------------------------------------------------";
     }
@@ -79,6 +80,8 @@ public class HelpMenuView {
             case "H":
                 this.gainStats();
                 break;
+            case "P":
+                this.goBack();
             case "Q":
                 this.goBack();
                 break;
