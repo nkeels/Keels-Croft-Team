@@ -7,6 +7,7 @@ package byui.cit260.BYUIDO.control;
 
 import byui.cit260.BYUIDO.model.Player;
 import byui.pkgdo.BYUIDo;
+import static java.lang.Integer.parseInt;
 
 /**
  *
@@ -32,5 +33,20 @@ public class GameControl {
          System.out.println("\n*** createNewGame function called ***");
         
     }
-    
+    public static int numberGuessingGame(int usersGuess){
+          
+        int actualNumber = (int) (Math.random() * 10);
+        
+        if (usersGuess < 1 || usersGuess > 10){
+              return -1;
+        }else if (usersGuess < actualNumber) {
+            return 0;
+        }else if (usersGuess > actualNumber) {
+                        return 1; 
+
+        }else {
+            return 3;
+        }
+           
+    }
 }

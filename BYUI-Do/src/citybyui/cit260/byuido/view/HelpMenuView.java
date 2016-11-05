@@ -22,11 +22,11 @@ public class HelpMenuView {
                   + "\n----------------------------------------------------"
                   + "\n| Help Menu                                         |"
                   + "\n----------------------------------------------------"
-                  + "\nG - What is the goal of the game"
-                  + "\nM - How to move"
-                  + "\nL - List meanings of stats "
-                  + "\nH - How to gain stats"
-                  + "\nQ - Quit"
+                  + "\nG - What is the goal of the game                    |"
+                  + "\nM - How to move                                     |"
+                  + "\nL - List meanings of stats                          |"
+                  + "\nH - How to gain stats                               |"
+                  + "\nQ - Quit                                            |"
                   + "\n----------------------------------------------------";
     }
     
@@ -99,22 +99,33 @@ public class HelpMenuView {
     }
 
     private void goalOfGame() {
-        System.out.println("\n ***goalOfGame is called***");
+        System.out.println("\n The goal if the game is to "
+                          +"\n find a girl, go on dates, foster emotion, and"
+                          +"\n commit her to marriage. You win by recieving a "
+                          +"\n marriage certificate.");
     }
 
     private void howToMove() {
-    System.out.println("\n ***howToMove is called***");    
+        System.out.println("\n You move your character by choosing"
+                         + "\n a date location, or a general location"
+                         + "\n and select people within areas to talk to.");    
     }
 
     private void listStats() {
-    System.out.println("\n ***ListStats is called***");
+    System.out.println("\n Navigate through the character Menu. Within that"
+                     + "\n Within that menu, there will be an option that lists"
+                     + "\n your characters stat points");
     }
 
     private void gainStats() {
-    System.out.println("\n ***gainStats is called***");  
+    System.out.println("\nYou can gain or lose stat points by going"
+                     + "\non dates, making choices on events and actions. Every"
+                     + "\nevent you do, or interaction you do choose affects stats.");  
     }
 
     private void goBack() {
-    System.out.println("\n ***goBack is called***");    }
+    System.out.println("\n In any menu, simply select the Q option."
+                     + "\n this selection will either take you to the" 
+                     + "\n previous menu, or the start game menu ");    }
 }
 
