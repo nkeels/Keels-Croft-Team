@@ -22,7 +22,7 @@ public class GameMenuView {
                   + "\nN - Name of Character"
                   + "\nY - Confirm"
                   + "\nW - whatever"
-                  + "\nO -Old Man Guessing Game"
+                  + "\nO - Old Man Guessing Game"
                   + "\nQ - Main Menu"
                   + "\n----------------------------------------------------";
     }
