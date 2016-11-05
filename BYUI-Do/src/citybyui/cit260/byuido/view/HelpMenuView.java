@@ -32,7 +32,7 @@ public class HelpMenuView {
     
     public void displayHelpMenuView() {
         
-        boolean done = false;
+        boolean done  = false;
         do{
         String menuOption = this.getMenuOption();
         if (menuOption.toUpperCase().equals("Q"))
@@ -52,7 +52,7 @@ public class HelpMenuView {
             value = keyboard.nextLine();
             value = value.trim();
             
-            if (value.length() < 1) {
+             if (value.length() < 1) {
                 System.out.println("\nInvalid value: value cannot be blank");
                 continue;
             }

@@ -61,22 +61,7 @@ public class StartProgramView {
     }
 
     private String getPlayersName() {
-        /*
-        While valid value has not been entered
-            Display promptmessage
-        Get the value entered from keyboard
-        Trim front and trailing blanks off the name
-        
-        If the length of the value is blank then
-            display "Invalid value: the value cannot be blank"
-        continue
-        ENDIF
-        
-        Break
-        
-        Endwhile
-        Return name
-        */
+    
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
