@@ -27,10 +27,10 @@ public class StatControl {
     if (stress < 0) {
             return -1;
         }
-    if (confide < 0) {
+    else if (confide < 0) {
             return -1;
         }
-    if (charisma < 0) {
+    else if (charisma < 0) {
             return -1;
     }
     
