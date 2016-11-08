@@ -8,16 +8,16 @@ package citybyui.cit260.byuido.view;
 import byui.cit260.BYUIDO.control.GameControl;
 import byui.pkgdo.BYUIDo;
 import java.util.Scanner;
-
+ 
 /**
  *
  * @author Scotty
  */
-public class MainMenuView {
+public class MainMenuView extends View{
     private String menu;
 
     public MainMenuView() {
-        this.menu = "\n"
+             super( "\n"
                   + "\n----------------------------------------------------"
                   + "\n| Main Menu                                        |"
                   + "\n----------------------------------------------------"
@@ -26,44 +26,14 @@ public class MainMenuView {
                   + "\n|H - Get help on how to play the game              |"
                   + "\n|S - Save game                                     |"
                   + "\n|Q - Quit                                          |"
-                  + "\n----------------------------------------------------";
+                  + "\n----------------------------------------------------");
     }
    
     
     
-    public void displayMainMenuView() {
-        
-        boolean done = false;
-        do{
-        String menuOption = this.getMenuOption();
-        if (menuOption.toUpperCase().equals("Q"))
-            return;
-        
-        done = this.doAction(menuOption);
-    }    while (!done);
-    }
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-        break;
-        }
-        return value;        
-    }
     
 
-    private boolean doAction(String choice) {
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
         
@@ -77,7 +47,7 @@ public class MainMenuView {
             case "H":
                 this.displayHelpMenu();
                 HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayHelpMenuView();
+                helpMenu.display();
                 break;
             case "S":
                 this.saveGame();

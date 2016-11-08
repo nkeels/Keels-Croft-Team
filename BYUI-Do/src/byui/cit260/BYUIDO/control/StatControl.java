@@ -5,8 +5,6 @@
  */
 package byui.cit260.BYUIDO.control;
 
-import static jdk.nashorn.internal.objects.NativeMath.exp;
-
 /**
  *
  * @author Nick

@@ -87,7 +87,7 @@ public class GameMenuView {
 
     private void charaName() {
         CharNameView nameMenu = new CharNameView();
-        nameMenu.displayCharNameView();
+        nameMenu.display();
     }
 
     private void confirm() {
@@ -96,7 +96,7 @@ public class GameMenuView {
 
     private void actionMenuView() {
         ActionMenuView actionMenu = new ActionMenuView();
-        actionMenu.displayActionMenuView();
+        actionMenu.display();
     }
 
     private void olMan() {
