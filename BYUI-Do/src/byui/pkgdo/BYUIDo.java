@@ -49,7 +49,7 @@ public class BYUIDo implements Serializable {
         
        //create StartProgramVewwOrig and display the start program view
        StartProgramView startProgramView = new StartProgramView();
-       startProgramView.displayStartProgramView();
+       startProgramView.display();
        
        
 
