@@ -13,57 +13,21 @@ import java.util.Scanner;
  *
  * @author Nick
  */
-public class NumberGuessView {
+public class NumberGuessView extends View{
     
     private String menu;
     
     public NumberGuessView() {
-        this.menu = "\n"
+        super("\n"
                   + "\n----------------------------------------------------"
                   + "\n|Guess a number between 1 and 10                    |"
                   + "\n|                                                   |"
                   + "\n|Q - Main Menu                                      |"
-                  + "\n----------------------------------------------------";
-                      }
-
-    void displayNumberGuessView() {
-        boolean done = false; //set flag to not done
-        do {
-            //prompt for and get players name
-            String playersNumber = this.getPlayersNumber();
-            if (playersNumber.toUpperCase().equals('Q')) // user wants to quit
-                return; //exit the game
-            
-            //do the requested action and display the next view
-            done = this.doAction(playersNumber);
-            
+                  + "\n----------------------------------------------------");
         }
-        while (!done);  
-    }
 
-    private String getPlayersNumber() {
-       
-       
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-        break;
-        }
-        return value;        
-    }
-    
-    private boolean doAction(String playersNumber) {
+        @Override
+    public boolean doAction(String playersNumber) {
         
         int numberChoice = parseInt(playersNumber);
         int number = GameControl.numberGuessingGame(numberChoice);

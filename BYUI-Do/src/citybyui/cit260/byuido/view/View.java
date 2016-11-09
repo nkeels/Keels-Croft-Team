@@ -32,7 +32,8 @@ public abstract class View implements ViewInterface{
         done = this.doAction(value);
     }    while (!done);
             }
-        @Override
+        
+    @Override
    public String getInput() {
        Scanner keyboard = new Scanner(System.in);
         String value = "";

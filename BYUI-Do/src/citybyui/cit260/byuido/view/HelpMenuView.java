@@ -29,9 +29,7 @@ public class HelpMenuView extends View {
                   + "\n----------------------------------------------------");
     }
     
-   
-    
-
+       @Override
     public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
@@ -63,7 +61,7 @@ public class HelpMenuView extends View {
     GameControl.createNewGame(BYUIDo.getPlayer());
     
     GameMenuView gameMenu = new GameMenuView();
-    gameMenu.displayGameMenuView();
+    gameMenu.display();
     
  
     }

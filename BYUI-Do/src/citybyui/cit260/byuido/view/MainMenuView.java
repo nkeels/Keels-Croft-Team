@@ -31,8 +31,7 @@ public class MainMenuView extends View{
    
     
     
-    
-
+        @Override
     public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
@@ -64,7 +63,7 @@ public class MainMenuView extends View{
     GameControl.createNewGame(BYUIDo.getPlayer());
     
     GameMenuView gameMenu = new GameMenuView();
-    gameMenu.displayGameMenuView();
+    gameMenu.display();
     
     
     }

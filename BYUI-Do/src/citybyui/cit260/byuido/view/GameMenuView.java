@@ -11,11 +11,11 @@ import java.util.Scanner;
  *
  * @author Scotty
  */
-public class GameMenuView {
+public class GameMenuView extends View{
     private String menu;
 
     public GameMenuView() {
-        this.menu = "\n"
+        super( "\n"
                   + "\n----------------------------------------------------"
                   + "\n| Game Menu                                        |"
                   + "\n----------------------------------------------------"
@@ -24,44 +24,11 @@ public class GameMenuView {
                   + "\n|W - Whatever                                       |"
                   + "\n|O - Old Man Guessing Game                          |"
                   + "\n|Q - Main Menu                                      |"
-                  + "\n----------------------------------------------------";
+                  + "\n----------------------------------------------------");
     }
    
-    
-    
-    public void displayGameMenuView() {
-        
-        boolean done = false;
-        do{
-        String menuOption = this.getMenuOption();
-        if (menuOption.toUpperCase().equals("Q"))
-            return;
-        
-        done = this.doAction(menuOption);
-    }    while (!done);
-    }
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-        break;
-        }
-        return value;        
-    }
-    
-
-    private boolean doAction(String choice) {
+        @Override
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
         
@@ -101,7 +68,7 @@ public class GameMenuView {
 
     private void olMan() {
         NumberGuessView  numberGuess = new NumberGuessView();
-        numberGuess.displayNumberGuessView();}
+        numberGuess.display();}
     
     }
     

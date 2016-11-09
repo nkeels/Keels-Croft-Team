@@ -22,8 +22,7 @@ public class CharNameView extends View {
     }
 
 
-    
-
+      @Override
     public boolean doAction(String playersName) {
         if (playersName.length() < 2){
         System.out.println("\nInvalid players name: "
