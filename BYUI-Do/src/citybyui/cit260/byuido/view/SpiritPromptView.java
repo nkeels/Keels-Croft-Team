@@ -12,7 +12,7 @@ package citybyui.cit260.byuido.view;
 public class SpiritPromptView extends View {
     
     public String message;
-    
+     
     public SpiritPromptView(String message){
        super("\n---------------------------------------------------------------"
            + "\nYou wake up right when the teacher declares the end of your class on Marriage."
@@ -50,7 +50,10 @@ public class SpiritPromptView extends View {
                 break;
                 
         }
-    return true;
+    SearchLocationView searchLocation = new SearchLocationView();
+    searchLocation.display();
+
+        return true;
     }
     private void girlList() {
         System.out.println("\n You receive a list of the eligible ladies in your area,"
@@ -62,6 +65,4 @@ public class SpiritPromptView extends View {
         System.out.println("\n You thank your friend but decline their offer for information,"
                 + "\n instead deciding to go and look for yourself.");
     }
-    SearchLocationView searchLocation = new SearchLocationView();
-    searchLocation.display();
 }
