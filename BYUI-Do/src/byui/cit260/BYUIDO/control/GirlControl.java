@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package citybyui.cit260.byuido.view;
+package byui.cit260.BYUIDO.control;
 
 /**
  *
  * @author Scotty
  */
-class SearchLocationView {
-
-    void display() {
-        System.out.println("Search location function has been called.");
-        return;
+public class GirlControl {
+      public static int createGirlList(String searchLocation) {
+        System.out.println("\n*** Girl List function has been called ***");
+        return 1;
     }
     
 }
