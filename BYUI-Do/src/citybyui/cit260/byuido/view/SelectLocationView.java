@@ -15,29 +15,14 @@ package citybyui.cit260.byuido.view;
         private String message;
         
     public SelectLocationView() {
+        
+      
     }
 
         
          public SelectLocationView(String message) {
              
-        super      ("\n                                                    "
-                  + "\n----------------------------------------------------"
-                  + "\n|Where do you want to go?                          |"
-                  + "\n----------------------------------------------------"
-                  + "\n|PP - Porter Park                                  |"
-                  + "\n|RI - The ridge                                    |"
-                  + "\n|AV - Aspen Village                                |"
-                  + "\n|TP - Tuscany Place                                |"
-                  + "\n|WM - Windsor Manor                                |"
-                  + "\n|NP - North Point                                  |"
-                  + "\n|TW - The Willows                                  |"
-                  + "\n|RB - The Ricks                                    |"
-                  + "\n|TB - The Taylor                                   |"
-                  + "\n|MC - The Manwaring Center                         |"
-                  + "\n|RB - The Romney Building                          |"
-                  + "\n|SB - The Spori Building                           |"
-                  + "\n|Q - Go back a menu                                |"
-                  + "\n----------------------------------------------------");
+       
     }
     
     
