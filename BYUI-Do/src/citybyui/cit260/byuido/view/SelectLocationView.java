@@ -12,7 +12,7 @@ package citybyui.cit260.byuido.view;
 
     class SelectLocationView extends View{
 
-//        private String menu;
+        private String message;
         
     public SelectLocationView() {
     }
