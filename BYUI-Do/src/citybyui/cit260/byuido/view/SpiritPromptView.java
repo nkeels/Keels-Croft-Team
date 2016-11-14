@@ -50,7 +50,7 @@ public class SpiritPromptView extends View {
                 break;
                 
         }
-    SearchLocationView searchLocation = new SearchLocationView();
+    SelectLocationView searchLocation = new SelectLocationView();
     searchLocation.display();
 
         return true;
