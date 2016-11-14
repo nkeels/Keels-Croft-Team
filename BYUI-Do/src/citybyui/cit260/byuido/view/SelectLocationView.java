@@ -5,6 +5,8 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.MapControl;
+
 /**
  *
  * @author Scotty
@@ -96,7 +98,8 @@ package citybyui.cit260.byuido.view;
     }   
 
     private void porterPark() {
-        System.out.println("\nThis Works");
+        MapControl move = new MapControl();
+        move.move();
     }
 
     private void theRidge() {

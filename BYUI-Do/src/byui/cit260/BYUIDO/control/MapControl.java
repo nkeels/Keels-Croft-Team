@@ -10,5 +10,13 @@ package byui.cit260.BYUIDO.control;
  * @author Nick
  */
 public class MapControl {
+
+    public MapControl() {
+    }
+    
+    public void move() {
+        System.out.println("This function moved your characted");
+        
+    }
     
 }
