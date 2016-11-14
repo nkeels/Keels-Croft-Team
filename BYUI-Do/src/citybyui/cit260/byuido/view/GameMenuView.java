@@ -5,8 +5,6 @@
  */
 package citybyui.cit260.byuido.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Scotty
@@ -70,7 +68,8 @@ public class GameMenuView extends View{
 
     private void olMan() {
         NumberGuessView  numberGuess = new NumberGuessView();
-        numberGuess.display();}
+        numberGuess.display();
+    }
     
     private void inArea(){
     SelectLocationView search = new SelectLocationView();

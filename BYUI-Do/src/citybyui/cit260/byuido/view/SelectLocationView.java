@@ -12,7 +12,7 @@ package citybyui.cit260.byuido.view;
 
     class SelectLocationView extends View{
 
-        private String menu;
+//        private String menu;
         
     public SelectLocationView() {
     }
@@ -90,7 +90,7 @@ package citybyui.cit260.byuido.view;
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
-        return false;
+        return true;
     }   
 
     private void porterPark() {
@@ -126,7 +126,8 @@ package citybyui.cit260.byuido.view;
     }
 
     private void taylorBuilding() {
-        System.out.println("This Works");    }
+        System.out.println("This Works");  
+    }
 
     private void manwaringCenter() {
         System.out.println("This Works");    
