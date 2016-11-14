@@ -34,8 +34,7 @@ public class InArea extends View {
                 this.searchTheArea();
                 break;
             case "T":
-                NumberGuessView guess = new NumberGuessView();
-                guess.doAction(displayMessage);
+                this.talkToOldMan();
                 break;
             case "A":
                 this.goAdventure();
@@ -62,8 +61,11 @@ public class InArea extends View {
     }
 
     private void talkToOldMan() {
-        System.out.println("This function has been called");
+      
+        ActionMenuView actionMenu = new ActionMenuView();
+        actionMenu.display();
     }
+    
 
     private void goAdventure() {
         System.out.println("This function has been called");   
