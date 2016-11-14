@@ -45,6 +45,8 @@ public class GameMenuView extends View{
             case "W":
                 this.actionMenuView();
                 break;
+            case "SA":
+                this.inArea();
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -70,6 +72,10 @@ public class GameMenuView extends View{
         NumberGuessView  numberGuess = new NumberGuessView();
         numberGuess.display();}
     
+    private void inArea(){
+    SelectLocationView inArea = new SelectLocationView();
+    inArea.display();
+            
     }
-    
+}
 
