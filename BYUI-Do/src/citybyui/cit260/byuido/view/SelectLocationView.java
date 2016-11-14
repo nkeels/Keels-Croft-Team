@@ -92,7 +92,7 @@ package citybyui.cit260.byuido.view;
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
-        return true;
+        return false;
     }   
 
     private void porterPark() {
