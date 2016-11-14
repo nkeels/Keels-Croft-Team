@@ -5,6 +5,8 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import citybyui.cit260.byuido.view.InArea;
+
 /**
  *
  * @author Nick
@@ -15,7 +17,9 @@ public class MapControl {
     }
     
     public void move() {
-        System.out.println("This function moved your characted");
+        InArea choice = new InArea();
+        choice.display();
+        
         
     }
     

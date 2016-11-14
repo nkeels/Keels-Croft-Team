@@ -103,51 +103,63 @@ import byui.cit260.BYUIDO.control.MapControl;
     }
 
     private void theRidge() {
-        System.out.println("\nThis Works"); 
+        MapControl move = new MapControl();
+        move.move(); 
     }
 
     private void aspenVillage() {
-        System.out.println("\nThis Works"); 
+        MapControl move = new MapControl();
+        move.move(); 
     }
 
     private void tuscanyPlace() {
-        System.out.println("\nThis Works"); 
+        MapControl move = new MapControl();
+        move.move(); 
     }
 
     private void windsorManor() {
-        System.out.println("\nThis Works");   
+        MapControl move = new MapControl();
+        move.move();   
     }
 
     private void northPoint() {
-        System.out.println("\nThis Works");   
+        MapControl move = new MapControl();
+        move.move();   
     }
 
     private void theWillows() {
-        System.out.println("\nThis Works");   
+        MapControl move = new MapControl();
+        move.move();   
     }
 
     private void ricksBuilding() {
-        System.out.println("\nThis works");    
+        MapControl move = new MapControl();
+        move.move();    
     }
 
     private void taylorBuilding() {
-        System.out.println("\nThis Works");  
+        MapControl move = new MapControl();
+        move.move();  
     }
 
     private void manwaringCenter() {
-        System.out.println("\nThis Works");    
+        MapControl move = new MapControl();
+        move.move();    
     }
 
     private void romneyBuilding() {
-        System.out.println("\nThis Works");   
+        MapControl move = new MapControl();
+        move.move();   
     }
 
     private void sporiBuilding() {
-       System.out.println("\nThis Works");   
+       MapControl move = new MapControl();
+        move.move();   
     }
 
     private void goBack() {
-        System.out.println("\nThis Works");   
+        MapControl move = new MapControl();
+        move.move();   
     }
 }
 
