@@ -14,8 +14,9 @@ package citybyui.cit260.byuido.view;
 
         public SelectLocationView() {
     }
-
+            public String message;
          public SelectLocationView(String message) {
+             
         super      ("\n                                                    "
                   + "\n----------------------------------------------------"
                   + "\n|Where do you want to go?                          |"
