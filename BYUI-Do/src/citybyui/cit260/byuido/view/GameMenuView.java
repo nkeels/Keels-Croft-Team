@@ -73,8 +73,8 @@ public class GameMenuView extends View{
         numberGuess.display();}
     
     private void inArea(){
-    SelectLocationView inArea = new SelectLocationView();
-    inArea.display();
+    SelectLocationView search = new SelectLocationView();
+    search.display();
             
     }
 }
