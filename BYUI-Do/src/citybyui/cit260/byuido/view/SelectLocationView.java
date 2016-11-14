@@ -94,55 +94,55 @@ package citybyui.cit260.byuido.view;
     }   
 
     private void porterPark() {
-        System.out.println("This Works");
+        System.out.println("\nThis Works");
     }
 
     private void theRidge() {
-        System.out.println("This Works"); 
+        System.out.println("\nThis Works"); 
     }
 
     private void aspenVillage() {
-        System.out.println("This Works"); 
+        System.out.println("\nThis Works"); 
     }
 
     private void tuscanyPlace() {
-        System.out.println("This Works"); 
+        System.out.println("\nThis Works"); 
     }
 
     private void windsorManor() {
-        System.out.println("This Works");   
+        System.out.println("\nThis Works");   
     }
 
     private void northPoint() {
-        System.out.println("This Works");   
+        System.out.println("\nThis Works");   
     }
 
     private void theWillows() {
-        System.out.println("This Works");   
+        System.out.println("\nThis Works");   
     }
 
     private void ricksBuilding() {
-        System.out.println("This works");    
+        System.out.println("\nThis works");    
     }
 
     private void taylorBuilding() {
-        System.out.println("This Works");  
+        System.out.println("\nThis Works");  
     }
 
     private void manwaringCenter() {
-        System.out.println("This Works");    
+        System.out.println("\nThis Works");    
     }
 
     private void romneyBuilding() {
-        System.out.println("This Works");   
+        System.out.println("\nThis Works");   
     }
 
     private void sporiBuilding() {
-       System.out.println("This Works");   
+       System.out.println("\nThis Works");   
     }
 
     private void goBack() {
-        System.out.println("This Works");   
+        System.out.println("\nThis Works");   
     }
 }
 
