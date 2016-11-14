@@ -21,7 +21,6 @@ public class GameMenuView extends View{
                   + "\n|Y - Confirm                                       |"
                   + "\n|W - Whatever                                      |"
                   + "\n|SA - Search Area                                  |"
-                  + "\n|O - Old Man Guessing Game                         |"
                   + "\n|Q - Main Menu                                     |"
                   + "\n----------------------------------------------------");
     }
@@ -37,9 +36,6 @@ public class GameMenuView extends View{
                 break;
             case "Y":
                 this. confirm();
-                break;
-            case "O":
-                this. olMan();
                 break;
             case "W":
                 this.actionMenuView();

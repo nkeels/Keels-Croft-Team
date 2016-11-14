@@ -17,7 +17,7 @@ public class InArea extends View {
                   + "\n| What do you do?                                  |"
                   + "\n----------------------------------------------------"
                   + "\n|S - Search the area                               |"
-                  + "\n|O - Talk the the old man                          |"
+                  + "\n|O - Talk a random person                          |"
                   + "\n|A - Adventure the area                            |"
                   + "\n|H - Get help on how to play the game              |"
                   + "\n|S - Save game                                     |"
@@ -34,7 +34,8 @@ public class InArea extends View {
                 this.searchTheArea();
                 break;
             case "T":
-                this.talkToOldMan();
+                NumberGuessView guess = new NumberGuessView();
+                guess.doAction(displayMessage);
                 break;
             case "A":
                 this.goAdventure();
