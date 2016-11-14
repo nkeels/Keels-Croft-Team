@@ -12,7 +12,12 @@ package citybyui.cit260.byuido.view;
 
     class SelectLocationView extends View{
 
-            public String message;
+        private String menu;
+        
+    public SelectLocationView() {
+    }
+
+        
          public SelectLocationView(String message) {
              
         super      ("\n                                                    "
@@ -93,40 +98,51 @@ package citybyui.cit260.byuido.view;
     }
 
     private void theRidge() {
-        System.out.println("This Works");    }
+        System.out.println("This Works"); 
+    }
 
     private void aspenVillage() {
-        System.out.println("This Works");    }
+        System.out.println("This Works"); 
+    }
 
     private void tuscanyPlace() {
-        System.out.println("This Works");    }
+        System.out.println("This Works"); 
+    }
 
     private void windsorManor() {
-        System.out.println("This Works");    }
+        System.out.println("This Works");   
+    }
 
     private void northPoint() {
-        System.out.println("This Works");    }
+        System.out.println("This Works");   
+    }
 
     private void theWillows() {
-        System.out.println("This Works");    }
+        System.out.println("This Works");   
+    }
 
     private void ricksBuilding() {
-        System.out.println("This works");    }
+        System.out.println("This works");    
+    }
 
     private void taylorBuilding() {
         System.out.println("This Works");    }
 
     private void manwaringCenter() {
-        System.out.println("This Works");    }
+        System.out.println("This Works");    
+    }
 
     private void romneyBuilding() {
-        System.out.println("This Works");    }
+        System.out.println("This Works");   
+    }
 
     private void sporiBuilding() {
-       System.out.println("This Works");    }
+       System.out.println("This Works");   
+    }
 
     private void goBack() {
-        System.out.println("This Works");    }
+        System.out.println("This Works");   
+    }
 }
 
     
