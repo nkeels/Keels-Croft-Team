@@ -17,7 +17,7 @@ public class InArea extends View {
                   + "\n| What do you do?                                  |"
                   + "\n----------------------------------------------------"
                   + "\n|S - Search the area                               |"
-                  + "\n|O - Talk a random person                          |"
+                  + "\n|T - Talk a random person                          |"
                   + "\n|A - Adventure the area                            |"
                   + "\n|H - Get help on how to play the game              |"
                   + "\n|S - Save game                                     |"
