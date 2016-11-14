@@ -12,8 +12,6 @@ package citybyui.cit260.byuido.view;
 
     class SelectLocationView extends View{
 
-        public SelectLocationView() {
-    }
             public String message;
          public SelectLocationView(String message) {
              
