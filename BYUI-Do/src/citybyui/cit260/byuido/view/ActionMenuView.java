@@ -5,8 +5,6 @@
  */
 package citybyui.cit260.byuido.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Nick
