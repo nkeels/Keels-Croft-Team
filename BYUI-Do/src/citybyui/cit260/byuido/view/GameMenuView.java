@@ -17,11 +17,12 @@ public class GameMenuView extends View{
                   + "\n----------------------------------------------------"
                   + "\n| Game Menu                                        |"
                   + "\n----------------------------------------------------"
-                  + "\n|N - Name of Character                              |"                             
-                  + "\n|Y - Confirm                                        |"
-                  + "\n|W - Whatever                                       |"
-                  + "\n|O - Old Man Guessing Game                          |"
-                  + "\n|Q - Main Menu                                      |"
+                  + "\n|N - Name of Character                             |"                             
+                  + "\n|Y - Confirm                                       |"
+                  + "\n|W - Whatever                                      |"
+                  + "\n|SA - Search Area                                  |"
+                  + "\n|O - Old Man Guessing Game                         |"
+                  + "\n|Q - Main Menu                                     |"
                   + "\n----------------------------------------------------");
     }
    
