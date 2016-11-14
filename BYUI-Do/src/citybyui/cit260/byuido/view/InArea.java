@@ -61,9 +61,8 @@ public class InArea extends View {
     }
 
     private void talkToOldMan() {
-      
-        ActionMenuView actionMenu = new ActionMenuView();
-        actionMenu.display();
+        NumberGuessView guess = new NumberGuessView();
+        guess.display();
     }
     
 
