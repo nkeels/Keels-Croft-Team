@@ -5,6 +5,7 @@
  */
 package byui.cit260.BYUIDO.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,63 +13,34 @@ import java.util.Objects;
  *
  * @author Scotty
  */
-public class Girl extends Character implements Serializable{
+public enum Girl implements Serializable{
+        
+    Stacy("Super passive aggresive, loves stadium singing, and long walks at night in the gardens "),
+    Kytanna("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life"),
+    Brieaunah("Classified in high school yearbook as most likely to be a cat lady"),
+    Brielle("Takes over 100 seflies, shakey convert that is a borderline rule follower"),
+    Michelle("Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone. ");
     
-    private Integer age;
-    private String interest;
+    private final Point coordinates;
+    private final String description;
 
-    public Girl() {
+    Girl(String description){
+         this.description = description;
+         coordinates = new Point(1,1); 
+        
+    }
+    
+
+    public Point getCoordinates() {
+        return coordinates;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getDescription() {
+        return description;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getInterest() {
-        return interest;
-    }
-
-    public void setInterest(String interest) {
-        this.interest = interest;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 43 * hash + Objects.hashCode(this.age);
-        hash = 43 * hash + Objects.hashCode(this.interest);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Girl other = (Girl) obj;
-        if (!Objects.equals(this.interest, other.interest)) {
-            return false;
-        }
-        if (!Objects.equals(this.age, other.age)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "Girl{" + super.toString() + "age=" + age + ", interest=" + interest + '}';
-    }
+   
+    
     
     
 }
