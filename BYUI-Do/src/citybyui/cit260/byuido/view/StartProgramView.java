@@ -42,7 +42,7 @@ public class StartProgramView extends View{
       + "\n| want to ask her to join in matrimony.          |" 
       + "\n| When you've won her hand in marriage,          |"
       + "\n| You will be prepared for eternal happiness!    |"
-      + "\n**********************************************"  );
+      + "\n|------------------------------------------------|"  );
     }
 
     @Override
