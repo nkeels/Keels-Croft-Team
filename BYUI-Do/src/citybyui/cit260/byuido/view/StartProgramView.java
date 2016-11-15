@@ -14,8 +14,6 @@ import byui.cit260.BYUIDO.model.Player;
  */
 public class StartProgramView extends View{
     
-    private String promptMessage;
-    
    public StartProgramView() {
        
     super( "\nPlease enter your name: ");
