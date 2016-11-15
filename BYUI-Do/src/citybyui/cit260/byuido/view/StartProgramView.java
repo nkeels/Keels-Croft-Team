@@ -7,7 +7,6 @@ package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.GameControl;
 import byui.cit260.BYUIDO.model.Player;
-import java.util.Scanner;
 
 /**
  *
