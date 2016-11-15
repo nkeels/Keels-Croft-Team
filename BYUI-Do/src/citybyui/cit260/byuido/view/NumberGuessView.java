@@ -7,7 +7,6 @@ package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.GameControl;
 import static java.lang.Integer.parseInt;
-import java.util.Scanner;
 
 /**
  *
@@ -27,7 +26,7 @@ public class NumberGuessView extends View{
         }
 
         @Override
-    public boolean doAction(String playersNumber) {
+       public boolean doAction(String playersNumber) {
         
         int numberChoice = parseInt(playersNumber);
         int number = GameControl.numberGuessingGame(numberChoice);

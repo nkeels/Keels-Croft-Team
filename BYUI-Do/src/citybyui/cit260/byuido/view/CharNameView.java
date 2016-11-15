@@ -49,7 +49,7 @@ public class CharNameView extends View {
         CharNameView nameMenu = new CharNameView();
         nameMenu.display();
     
-        return;
+        
     } 
 }
     
