@@ -27,7 +27,7 @@ public class StartProgramView extends View{
         
         System.out.println(
         "\n|------------------------------------------------|"
-      + "\n|Welcome!!!                                      |"        
+      + "\n|                 Welcome!!!                     |"        
       + "\n|------------------------------------------------|"
       + "\n| This is the game of BYU-I DO!!!                |" 
       + "\n| In this game you will help your character      |"
