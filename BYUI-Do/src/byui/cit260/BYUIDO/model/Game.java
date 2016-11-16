@@ -16,6 +16,9 @@ public class Game implements Serializable{
     
     private String confirmation;
     private String playerName;
+    
+    private Map map;
+    private Player player;
 
     public Game() {
     }

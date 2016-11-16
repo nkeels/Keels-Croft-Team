@@ -5,6 +5,7 @@
  */
 package byui.cit260.BYUIDO.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,51 +13,40 @@ import java.util.Objects;
  *
  * @author Nick
  */
-public class RandomScene extends Scene implements Serializable {
+public enum RandomScene implements Serializable{
+        
+    PP("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", 1, 3),
+    RI("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", 2, 5),
+    AV("Classified in high school yearbook as most likely to be a cat lady" , 0, 3),
+    TP("Takes over 100 seflies, shakey convert that is a borderline rule follower", 3, 1),
+    WM("Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", 4, 2),
+    NP("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", 1, 3),
+    TW("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", 2, 5),
+    RK("Classified in high school yearbook as most likely to be a cat lady" , 0, 3),
+    TL("Takes over 100 seflies, shakey convert that is a borderline rule follower", 3, 1),
+    MC("Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", 4, 2),
+    RN("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", 1, 3),
+    SR("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", 2, 5);
     
-    private String title;
+    private final Point coordinates;
+    private final String description;
 
-    public RandomScene() {
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.title);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final RandomScene other = (RandomScene) obj;
-        if (!Objects.equals(this.title, other.title)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "RandomScene{" + super.toString() + "title=" + title + '}';
+    RandomScene(String description, int row, int column){
+         this.description = description;
+         this.coordinates = new Point(row, column); 
+         
     }
     
+
+    public Point getCoordinates() {
+        return coordinates;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+   
     
     
     

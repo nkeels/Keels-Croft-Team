@@ -18,6 +18,9 @@ public class Location implements Serializable {
     private String title;
     private String time;
     private Double coordinate;
+    
+    private RandomScene randomScene;
+    private Scene scene;
 
     public Location() {
     }

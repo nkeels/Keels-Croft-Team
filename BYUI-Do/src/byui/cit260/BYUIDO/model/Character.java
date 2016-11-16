@@ -21,6 +21,8 @@ public class Character implements Serializable {
     private String gender;
     private Integer personalityQual;
     
+    private Game character;
+    
     public Character() {
     
 }
