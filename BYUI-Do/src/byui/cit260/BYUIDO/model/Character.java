@@ -23,6 +23,9 @@ public class Character implements Serializable {
     
     private Game character;
     
+    private Location[] place;
+    private Character[] person;
+    
     public Character() {
     
 }
@@ -76,6 +79,31 @@ public class Character implements Serializable {
         this.personalityQual = personalityQual;
     }
 
+    public Game getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Game character) {
+        this.character = character;
+    }
+
+    public Location[] getPlace() {
+        return place;
+    }
+
+    public void setPlace(Location[] place) {
+        this.place = place;
+    }
+
+    public Character[] getPerson() {
+        return person;
+    }
+
+    public void setPerson(Character[] person) {
+        this.person = person;
+    }
+
+    
     @Override
     public int hashCode() {
         int hash = 7;

@@ -16,6 +16,8 @@ public class Scene implements Serializable{
     
     private String description;
     private String displaySymbol;
+    
+    private Location[] scene;
 
     public Scene() {
     }

@@ -15,7 +15,7 @@ import java.util.Objects;
  */
 public enum RandomScene implements Serializable{
         
-    PP("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", 1, 3),
+    PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", 1, 3),
     RI("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", 2, 5),
     AV("Classified in high school yearbook as most likely to be a cat lady" , 0, 3),
     TP("Takes over 100 seflies, shakey convert that is a borderline rule follower", 3, 1),
@@ -31,6 +31,18 @@ public enum RandomScene implements Serializable{
     private final Point coordinates;
     private final String description;
 
+    
+    
+    private Location[] sites;
+
+    public Location[] getSites() {
+        return sites;
+    }
+
+    public void setSites(Location[] sites) {
+        this.sites = sites;
+    }
+    
     RandomScene(String description, int row, int column){
          this.description = description;
          this.coordinates = new Point(row, column); 

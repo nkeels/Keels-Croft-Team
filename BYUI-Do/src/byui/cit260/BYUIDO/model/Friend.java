@@ -12,13 +12,17 @@ import java.util.Objects;
  *
  * @author Scotty
  */
-public class Friend extends Character implements Serializable{
+public class Friend implements Serializable{
+    
+//    Friend("in front of the Taylor building, you meet up and ask him a question about eligible bachelorettes and he responds with the option of gaing a list of the girls that are appropriate for you.");
     
     private String grade;
     private Integer age;
 
-    public Friend() {
+    Friend(String grade, int age) {
+    
     }
+    
 
     public String getGrade() {
         return grade;

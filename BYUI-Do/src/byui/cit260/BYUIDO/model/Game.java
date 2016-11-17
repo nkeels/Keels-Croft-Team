@@ -19,6 +19,7 @@ public class Game implements Serializable{
     
     private Map map;
     private Player player;
+    private Character character;
 
     public Game() {
     }
@@ -39,6 +40,31 @@ public class Game implements Serializable{
         this.playerName = playerName;
     }
 
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+
+    
     @Override
     public int hashCode() {
         int hash = 5;

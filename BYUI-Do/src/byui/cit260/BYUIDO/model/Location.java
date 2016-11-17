@@ -21,6 +21,8 @@ public class Location implements Serializable {
     
     private RandomScene randomScene;
     private Scene scene;
+    private Character character;
+   
 
     public Location() {
     }
@@ -48,6 +50,31 @@ public class Location implements Serializable {
     public void setCoordinate(Double coordinate) {
         this.coordinate = coordinate;
     }
+
+    public RandomScene getRandomScene() {
+        return randomScene;
+    }
+
+    public void setRandomScene(RandomScene randomScene) {
+        this.randomScene = randomScene;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+    
 
     @Override
     public int hashCode() {

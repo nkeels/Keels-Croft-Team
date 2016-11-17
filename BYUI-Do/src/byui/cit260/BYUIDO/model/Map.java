@@ -16,6 +16,9 @@ public class Map implements Serializable {
     private double columnCount;
     private double rowCount;
 
+    private Location local;
+    private Game[] map;
+    
     public Map() {
     }
 
@@ -34,6 +37,23 @@ public class Map implements Serializable {
     public void setRowCount(double rowCount) {
         this.rowCount = rowCount;
     }
+
+    public Location getLocal() {
+        return local;
+    }
+
+    public void setLocal(Location local) {
+        this.local = local;
+    }
+
+    public Game[] getMap() {
+        return map;
+    }
+
+    public void setMap(Game[] map) {
+        this.map = map;
+    }
+    
 
     @Override
     public int hashCode() {
