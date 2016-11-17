@@ -60,4 +60,8 @@ public class GameControl {
         }
            
     }
+
+    static void assignScenesToLocations(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
