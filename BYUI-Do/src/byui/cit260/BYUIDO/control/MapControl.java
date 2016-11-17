@@ -5,6 +5,7 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import byui.cit260.BYUIDO.model.Map;
 import citybyui.cit260.byuido.view.InArea;
 
 /**
@@ -13,9 +14,23 @@ import citybyui.cit260.byuido.view.InArea;
  */
 public class MapControl {
 
+    static void moveActorsToStartingLocation(Map map) {
+        System.out.println("blah");
+    }
+
     public MapControl() {
     }
     
+    public static Map createMap() {
+        Map map = new Map();
+        
+        Scene[] scenes = createScenes();
+        
+        GameControl.assignScenesToLocations(map, scenes);
+        
+        return map;
+    }
+// this function is for character movement    
     public void move() {
         InArea choice = new InArea();
         choice.display();

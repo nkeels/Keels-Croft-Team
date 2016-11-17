@@ -34,12 +34,14 @@ public class GameControl {
     public static void createNewGame(Player player) {
         
         Game game = new Game();
-        BYUI-Do.setCurrentGame(game);
+        BYUIDo.setCurrentGame(game);
         
         game.setPlayer(player);
         
         Map map = MapControl.createMap();
         game.setMap(map);
+        
+        MapControl.moveActorsToStartingLocation(map);
         
     }
     public static int numberGuessingGame(int usersGuess){

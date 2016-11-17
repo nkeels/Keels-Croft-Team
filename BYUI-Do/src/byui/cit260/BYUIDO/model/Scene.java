@@ -22,6 +22,42 @@ public class Scene implements Serializable{
     public Scene() {
     }
 
+    private static Scene[] createScenes() {
+        Scene[] scene = new Scene[SceneType.values().length];
+        
+        Scene starting Scene = new Scene();
+        startingScene.setDescription(
+              "And we did come to the place called Porter Park....."
+            + "because you were looking for a wife, this scripture comes to mind");
+        startingScene.setMapSymbol("PP");
+        startingScene.setBlocked(false);
+        startingScene.setTravelTime(240);
+        scene[SceneType.start.ordinal()] = startingScene;
+        
+        Scene finishScene = new Scene();
+        finishScene.setDescription(
+              "And we did finally get married....."
+            + "because you were looking for a wife, this scripture comes to mind");
+        finishScene.setMapSymbol("PP");
+        finishScene.setBlocked(false);
+        finishScene.setTravelTime(Double.POSITIVE_INFINITY);
+        scene[SceneType.finish.ordinal()] = startingScene;
+        return scenes;
+        
+        Scene finishScene = new Scene();
+        finishScene.setDescription(
+              "And we did finally get married....."
+            + "because you were looking for a wife, this scripture comes to mind");
+        finishScene.setMapSymbol("PP");
+        finishScene.setBlocked(false);
+        finishScene.setTravelTime(Double.POSITIVE_INFINITY);
+        scene[SceneType.finish.ordinal()] = startingScene;
+        return scenes;
+        
+        
+    }
+
+    
     public String getDescription() {
         return description;
     }

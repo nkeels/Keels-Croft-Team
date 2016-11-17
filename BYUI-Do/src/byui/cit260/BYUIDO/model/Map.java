@@ -15,13 +15,37 @@ public class Map implements Serializable {
     
     private double columnCount;
     private double rowCount;
-
+    private Location[][] locations;
     private Location local;
     private Game[] map;
     
     public Map() {
+              
     }
 
+     public Map(int noOfRows, int noOfColumns) {
+        
+            if (noOfRows < 1 || noOfColumns < 1) {
+            System.out.println(" the # of rows/columns must be > zero");
+            return;
+            }
+            
+            this.noOfRows = noOfRows;
+            this.noOfColumns = noOfColumns;
+            
+            this.locations = new Location [noOfRows] [noOfColumns];
+            
+            for (int row = 0; row < noOfRows; row++) {
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                
+                locations[row][column] = location;
+               
+                
+            }
+            
+        }
     public double getColumnCount() {
         return columnCount;
     }

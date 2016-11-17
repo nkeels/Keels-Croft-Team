@@ -23,6 +23,7 @@ public class Location implements Serializable {
     private Scene scene;
     private Character character;
    
+    private ArrayList<Girl> girls;
 
     public Location() {
     }
@@ -73,6 +74,14 @@ public class Location implements Serializable {
 
     public void setCharacter(Character character) {
         this.character = character;
+    }
+
+    public <any> getGirls() {
+        return girls;
+    }
+
+    public void setGirls(<any> girls) {
+        this.girls = girls;
     }
     
 
