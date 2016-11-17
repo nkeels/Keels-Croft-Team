@@ -5,19 +5,10 @@
  */
 package byui.pkgdo;
 
-import byui.cit260.BYUIDO.model.Player;
-import byui.cit260.BYUIDO.model.Character;
-import byui.cit260.BYUIDO.model.DateScene;
-import byui.cit260.BYUIDO.model.Friend;
 import byui.cit260.BYUIDO.model.Game;
-import byui.cit260.BYUIDO.model.Girl;
-import byui.cit260.BYUIDO.model.Location;
-import byui.cit260.BYUIDO.model.Scene;
-import byui.cit260.BYUIDO.model.RandomScene;
-import byui.cit260.BYUIDO.model.Map;
+import byui.cit260.BYUIDO.model.Player;
 import citybyui.cit260.byuido.view.StartProgramView;
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *

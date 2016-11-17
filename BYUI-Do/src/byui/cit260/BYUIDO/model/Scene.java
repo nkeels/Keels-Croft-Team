@@ -5,6 +5,7 @@
  */
 package byui.cit260.BYUIDO.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,68 +13,49 @@ import java.util.Objects;
  *
  * @author Nick
  */
-public class Scene implements Serial izable{
+public enum Scene implements Serializable{
+        
+    PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "Porter Park", "RandomScene" ),
+    RI("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", "The Ridge", "Apartment Scene"),
+    AV("Classified in high school yearbook as most likely to be a cat lady" , "Alpine Village", "Apartment Scene"),
+    TP("Takes over 100 seflies, shakey convert that is a borderline rule follower", "Tuscany Place", "Apartment Scene"),
+    WM("Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", "Windsor Manor", "Apartment Scene"),
+    NP("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", "North Point", "Apartment Scene"),
+    TW("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", "The Willows", "Apartment Scene"),
+    RK("Classified in high school yearbook as most likely to be a cat lady" , "The Ricks", "School Building"),
+    TL("Takes over 100 seflies, shakey convert that is a borderline rule follower", "Taylor Building", "School Building"),
+    MC("Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", "Manwring Center", "School Building"),
+    RN("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", "Romney Building", "School Building"),
+    SR("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", "Spori Building", "School Builfing");
     
-    private String description;
-    private String displaySymbol;
-    
-    private Location[] scene;
+    private final String displaySymbol;
+    private final String description;
+    private final String sceneType;
 
-    public Scene() {
+    
+    Scene(String description, String displaySymbol, String sceneType){
+         this.description = description;
+         this.displaySymbol = displaySymbol; 
+         this.sceneType = sceneType;
+         
     }
-
     
 
-    
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public String getDisplaySymbol() {
         return displaySymbol;
     }
+    
 
-    public void setDisplaySymbol(String displaySymbol) {
-        this.displaySymbol = displaySymbol;
+    public String getDescription() {
+        return description;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.description);
-        hash = 41 * hash + Objects.hashCode(this.displaySymbol);
-        return hash;
+    public String getSceneType() {
+        return sceneType;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Scene other = (Scene) obj;
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.displaySymbol, other.displaySymbol)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "Scene{" + "description=" + description + ", displaySymbol=" + displaySymbol + '}';
-    }
+   
     
     
     

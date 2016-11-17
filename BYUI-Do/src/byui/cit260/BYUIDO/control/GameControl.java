@@ -9,7 +9,6 @@ import byui.cit260.BYUIDO.model.Game;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.model.Player;
 import byui.pkgdo.BYUIDo;
-import static java.lang.Integer.parseInt;
 
 /**
  *

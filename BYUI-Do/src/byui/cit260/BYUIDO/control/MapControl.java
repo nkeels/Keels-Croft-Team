@@ -7,7 +7,7 @@ package byui.cit260.BYUIDO.control;
 
 import byui.cit260.BYUIDO.model.Location;
 import byui.cit260.BYUIDO.model.Map;
-import byui.cit260.BYUIDO.model.RandomScene;
+import byui.cit260.BYUIDO.model.Scene;
 import byui.cit260.BYUIDO.model.Scene;
 import citybyui.cit260.byuido.view.InArea;
 
@@ -72,12 +72,12 @@ public class MapControl {
     private static void assignScenesToLocations(Map map) {
         Location[][] locations = map.getLocations();
         
-        locations[0][0].setRandomScene(RandomScene.PP);
-        locations[0][1].setRandomScene(RandomScene.PP);
-        locations[0][2].setRandomScene(RandomScene.PP);
-        locations[0][3].setRandomScene(RandomScene.PP);
-        locations[0][4].setRandomScene(RandomScene.PP);
-        locations[0][5].setRandomScene(RandomScene.PP);
+        locations[0][0].setRandomScene(Scene.PP);
+        locations[0][1].setRandomScene(Scene.PP);
+        locations[0][2].setRandomScene(Scene.PP);
+        locations[0][3].setRandomScene(Scene.PP);
+        locations[0][4].setRandomScene(Scene.PP);
+        locations[0][5].setRandomScene(Scene.PP);
         
     }
 
