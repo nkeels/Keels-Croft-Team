@@ -5,6 +5,7 @@
  */
 package byui.cit260.BYUIDO.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 
 /**
@@ -12,11 +13,39 @@ import java.io.Serializable;
  * @author Nick
  */
 public class Map implements Serializable {
-    
+
     private double columnCount;
     private double rowCount;
+    private Location[][] locations;
+    private Location local;
+    private Game[] map;
 
     public Map() {
+
+    }
+
+    public Map(int noOfRows, int noOfColumns) {
+
+        if (noOfRows < 1 || noOfColumns < 1) {
+            System.out.println(" the # of rows/columns must be > zero");
+            return;
+        }
+
+        this.rowCount = noOfRows;
+        this.columnCount = noOfColumns;
+
+        this.locations = new Location[noOfRows][noOfColumns];
+
+        for (int row = 0; row < noOfRows; row++) {
+            for (int column = 0; column < noOfColumns; column++) {
+                Location location = new Location();
+                location.setCoordinate(new Point(row, column));
+                
+
+                locations[row][column] = location;
+
+            }
+        }
     }
 
     public double getColumnCount() {
@@ -34,6 +63,31 @@ public class Map implements Serializable {
     public void setRowCount(double rowCount) {
         this.rowCount = rowCount;
     }
+
+    public Location getLocal() {
+        return local;
+    }
+
+    public void setLocal(Location local) {
+        this.local = local;
+    }
+
+    public Game[] getMap() {
+        return map;
+    }
+
+    public void setMap(Game[] map) {
+        this.map = map;
+    }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+    
 
     @Override
     public int hashCode() {
@@ -68,7 +122,5 @@ public class Map implements Serializable {
     public String toString() {
         return "Map{" + "columnCount=" + columnCount + ", rowCount=" + rowCount + '}';
     }
-    
-    
-    
+
 }

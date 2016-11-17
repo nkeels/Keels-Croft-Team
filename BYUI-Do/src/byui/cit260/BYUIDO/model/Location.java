@@ -5,7 +5,9 @@
  */
 package byui.cit260.BYUIDO.model;
 
+import java.awt.Point;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,7 +19,13 @@ public class Location implements Serializable {
     
     private String title;
     private String time;
-    private Double coordinate;
+    private Point coordinate;
+    
+    private RandomScene randomScene;
+    private Scene scene;
+    private Character character;
+   
+    private ArrayList<Girl> girls;
 
     public Location() {
     }
@@ -38,13 +46,46 @@ public class Location implements Serializable {
         this.time = time;
     }
 
-    public Double getCoordinate() {
+    public Point getCoordinate() {
         return coordinate;
     }
 
-    public void setCoordinate(Double coordinate) {
+    public void setCoordinate(Point coordinate) {
         this.coordinate = coordinate;
     }
+
+    public RandomScene getRandomScene() {
+        return randomScene;
+    }
+
+    public void setRandomScene(RandomScene randomScene) {
+        this.randomScene = randomScene;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+
+    public ArrayList<Girl> getGirls() {
+        return girls;
+    }
+
+    public void setGirls(ArrayList<Girl> girls) {
+        this.girls = girls;
+    }
+    
 
     @Override
     public int hashCode() {

@@ -15,6 +15,9 @@ import java.util.Objects;
 public class Player implements Serializable{
     
     private String name;
+    
+    private Game[] play;
+    private Character[] chara;
 
     public Player() {
     }
@@ -27,6 +30,23 @@ public class Player implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
+
+    public Game[] getPlay() {
+        return play;
+    }
+
+    public void setPlay(Game[] play) {
+        this.play = play;
+    }
+
+    public Character[] getChara() {
+        return chara;
+    }
+
+    public void setChara(Character[] chara) {
+        this.chara = chara;
+    }
+    
 
     @Override
     public int hashCode() {

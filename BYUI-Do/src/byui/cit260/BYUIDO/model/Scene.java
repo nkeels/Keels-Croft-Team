@@ -12,14 +12,19 @@ import java.util.Objects;
  *
  * @author Nick
  */
-public class Scene implements Serializable{
+public class Scene implements Serial izable{
     
     private String description;
     private String displaySymbol;
+    
+    private Location[] scene;
 
     public Scene() {
     }
 
+    
+
+    
     public String getDescription() {
         return description;
     }

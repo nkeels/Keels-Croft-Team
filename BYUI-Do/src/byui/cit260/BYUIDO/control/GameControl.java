@@ -5,6 +5,8 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import byui.cit260.BYUIDO.model.Game;
+import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.model.Player;
 import byui.pkgdo.BYUIDo;
 import static java.lang.Integer.parseInt;
@@ -30,7 +32,16 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-         System.out.println("\n*** createNewGame function called ***");
+        
+        Game game = new Game();
+        BYUIDo.setCurrentGame(game);
+        
+        game.setPlayer(player);
+        
+        Map map = MapControl.createMap();
+        game.setMap(map);
+        
+        MapControl.moveActorsToStartingLocation(map);
         
     }
     public static int numberGuessingGame(int usersGuess){
@@ -48,5 +59,9 @@ public class GameControl {
             return 3;
         }
            
+    }
+
+    static void assignScenesToLocations(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
