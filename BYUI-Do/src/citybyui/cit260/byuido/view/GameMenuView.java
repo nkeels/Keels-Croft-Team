@@ -69,8 +69,10 @@ public class GameMenuView extends View{
     }
     
     private void inArea(){
+        System.out.println("hi");
     SelectLocationView search = new SelectLocationView();
     search.display();
+    
             
     }
 }
