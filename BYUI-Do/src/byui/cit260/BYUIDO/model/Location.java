@@ -21,7 +21,7 @@ public class Location implements Serializable {
     private String time;
     private Point coordinate;
     
-    private RandomScene randomScene;
+    private Scene randomScene;
     private Scene scene;
     private Character character;
    
@@ -54,11 +54,11 @@ public class Location implements Serializable {
         this.coordinate = coordinate;
     }
 
-    public RandomScene getRandomScene() {
+    public Scene getRandomScene() {
         return randomScene;
     }
 
-    public void setRandomScene(RandomScene randomScene) {
+    public void setRandomScene(Scene randomScene) {
         this.randomScene = randomScene;
     }
 
