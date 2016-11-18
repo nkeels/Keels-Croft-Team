@@ -17,17 +17,31 @@ import java.util.Objects;
 public enum Scene implements Serializable{
         
     PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "Porter Park", "RandomScene" ),
-    RI("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", "The Ridge", "Apartment Scene"),
-    AV("Classified in high school yearbook as most likely to be a cat lady" , "Alpine Village", "Apartment Scene"),
-    TP("Takes over 100 seflies, shakey convert that is a borderline rule follower", "Tuscany Place", "Apartment Scene"),
-    WM("Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", "Windsor Manor", "Apartment Scene"),
-    NP("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", "North Point", "Apartment Scene"),
-    TW("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", "The Willows", "Apartment Scene"),
-    RK("Classified in high school yearbook as most likely to be a cat lady" , "The Ricks", "School Building"),
-    TL("Takes over 100 seflies, shakey convert that is a borderline rule follower", "Taylor Building", "School Building"),
-    MC("Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", "Manwring Center", "School Building"),
-    RN("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", "Romney Building", "School Building"),
-    SR("Avid scrapbooker, Loves david archuletta, angsty facebook posts about life", "Spori Building", "School Builfing");
+    RI("You arrive at The Ridge. You've heard it has private rooms. One day you might move there.", "The Ridge", "Apartment Scene"),
+    AV("Welcome to Aspen Village! Enjoy the Hot tub, and relax in our comfortable, social rooms!" , "Alpine Village", "Apartment Scene"),
+    TP("Mostly known for the girl single apartments, its a pretty social community. The ward even has ward prayer on Sundays", "Tuscany Place", "Apartment Scene"),
+    WM("Welcome to 'Hogwarts'! We have a secret room, platform 9 3/4, and private parking!", "Windsor Manor", "Apartment Scene"),
+    NP("#PartyPlace! We have Papa Johns and a couple of other restaurants. Have you seen our gym?!?", "North Point", "Apartment Scene"),
+    TW("Super clean, nice looking area. Its an all girl dorm. #winkyface", "The Willows", "Apartment Scene"),
+    RK("Math, History, and Psychology building. People there can USUALLY read minds" , "The Ricks", "School Building"),
+    TL("Religion and Humanities building. Has two chapels. This is where you start", "Taylor Building", "School Building"),
+    MC("Has the Crossroads. Students hang out, and 'do homework'.....lets be real.", "Manwring Center", "School Building"),
+    RN("Science and Geology building. It has a pretty sweet geology museum. Go there. ", "Romney Building", "School Building"),
+    SR("The art building. It is an excellent date opportuninty to see the art and other exhibits", "Spori Building", "School Building"),
+    FC("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    P("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    CR("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    MD("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    RM("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    PB("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    NYB("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    TF("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    FO("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    TB("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    SP("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    SD("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    CD("The date center of Rexburg. There is bowling, pool, movies, and best of all.....pizza. What more do you need?.....Honest ", "Fat Cats", "Date Scene"),
+    CS("Customizable ice cream. It has a pretty 'vanilla' atmosphere, and is good for a date.", "Cold Stone", "Date Scene");
     
     private final String displaySymbol;
     private final String description;
