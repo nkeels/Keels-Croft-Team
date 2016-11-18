@@ -13,6 +13,7 @@ import java.util.Objects;
  *
  * @author Nick
  */
+
 public enum Scene implements Serializable{
         
     PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "Porter Park", "RandomScene" ),
