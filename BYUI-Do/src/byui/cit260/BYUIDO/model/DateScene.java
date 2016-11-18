@@ -12,7 +12,9 @@ import java.util.Objects;
  *
  * @author Scotty
  */
-public class DateScene extends Scene implements Serializable{
+public enum DateScene implements Serializable{
+    
+    FC()
     
     private String title;
     private String interaction;

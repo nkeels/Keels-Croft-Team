@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author Nick
  */
-public class Scene implements Serial izable{
+public class Scene implements Serializable{
     
     private String description;
     private String displaySymbol;
