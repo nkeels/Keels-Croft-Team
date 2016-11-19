@@ -80,11 +80,11 @@ public class GameMenuView extends View {
     }
 
     private void displayMap(rowCount, columnCount) {
-        MapControl[][];
+       
         System.out.println("\n Where will you go?");
 
         System.out.println("\n 1---2---3---4---5");
-        for (row = 0, rowCount < noOfRows, row++ ) {
+        for (int row = 0, rowCount < noOfRows, row++) {
             System.out.println("|");
             System.out.print("\n 1");
             for (column = 0, columnCount < noOfColumns, column++ ) {
