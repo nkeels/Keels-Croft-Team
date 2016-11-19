@@ -5,37 +5,41 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.MapControl;
+import byui.cit260.BYUIDO.model.Location;
+
 /**
  *
  * @author Scotty
  */
-public class GameMenuView extends View{
+public class GameMenuView extends View {
+
     private String menu;
 
     public GameMenuView() {
-        super( "\n"
-                  + "\n----------------------------------------------------"
-                  + "\n| Game Menu                                        |"
-                  + "\n----------------------------------------------------"
-                  + "\n|N - Name of Character                             |"                             
-                  + "\n|Y - Confirm                                       |"
-                  + "\n|W - Whatever                                      |"
-                  + "\n|SA - Search Area                                  |"
-                  + "\n|Q - Main Menu                                     |"
-                  + "\n----------------------------------------------------");
+        super("\n"
+                + "\n----------------------------------------------------"
+                + "\n| Game Menu                                        |"
+                + "\n----------------------------------------------------"
+                + "\n|N - Name of Character                             |"
+                + "\n|Y - Confirm                                       |"
+                + "\n|W - Whatever                                      |"
+                + "\n|SA - Search Area                                  |"
+                + "\n|Q - Main Menu                                     |"
+                + "\n----------------------------------------------------");
     }
-   
-        @Override
+
+    @Override
     public boolean doAction(String choice) {
-        
+
         choice = choice.toUpperCase();
-        
+
         switch (choice) {
             case "N":
                 this.charaName();
                 break;
             case "Y":
-                this. confirm();
+                this.confirm();
                 break;
             case "W":
                 this.actionMenuView();
@@ -64,16 +68,37 @@ public class GameMenuView extends View{
     }
 
     private void olMan() {
-        NumberGuessView  numberGuess = new NumberGuessView();
+        NumberGuessView numberGuess = new NumberGuessView();
         numberGuess.display();
     }
-    
-    private void inArea(){
-        System.out.println("hi");
-    SelectLocationView search = new SelectLocationView();
-    search.display();
-    
-            
+
+    private void inArea() {
+        // displayMap
+        this.displayMap;
+        SelectLocationView search = new SelectLocationView();
+        search.display();
+    }
+
+    private void displayMap(rowCount, columnCount) {
+        MapControl[][];
+        System.out.println("\n Where will you go?");
+
+        System.out.println("\n 1---2---3---4---5");
+        for (row = 0, rowCount < noOfRows, row++ ) {
+            System.out.println("|");
+            System.out.print("\n 1");
+            for (column = 0, columnCount < noOfColumns, column++ ) {
+                System.out.println("_");
+                Location = locations[row][column];
+                if (Location) {
+                    display;
+                } 
+                System.out.println("|");
+            }
+            System.out.println("_");
+        }
+
     }
 }
+
 
