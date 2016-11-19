@@ -37,7 +37,7 @@ public enum Scene implements Serializable{
     NYB("You enter to see a small little restaurant, great deals on wraps and the wonderful smell of future commitment", "New York Burrito", "Date Scene"),
     FO("Walk in and seThe date center of Rexburg. There is boe cheap asian decorations. One of the waitresses is dressed up super wierd", "Old Fongs", "Date Scene"),
     TF("You enter the restaurant. It smells super good. You have heard that the yellow curry is way good.", "Thai Food Place", "Date Scene"),
-    TB("Welcome to Taco Bell. Its a pretty easy ,low key kind of date.", "Fat Cats", "Date Scene"),
+    TB("Welcome to Taco Bell. Its a pretty easy, low key kind of date.", "Fat Cats", "Date Scene"),
     SP("You walk through the park and see a playset, a nearby hospital, and open area for a possible picnic. ", "Smith Park", "Date Scene"),
     SD("You Walk into the sand dunes. You smell ember from surrounding bonfires, and notice that you have sand in your shoe.", "Sand Dunes", "Date Scene"),
     CD("You see a cave entrance, and some open idaho desert land.", "Civil Defense Caves", "Date Scene"),
