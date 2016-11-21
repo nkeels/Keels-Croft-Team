@@ -7,6 +7,8 @@ package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.MapControl;
 import byui.cit260.BYUIDO.model.Location;
+import byui.cit260.BYUIDO.model.Map;
+import byui.pkgdo.BYUIDo;
 
 /**
  *
@@ -74,20 +76,22 @@ public class GameMenuView extends View {
 
     private void inArea() {
         // displayMap
-        this.displayMap;
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        this.displayMap(locations);
         SelectLocationView search = new SelectLocationView();
         search.display();
     }
 
-    private void displayMap(rowCount, columnCount) {
-        MapControl[][];
+    private void displayMap(Location[][] locations) {
+      
+        
         System.out.println("\n Where will you go?");
 
         System.out.println("\n 1---2---3---4---5");
-        for (row = 0, rowCount < noOfRows, row++ ) {
+        for ( row = 0; row < .length; noOfRows++ ) {
             System.out.println("|");
             System.out.print("\n 1");
-            for (column = 0, columnCount < noOfColumns, column++ ) {
+            for (column = 0; columnCount < noOfColumns; column++ ) {
                 System.out.println("_");
                 Location = locations[row][column];
                 if (Location) {
