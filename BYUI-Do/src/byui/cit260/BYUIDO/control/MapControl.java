@@ -21,6 +21,10 @@ public class MapControl {
         System.out.println("blah");
     }
 
+    private static void getDisplayMap(Location[][] locations) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
     public MapControl() {
     }
@@ -101,7 +105,9 @@ public class MapControl {
         locations[4][2].setScene(Scene.CD);
         locations[4][3].setScene(Scene.FC);
         locations[4][4].setScene(Scene.MD);
-        }
+        
+        getDisplayMap(locations);
+    }
 
 // this function is for character movement    
     public void move() {
