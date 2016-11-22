@@ -87,7 +87,7 @@ public class GameMenuView extends View {
         
         System.out.println("\n Where will you go?");
 
-        System.out.println("\n 0----1----2----3----4");
+        System.out.println("|-------------0----------1-------------2------------------3-------------------------4");
         for ( int row = 0; row < locations.length; row++ ) {
             System.out.println("\n" + row + "|-------------|----------|-------------|------------------|-------------------------|");
             
@@ -99,7 +99,7 @@ public class GameMenuView extends View {
                 } 
              System.out.printf("|");
             }
-               System.out.printf("==");
+               System.out.println("=="); 
             }
             
 }
