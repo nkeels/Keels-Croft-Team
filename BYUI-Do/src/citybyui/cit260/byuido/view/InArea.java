@@ -45,9 +45,6 @@ public class InArea extends View {
             case "S":
                 this.saveGame();
                 break;
-            case "Q":
-                this.goBack();
-                break;
                 default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
