@@ -84,7 +84,7 @@ public class GameMenuView extends View {
 
     private void displayMap(Location[][] locations) {
       
-        
+//this just needs to be aligned, essentially. You'll need to submit it though        
         System.out.println("\n Where will you go?");
 
         System.out.println("|-------------0----------1-------------2------------------3-------------------------4");
