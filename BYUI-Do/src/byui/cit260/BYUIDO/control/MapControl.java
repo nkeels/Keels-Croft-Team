@@ -8,7 +8,6 @@ package byui.cit260.BYUIDO.control;
 import byui.cit260.BYUIDO.model.Location;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.model.Scene;
-import byui.cit260.BYUIDO.model.Scene;
 import citybyui.cit260.byuido.view.InArea;
 
 /**
@@ -22,8 +21,7 @@ public class MapControl {
     }
 
     private static void getDisplayMap(Location[][] locations) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+     System.out.println("hello");    }
 
 
     public MapControl() {
