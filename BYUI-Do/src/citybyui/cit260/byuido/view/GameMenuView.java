@@ -89,15 +89,15 @@ public class GameMenuView extends View {
 
         System.out.println("\n 1---2---3---4---5");
         for ( int row = 0; row < locations.length; row++ ) {
-            System.out.printf("|");
-            System.out.printf("\n 1");
+            System.out.println("|");
+            System.out.println("\n 1");
             for (int column = 0; column < locations.length; column++ ) {
-                System.out.println("_");
+                System.out.printf("_");
                Location location = locations[row][column];
                String mp = location.getScene().getDisplaySymbol();
-               System.out.println(mp);
+               System.out.printf(mp);
                 } 
-             System.out.println("|");
+             System.out.printf("|");
             }
                System.out.printf("==");
             }
