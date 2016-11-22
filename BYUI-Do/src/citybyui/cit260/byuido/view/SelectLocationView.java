@@ -84,12 +84,9 @@ import byui.cit260.BYUIDO.control.MapControl;
             case "RM":
                 this.romneyBuilding();
                 break;
-            case "SP":
+            case "SB":
                 this.sporiBuilding();
-                break;
-            case "Q":
-                this.goBack();
-                break;    
+                break;              
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
