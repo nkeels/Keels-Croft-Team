@@ -89,8 +89,8 @@ public class GameMenuView extends View {
 
         System.out.println("\n 1---2---3---4---5");
         for ( int row = 0; row < locations.length; row++ ) {
-            System.out.println("|");
-            System.out.print("\n 1");
+            System.out.printf("|");
+            System.out.printf("\n 1");
             for (int column = 0; column < locations.length; column++ ) {
                 System.out.println("_");
                Location location = locations[row][column];
@@ -99,7 +99,7 @@ public class GameMenuView extends View {
                 } 
              System.out.println("|");
             }
-               System.out.println("==");
+               System.out.printf("==");
             }
             
 }
