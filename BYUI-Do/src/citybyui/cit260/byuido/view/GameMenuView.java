@@ -88,17 +88,19 @@ public class GameMenuView extends View {
             System.out.println("|");
             System.out.print("\n 1");
             for (column = 0, columnCount < noOfColumns, column++ ) {
-                System.out.println("_");
+                System.out.println("---------------");
                 Location = locations[row][column];
                 if (Location) {
                     display;
                 } 
+            }
                 System.out.println("|");
             }
             System.out.println("_");
-        }
-
-    }
 }
+        
+
+   
+
 
 
