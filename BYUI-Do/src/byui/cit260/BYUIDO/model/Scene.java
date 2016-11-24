@@ -32,7 +32,7 @@ public enum Scene implements Serializable{
     MD("Are you lovin' it? You're date will love it. People say they hate it....as they oder a mcdouble....you've done it too.", "MD", "Date Scene"),
     RM("Welcome to R Mountain. You see a wonderful area to hike.", "RM", "Date Scene"),
     PB("Welcome to Splatter Paintball. You smell the smell that smells...smelly. Its a good date to go on.", "PB", "Date Scene"),
-    NYB("You enter to see a small little restaurant, great deals on wraps and the wonderful smell of future commitment", "NYB", "Date Scene"),
+    NYB("You enter to see a small little restaurant, great deals on wraps and the wonderful smell of future commitment", "NY", "Date Scene"),
     FO("Walk in and seThe date center of Rexburg. There is boe cheap asian decorations. One of the waitresses is dressed up super wierd", "FO", "Date Scene"),
     TF("You enter the restaurant. It smells super good. You have heard that the yellow curry is way good.", "TF", "Date Scene"),
     TB("Welcome to Taco Bell. Its a pretty easy, low key kind of date.", "TB", "Date Scene"),
