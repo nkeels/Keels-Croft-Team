@@ -92,7 +92,7 @@ public class GameMenuView extends View {
             System.out.println("\n" + row + "|------|------|------|------|------|");
             
             for (int column = 0; column < locations.length; column++ ) {
-                System.out.printf("    ");
+                System.out.printf("     ");
                Location location = locations[row][column];
                String mp = location.getScene().getDisplaySymbol();
                System.out.printf(mp);
