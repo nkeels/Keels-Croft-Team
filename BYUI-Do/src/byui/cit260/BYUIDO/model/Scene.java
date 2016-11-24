@@ -14,10 +14,10 @@ import java.io.Serializable;
 
 public enum Scene implements Serializable{
         
-    PORTERPARK("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "PP", "RandomScene" ),
-    THERIDGE("You arrive at The Ridge. You've heard it has private rooms. One day you might move there.", "TR", "Apartment Scene"),
-    ALPINEVILLAGE("Welcome to Aspen Village! Enjoy the Hot tub, and relax in our comfortable, social rooms!" , "AV", "Apartment Scene"),
-    TUSCANYPLACE("Mostly known for the girl single apartments, its a pretty social community. The ward even has ward prayer on Sundays", "TP", "Apartment Scene"),
+    PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "PP", "RandomScene" ),
+    RI("You arrive at The Ridge. You've heard it has private rooms. One day you might move there.", "TR", "Apartment Scene"),
+    AV("Welcome to Aspen Village! Enjoy the Hot tub, and relax in our comfortable, social rooms!" , "AV", "Apartment Scene"),
+    TP("Mostly known for the girl single apartments, its a pretty social community. The ward even has ward prayer on Sundays", "TP", "Apartment Scene"),
     WM("Welcome to 'Hogwarts'! We have a secret room, platform 9 3/4, and private parking!", "WM", "Apartment Scene"),
     NP("#PartyPlace! We have Papa Johns and a couple of other restaurants. Have you seen our gym?!?", "NP", "Apartment Scene"),
     TW("Super clean, nice looking area. Its an all girl dorm. #winkyface", "TW", "Apartment Scene"),
