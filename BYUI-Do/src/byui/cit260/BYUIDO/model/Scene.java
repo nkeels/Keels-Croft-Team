@@ -5,9 +5,7 @@
  */
 package byui.cit260.BYUIDO.model;
 
-import java.awt.Point;
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
@@ -16,7 +14,7 @@ import java.util.Objects;
 
 public enum Scene implements Serializable{
         
-    PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "Porter Park", "RandomScene" ),
+    PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "PP", "RandomScene" ),
     RI("You arrive at The Ridge. You've heard it has private rooms. One day you might move there.", "The Ridge", "Apartment Scene"),
     AV("Welcome to Aspen Village! Enjoy the Hot tub, and relax in our comfortable, social rooms!" , "Alpine Village", "Apartment Scene"),
     TP("Mostly known for the girl single apartments, its a pretty social community. The ward even has ward prayer on Sundays", "Tuscany Place", "Apartment Scene"),
