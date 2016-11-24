@@ -97,7 +97,7 @@ public class GameMenuView extends View {
                String mp = location.getScene().getDisplaySymbol();
                System.out.printf(mp);
                 } 
-             System.out.printf("|");
+             System.out.printf(" |");
             }
                System.out.println("=="); 
             }
