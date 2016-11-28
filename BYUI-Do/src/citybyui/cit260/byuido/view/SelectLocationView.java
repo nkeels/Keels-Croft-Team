@@ -154,10 +154,7 @@ import byui.cit260.BYUIDO.control.MapControl;
         move.move();   
     }
 
-    private void goBack() {
-        MapControl move = new MapControl();
-        move.move();   
-    }
+    
 }
 
     

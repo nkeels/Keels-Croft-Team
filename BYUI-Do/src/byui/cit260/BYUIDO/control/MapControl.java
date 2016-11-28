@@ -106,6 +106,8 @@ public class MapControl {
         
         getDisplayMap(locations);
     }
+    
+    
 
 // this function is for character movement    
     public void move() {
