@@ -51,10 +51,10 @@ public class GameControl {
         if (usersGuess < 1 || usersGuess > 10){
               throw new GameControlException("Cannot make choice " + usersGuess + ", " + "because that number is not a whole number between 1 and 10.");
         }else if (usersGuess < actualNumber) {
-               throw new GameControlException( usersGuess + "is too low.");
+               throw new GameControlException( usersGuess + " is too low.");
 
         }else if (usersGuess > actualNumber) {
-                         throw new GameControlException( usersGuess + "is too high."); 
+                         throw new GameControlException( usersGuess + " is too high."); 
 
         
         }
