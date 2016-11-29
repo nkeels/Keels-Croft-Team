@@ -41,9 +41,13 @@ public class NumberGuessView extends View{
             return true;
         } catch (GameControlException ge) {
             System.out.println(ge.getMessage());
-            return false;
+           
+        } catch (TypeNotPresentException tn) {
+            System.out.println("That is not a number");
         }
         
- 
+  return false;
            }
+       
 }
+
