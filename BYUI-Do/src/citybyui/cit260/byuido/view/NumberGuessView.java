@@ -6,7 +6,7 @@
 package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.GameControl;
-import static java.lang.Integer.parseInt;
+import citbyui.cit260.BYUIDO.exceptions.GameControlException;
 
 /**
  *
@@ -26,28 +26,24 @@ public class NumberGuessView extends View{
         }
 
         @Override
-       public boolean doAction(String playersNumber) {
+       public boolean doAction(String playersNumber){
         
-        int numberChoice = parseInt(playersNumber);
-        int number = GameControl.numberGuessingGame(numberChoice);
-        
-        
-        if (number < 0){
-            System.out.println("\nThat's not the right number");
-            return false;
-        } 
-        if (number == 0){
-            System.out.println("\nToo low");
-            return false;
-        }
-        if (number == 1) {
-            System.out.println("\nToo High");
-            return false;
-        }
-        if (number == 3) {
-            System.out.println("\nYou got it");
+           
+      try {
+           int numberChoice = Integer.parseInt(playersNumber);
+      } catch (NumberFormatException nf) {
+          System.out.println("Enter a whole number between 1 and 10, or enter Q to quit");
+      }
+        int numberChoice = Integer.parseInt(playersNumber);
+        try {
+            GameControl.numberGuessingGame(numberChoice);
+            System.out.println("\nYou got it!!!!");
             return true;
-        }  
-       return true;
-    }
+        } catch (GameControlException ge) {
+            System.out.println(ge.getMessage());
+            return false;
+        }
+        
+ 
+           }
 }

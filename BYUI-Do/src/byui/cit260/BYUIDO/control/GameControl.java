@@ -9,6 +9,7 @@ import byui.cit260.BYUIDO.model.Game;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.model.Player;
 import byui.pkgdo.BYUIDo;
+import citbyui.cit260.BYUIDO.exceptions.GameControlException;
 
 /**
  *
@@ -43,24 +44,23 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
         
     }
-    public static int numberGuessingGame(int usersGuess){
+    public static void numberGuessingGame(int usersGuess) throws GameControlException{
           
         int actualNumber = (int) (Math.random() * 10);
         
         if (usersGuess < 1 || usersGuess > 10){
-              return -1;
+              throw new GameControlException("Cannot make choice " + usersGuess + ", " + "because that number is not a whole number between 1 and 10.");
         }else if (usersGuess < actualNumber) {
-            return 0;
-        }else if (usersGuess > actualNumber) {
-                        return 1; 
+               throw new GameControlException( usersGuess + "is too low.");
 
-        }else {
-            return 3;
+        }else if (usersGuess > actualNumber) {
+                         throw new GameControlException( usersGuess + "is too high."); 
+
+        
         }
            
     }
 
     static void assignScenesToLocations(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+System.out.println("\n Suh dude");    }
 }
