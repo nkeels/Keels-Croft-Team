@@ -12,28 +12,28 @@ import citbyui.cit260.BYUIDO.exceptions.GameControlException;
  *
  * @author Nick
  */
-public class NumberGuessView extends View{
-    
+public class NumberGuessView extends View {
+
     private String menu;
-    
+
     public NumberGuessView() {
         super("\n"
-                  + "\n----------------------------------------------------"
-                  + "\n|Guess a number between 1 and 10                    |"
-                  + "\n|                                                   |"
-                  + "\n|Q - Main Menu                                      |"
-                  + "\n----------------------------------------------------");
-        }
+                + "\n----------------------------------------------------"
+                + "\n|Guess a number between 1 and 10                    |"
+                + "\n|                                                   |"
+                + "\n|Q - Main Menu                                      |"
+                + "\n----------------------------------------------------");
+    }
 
-        @Override
-       public boolean doAction(String playersNumber){
-        
-           
-      try {
-           int numberChoice = Integer.parseInt(playersNumber);
-      } catch (NumberFormatException nf) {
-          System.out.println("Enter a whole number between 1 and 10, or enter Q to quit");
-      }
+    @Override
+    public boolean doAction(String playersNumber) {
+
+        try {
+            int numberChoice = Integer.parseInt(playersNumber);
+        } catch (NumberFormatException nf) {
+            System.out.println("Enter a whole number between 1 and 10, or enter Q to quit");
+            return false;
+        }
         int numberChoice = Integer.parseInt(playersNumber);
         try {
             GameControl.numberGuessingGame(numberChoice);
@@ -41,13 +41,8 @@ public class NumberGuessView extends View{
             return true;
         } catch (GameControlException ge) {
             System.out.println(ge.getMessage());
-           
-        } catch (TypeNotPresentException tn) {
-            System.out.println("That is not a number");
+            return false;
         }
-        
-  return false;
-           }
-       
-}
+    }
 
+}
