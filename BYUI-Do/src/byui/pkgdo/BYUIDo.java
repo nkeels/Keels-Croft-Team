@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @author Scotty
  */
 public class BYUIDo implements Serializable {
-    
+
     private static Game currentGame = null;
     private static Player player = null;
 
@@ -37,19 +37,16 @@ public class BYUIDo implements Serializable {
 
     public static void main(String[] args) {
 
+        StartProgramView startProgramView = new StartProgramView();
+        try {
+            startProgramView.display();
+
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
         
-      
-       StartProgramView startProgramView = new StartProgramView();
-      try{ startProgramView.display();
-       
-       
-
-
-    } catch (Throwable te) {
-        System.out.println(te.getMessage());
-        te.printStackTrace();
-        startProgramView.display();
-    }
             
-}
+    }
 }
