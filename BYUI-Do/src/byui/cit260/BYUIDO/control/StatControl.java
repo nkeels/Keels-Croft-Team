@@ -5,23 +5,25 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import citbyui.cit260.BYUIDO.exceptions.StatControlException;
+
 /**
  *
  * @author Nick
  */
 public class StatControl {
     
-    public int dateAgree(int stress,int charisma,int confide) {
+    public int dateAgree(int stress,int charisma,int confide) throws StatControlException {
         
 
     if (stress < 0) {
-            return -1;
+            throw new StatControlException("invalid stat number");
         }
     else if (confide < 0) {
-            return -1;
+            throw new StatControlException("invalid stat number");
         }
     else if (charisma < 0) {
-            return -1;
+            throw new StatControlException("invalid stat number");
     }
     
     int decision = charisma + confide - stress;
@@ -29,15 +31,15 @@ public class StatControl {
     return decision;
 }   
 
-public int relationPoint(int fun,int date,int days) {
+public int relationPoint(int fun,int date,int days) throws StatControlException {
      if (fun < 0) {
-            return -1;
+            throw new StatControlException("invalid stat number");
         }
     if (date < 0) {
-            return -1;
+            throw new StatControlException("invalid stat number");
         }
     if (days < 0) {
-            return -1;
+            throw new StatControlException("invalid stat number");
     }
     
     int points = ((fun * date)+ days);
