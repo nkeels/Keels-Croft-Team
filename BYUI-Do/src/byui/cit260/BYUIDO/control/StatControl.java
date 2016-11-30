@@ -45,13 +45,13 @@ public class StatControl {
 
     public int proposal(int points, int trust, int stress) throws StatControlException {
         if (points < 0) {
-            throw new StatControlException("Invalid Number");
+            throw new StatControlException("Invalid Points Value");
         }
         if (trust < 0) {
-            throw new StatControlException("Invalid Number");
+            throw new StatControlException("Invalid Trust Value");
         }
         if (stress < 0) {
-            throw new StatControlException("Invalid Number");
+            throw new StatControlException("Invalid Stress Value");
         }
 
         int response = (int) ((points * trust) / Math.pow(stress, 2));
