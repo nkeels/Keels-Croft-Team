@@ -16,15 +16,15 @@ import java.util.Objects;
  * @author Nick
  */
 public class Location implements Serializable {
-    
+
     private String title;
     private String time;
     private Point coordinate;
-    
+
     private Scene randomScene;
     private Scene scene;
     private Character character;
-   
+
     private ArrayList<Girl> girls;
 
     public Location() {
@@ -85,7 +85,6 @@ public class Location implements Serializable {
     public void setGirls(ArrayList<Girl> girls) {
         this.girls = girls;
     }
-    
 
     @Override
     public int hashCode() {
@@ -124,8 +123,5 @@ public class Location implements Serializable {
     public String toString() {
         return "Location{" + "title=" + title + ", time=" + time + ", coordinate=" + coordinate + '}';
     }
-    
-    
-    
-    
+
 }

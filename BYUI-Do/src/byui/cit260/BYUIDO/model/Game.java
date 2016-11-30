@@ -12,11 +12,11 @@ import java.util.Objects;
  *
  * @author Nick
  */
-public class Game implements Serializable{
-    
+public class Game implements Serializable {
+
     private String confirmation;
     private String playerName;
-    
+
     private Map map;
     private Player player;
     private Character character;
@@ -64,7 +64,6 @@ public class Game implements Serializable{
         this.character = character;
     }
 
-    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -98,7 +97,5 @@ public class Game implements Serializable{
     public String toString() {
         return "Game{" + "confirmation=" + confirmation + ", playerName=" + playerName + '}';
     }
-    
-    
-    
+
 }

@@ -11,17 +11,16 @@ import java.io.Serializable;
  *
  * @author Nick
  */
+public enum Scene implements Serializable {
 
-public enum Scene implements Serializable{
-        
-    PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "PP", "RandomScene" ),
+    PP("You arrive at Porter Park, anticipating the feeling of grass beneath your feet.", "PP", "RandomScene"),
     RI("You arrive at The Ridge. You've heard it has private rooms. One day you might move there.", "TR", "Apartment Scene"),
-    AV("Welcome to Aspen Village! Enjoy the Hot tub, and relax in our comfortable, social rooms!" , "AV", "Apartment Scene"),
+    AV("Welcome to Aspen Village! Enjoy the Hot tub, and relax in our comfortable, social rooms!", "AV", "Apartment Scene"),
     TP("Mostly known for the girl single apartments, its a pretty social community. The ward even has ward prayer on Sundays", "TP", "Apartment Scene"),
     WM("Welcome to 'Hogwarts'! We have a secret room, platform 9 3/4, and private parking!", "WM", "Apartment Scene"),
     NP("#PartyPlace! We have Papa Johns and a couple of other restaurants. Have you seen our gym?!?", "NP", "Apartment Scene"),
     TW("Super clean, nice looking area. Its an all girl dorm. #winkyface", "TW", "Apartment Scene"),
-    RK("Math, History, and Psychology building. People there can USUALLY read minds" , "TR", "School Building"),
+    RK("Math, History, and Psychology building. People there can USUALLY read minds", "TR", "School Building"),
     TL("Religion and Humanities building. Has two chapels. This is where you start", "TL", "School Building"),
     MC("Has the Crossroads. Students hang out, and 'do homework'.....lets be real.", "MC", "School Building"),
     RN("Science and Geology building. It has a pretty sweet geology museum. Go there. ", "RB", "School Building"),
@@ -40,25 +39,21 @@ public enum Scene implements Serializable{
     SD("You Walk into the sand dunes. You smell ember from surrounding bonfires, and notice that you have sand in your shoe.", "SD", "Date Scene"),
     CD("You see a cave entrance, and some open idaho desert land.", "CD", "Date Scene"),
     CS("Customizable ice cream. It has a pretty 'vanilla' atmosphere, and is good for a date.", "CS", "Date Scene");
-    
+
     private final String displaySymbol;
     private final String description;
     private final String sceneType;
 
-    
-    Scene(String description, String displaySymbol, String sceneType){
-         this.description = description;
-         this.displaySymbol = displaySymbol; 
-         this.sceneType = sceneType;
-         
-    }
-    
+    Scene(String description, String displaySymbol, String sceneType) {
+        this.description = description;
+        this.displaySymbol = displaySymbol;
+        this.sceneType = sceneType;
 
+    }
 
     public String getDisplaySymbol() {
         return displaySymbol;
     }
-    
 
     public String getDescription() {
         return description;
@@ -68,8 +63,4 @@ public enum Scene implements Serializable{
         return sceneType;
     }
 
-   
-    
-    
-    
 }

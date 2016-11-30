@@ -30,6 +30,4 @@ public class StatControlException extends Exception {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 
-    
-    
 }
