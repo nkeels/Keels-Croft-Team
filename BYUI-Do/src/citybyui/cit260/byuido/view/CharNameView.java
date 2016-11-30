@@ -13,44 +13,41 @@ import byui.cit260.BYUIDO.model.Player;
  * @author Scotty
  */
 public class CharNameView extends View {
-        
+
     private String promptMessage;
-    
-   public CharNameView() {
-       
-    super("\nEnter the name of your character: ");
+
+    public CharNameView() {
+
+        super("\nEnter the name of your character: ");
     }
 
-
-      @Override
+    @Override
     public boolean doAction(String playersName) {
-        if (playersName.length() < 2){
-        System.out.println("\nInvalid players name: "
+        if (playersName.length() < 2) {
+            System.out.println("\nInvalid players name: "
                     + "The name must be greater than one character in length");
-        return false;
+            return false;
         }
         int player = SaveControl.createCharName(playersName);
-        
+
         if (player < 0) {
             System.out.println("\nError creating the character's name.");
             return false;
         }
-        
+
         System.out.println(playersName + " was saved correctly.");
         return true;
 
-        }
+    }
+
     private void displayNextView(Player player) {
         System.out.println("\n=========================================="
-                         + "\n The Name " + player.getName()
-                         + "\n has been saved."
-                         + "\n==========================================");
-    
+                + "\n The Name " + player.getName()
+                + "\n has been saved."
+                + "\n==========================================");
+
         CharNameView nameMenu = new CharNameView();
         nameMenu.display();
-    
-        
-    } 
-}
-    
 
+    }
+}

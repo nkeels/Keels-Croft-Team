@@ -78,9 +78,9 @@ public class StatControlTest {
      */
 //    @Test
     public void testRelationPoint() {
-      System.out.println("relationPoint");
-       System.out.println("\tTest Case 1");
-       int fun = 1;
+        System.out.println("relationPoint");
+        System.out.println("\tTest Case 1");
+        int fun = 1;
         int date = 4;
         int days = 8;
         int expResult = 12;
@@ -126,19 +126,19 @@ public class StatControlTest {
     /**
      * Test of proposal method, of class StatControl.
      */
-   // @Test
-   public void testProposal() {
+    // @Test
+    public void testProposal() {
         //test 1
-      System.out.println("\nTest 1");
-       int points = 7;
-       int trust = 5;
-       int stress = 2;
-       StatControl instance = new StatControl();
-       int expResult = 8;
-     
-       int result = instance.proposal(points, trust, stress);
-       assertEquals(expResult, result);
-        
+        System.out.println("\nTest 1");
+        int points = 7;
+        int trust = 5;
+        int stress = 2;
+        StatControl instance = new StatControl();
+        int expResult = 8;
+
+        int result = instance.proposal(points, trust, stress);
+        assertEquals(expResult, result);
+
         // TODO review the generated test code and remove the default call to fail
         System.out.println("\nTest Case 2");
         points = -1;
@@ -147,15 +147,15 @@ public class StatControlTest {
         expResult = -1;
         result = instance.proposal(points, trust, stress);
         assertEquals(expResult, result);
-        
+
         System.out.println("\nTest Case 3");
         points = 1;
         trust = -7;
         stress = 4;
         expResult = -1;
-       result = instance.proposal(points, trust, stress);
+        result = instance.proposal(points, trust, stress);
         assertEquals(expResult, result);
-        
+
         System.out.println("\nTest Case 4");
         points = -1;
         trust = 5;
@@ -163,14 +163,14 @@ public class StatControlTest {
         expResult = -1;
         result = instance.proposal(points, trust, stress);
         assertEquals(expResult, result);
-       
+
         System.out.println("\n Test Case 5");
         points = 0;
         trust = 0;
-       stress = 0;
+        stress = 0;
         expResult = 0;
         result = instance.proposal(points, trust, stress);
         assertEquals(expResult, result);
-          
-  }
+
+    }
 }

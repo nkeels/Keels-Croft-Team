@@ -13,23 +13,22 @@ import java.util.Objects;
  * @author Nick
  */
 public class Character implements Serializable {
-    
+
     private String charName;
     private Integer charisma;
     private Integer stress;
     private Integer confide;
     private String gender;
     private Integer personalityQual;
-    
+
     private Game character;
-    
+
     private Location[] place;
     private Character[] person;
-    
+
     public Character() {
-    
-}
-    
+
+    }
 
     public String getCharName() {
         return charName;
@@ -46,7 +45,7 @@ public class Character implements Serializable {
     public void setCharisma(Integer charisma) {
         this.charisma = charisma;
     }
-    
+
     public Integer getConfide() {
         return confide;
     }
@@ -103,7 +102,6 @@ public class Character implements Serializable {
         this.person = person;
     }
 
-    
     @Override
     public int hashCode() {
         int hash = 7;
@@ -115,8 +113,6 @@ public class Character implements Serializable {
         hash = 47 * hash + Objects.hashCode(this.charisma);
         return hash;
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -156,7 +152,4 @@ public class Character implements Serializable {
         return "Character{" + "charName=" + charName + ", stress=" + stress + ", confide=" + confide + ", gender=" + gender + ", personalityQual=" + personalityQual + ", charisma=" + charisma + '}';
     }
 
-    
-    
-    
 }

@@ -10,9 +10,10 @@ package byui.cit260.BYUIDO.control;
  * @author Scotty
  */
 public class GirlControl {
-      public static int createGirlList(String searchLocation) {
+
+    public static int createGirlList(String searchLocation) {
         System.out.println("\n*** Girl List function has been called ***");
         return 1;
     }
-    
+
 }

@@ -40,7 +40,6 @@ public class Map implements Serializable {
             for (int column = 0; column < noOfColumns; column++) {
                 Location location = new Location();
                 location.setCoordinate(new Point(row, column));
-                
 
                 locations[row][column] = location;
 
@@ -87,7 +86,6 @@ public class Map implements Serializable {
     public void setLocations(Location[][] locations) {
         this.locations = locations;
     }
-    
 
     @Override
     public int hashCode() {

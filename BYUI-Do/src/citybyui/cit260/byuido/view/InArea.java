@@ -12,23 +12,23 @@ package citybyui.cit260.byuido.view;
 public class InArea extends View {
 
     public InArea() {
-        super( "\n"
-                  + "\n----------------------------------------------------"
-                  + "\n| What do you do?                                  |"
-                  + "\n----------------------------------------------------"
-                  + "\n|S - Search the area                               |"
-                  + "\n|T - Talk a random person                          |"
-                  + "\n|A - Adventure the area                            |"
-                  + "\n|H - Get help on how to play the game              |"
-                  + "\n|S - Save game                                     |"
-                  + "\n|Q - Quit                                          |"
-                  + "\n----------------------------------------------------");
+        super("\n"
+                + "\n----------------------------------------------------"
+                + "\n| What do you do?                                  |"
+                + "\n----------------------------------------------------"
+                + "\n|S - Search the area                               |"
+                + "\n|T - Talk a random person                          |"
+                + "\n|A - Adventure the area                            |"
+                + "\n|H - Get help on how to play the game              |"
+                + "\n|S - Save game                                     |"
+                + "\n|Q - Quit                                          |"
+                + "\n----------------------------------------------------");
     }
 
     @Override
-    public boolean doAction (String choice) {
-         choice = choice.toUpperCase();
-        
+    public boolean doAction(String choice) {
+        choice = choice.toUpperCase();
+
         switch (choice) {
             case "SA":
                 this.searchTheArea();
@@ -45,14 +45,14 @@ public class InArea extends View {
             case "S":
                 this.saveGame();
                 break;
-                default:
+            default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
-                
+
         }
         return false;
     }
-    
+
     private void searchTheArea() {
         System.out.println("This function has been called");
     }
@@ -61,20 +61,17 @@ public class InArea extends View {
         NumberGuessView guess = new NumberGuessView();
         guess.display();
     }
-    
 
     private void goAdventure() {
-        System.out.println("This function has been called");   
+        System.out.println("This function has been called");
     }
 
     private void saveGame() {
-        System.out.println("This function has been called");   
+        System.out.println("This function has been called");
     }
 
     private void goBack() {
-        System.out.println("This function has been called");    }
-
-    
+        System.out.println("This function has been called");
     }
-    
 
+}

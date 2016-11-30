@@ -10,46 +10,41 @@ import byui.cit260.BYUIDO.control.MapControl;
 /**
  *
  * @author Scotty
- */  
+ */
+class SelectLocationView extends View {
 
-    class SelectLocationView extends View{
+    private String message;
 
-        private String message;
-        
     public SelectLocationView() {
-         super      ("\n                                                    "
-                  + "\n----------------------------------------------------"
-                  + "\n|Where do you want to go?                          |"
-                  + "\n----------------------------------------------------"
-                  + "\n|PP - Porter Park                                  |"
-                  + "\n|RI - The ridge                                    |"
-                  + "\n|AV - Aspen Village                                |"
-                  + "\n|TP - Tuscany Place                                |"
-                  + "\n|WM - Windsor Manor                                |"
-                  + "\n|NP - North Point                                  |"
-                  + "\n|TW - The Willows                                  |"
-                  + "\n|RB - The Ricks                                    |"
-                  + "\n|TB - The Taylor                                   |"
-                  + "\n|MC - The Manwaring Center                         |"
-                  + "\n|RB - The Romney Building                          |"
-                  + "\n|SB - The Spori Building                           |"
-                  + "\n|Q - Go back a menu                                |"
-                  + "\n----------------------------------------------------");
-      
+        super("\n                                                    "
+                + "\n----------------------------------------------------"
+                + "\n|Where do you want to go?                          |"
+                + "\n----------------------------------------------------"
+                + "\n|PP - Porter Park                                  |"
+                + "\n|RI - The ridge                                    |"
+                + "\n|AV - Aspen Village                                |"
+                + "\n|TP - Tuscany Place                                |"
+                + "\n|WM - Windsor Manor                                |"
+                + "\n|NP - North Point                                  |"
+                + "\n|TW - The Willows                                  |"
+                + "\n|RB - The Ricks                                    |"
+                + "\n|TB - The Taylor                                   |"
+                + "\n|MC - The Manwaring Center                         |"
+                + "\n|RB - The Romney Building                          |"
+                + "\n|SB - The Spori Building                           |"
+                + "\n|Q - Go back a menu                                |"
+                + "\n----------------------------------------------------");
+
     }
 
-        
-         public SelectLocationView(String message) {
-             
-       
+    public SelectLocationView(String message) {
+
     }
-    
-    
 
     @Override
     public boolean doAction(String choice) {
-            choice = choice.toUpperCase();
-        
+        choice = choice.toUpperCase();
+
         switch (choice) {
             case "PP":
                 this.porterPark();
@@ -86,13 +81,13 @@ import byui.cit260.BYUIDO.control.MapControl;
                 break;
             case "SB":
                 this.sporiBuilding();
-                break;              
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
-    }   
+    }
 
     private void porterPark() {
         MapControl move = new MapControl();
@@ -101,62 +96,57 @@ import byui.cit260.BYUIDO.control.MapControl;
 
     private void theRidge() {
         MapControl move = new MapControl();
-        move.move(); 
+        move.move();
     }
 
     private void aspenVillage() {
         MapControl move = new MapControl();
-        move.move(); 
+        move.move();
     }
 
     private void tuscanyPlace() {
         MapControl move = new MapControl();
-        move.move(); 
+        move.move();
     }
 
     private void windsorManor() {
         MapControl move = new MapControl();
-        move.move();   
+        move.move();
     }
 
     private void northPoint() {
         MapControl move = new MapControl();
-        move.move();   
+        move.move();
     }
 
     private void theWillows() {
         MapControl move = new MapControl();
-        move.move();   
+        move.move();
     }
 
     private void ricksBuilding() {
         MapControl move = new MapControl();
-        move.move();    
+        move.move();
     }
 
     private void taylorBuilding() {
         MapControl move = new MapControl();
-        move.move();  
+        move.move();
     }
 
     private void manwaringCenter() {
         MapControl move = new MapControl();
-        move.move();    
+        move.move();
     }
 
     private void romneyBuilding() {
         MapControl move = new MapControl();
-        move.move();   
+        move.move();
     }
 
     private void sporiBuilding() {
-       MapControl move = new MapControl();
-        move.move();   
+        MapControl move = new MapControl();
+        move.move();
     }
 
-    
 }
-
-    
-    
-

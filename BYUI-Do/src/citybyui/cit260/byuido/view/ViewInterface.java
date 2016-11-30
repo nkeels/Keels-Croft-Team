@@ -10,8 +10,10 @@ package citybyui.cit260.byuido.view;
  * @author Scotty
  */
 public interface ViewInterface {
-    
+
     public void display();
+
     public String getInput();
+
     public boolean doAction(String value);
 }

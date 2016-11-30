@@ -15,5 +15,5 @@ public class SaveControl {
         System.out.println("\n*** createCharName function has been called ***");
         return 1;
     }
-    
+
 }
