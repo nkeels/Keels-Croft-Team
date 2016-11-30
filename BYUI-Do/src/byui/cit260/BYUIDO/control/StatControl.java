@@ -5,6 +5,8 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import citbyui.cit260.BYUIDO.exceptions.StatControlException;
+
 /**
  *
  * @author Nick
@@ -41,15 +43,15 @@ public class StatControl {
         return points;
     }
 
-    public int proposal(int points, int trust, int stress) {
+    public int proposal(int points, int trust, int stress) throws StatControlException {
         if (points < 0) {
-            return -1;
+            throw new StatControlException("Invalid Number");
         }
         if (trust < 0) {
-            return -1;
+            throw new StatControlException("Invalid Number");
         }
         if (stress < 0) {
-            return -1;
+            throw new StatControlException("Invalid Number");
         }
 
         int response = (int) ((points * trust) / Math.pow(stress, 2));
