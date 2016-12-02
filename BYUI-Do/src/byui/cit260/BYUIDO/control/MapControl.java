@@ -70,6 +70,37 @@ public class MapControl {
 
         getDisplayMap(locations);
     }
+    
+    public static void sceneSort(int scenes[]) {
+    Scene[] scenes = Scene.values();
+    int n = scenes.length;
+    int k;
+    for(int o = m; m >= 0; o--){
+        for(int i = 0; i < m-1; i++) {
+            k = i + 1;
+            if(scenes[i] > scenes[k]) {
+                swapNumbers(i,k, scenes);
+            }
+        }
+        printNumbers(scenes);
+    }
+    }
+    
+    public void swapNumbers(int i, int j, int[] scenes){
+           int temp;
+           temp = scenes[i];
+           scenes[i] = scenes[j];
+           scenes[j] = temp;
+    }
+    
+    public void printNumbers(int[] input) {
+        
+        for (int i = 0; i < input.length; i++){
+            System.out.print(input[i] + ", ");
+        }
+        System.out.println("\n");
+        }
+    }    
 
 // this function is for character movement    
     public void move() {
