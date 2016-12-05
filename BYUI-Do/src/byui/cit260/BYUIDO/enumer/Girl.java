@@ -23,6 +23,7 @@ public enum Girl implements Serializable {
     private final Point coordinates;
     private final String description;
     private final String name;
+    
     Girl(String name, String description, int row, int column) {
         this.description = description;
         this.coordinates = new Point(row, column);
