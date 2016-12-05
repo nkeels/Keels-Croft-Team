@@ -65,8 +65,8 @@ public class StartProgramView extends View {
     private void displayNextView(Player player) {
         System.out.println("\n=========================================="
                 + "\nWelcome to the school of BYUI " + player.getName() + "!"
-                + "\n ! May your dreams of marriage ever be in your favor!"
-                + "\n==========================================");
+                + "\nMay your dreams of marriage ever be in your favor!"
+                + "\n===================================================");
         MainMenuView mainMenuView = new MainMenuView();
 
         mainMenuView.display();
