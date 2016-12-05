@@ -25,7 +25,7 @@ public class GirlControl {
         for (int i = 1; i < list.length; i++)
         {
             for (int j = i; j > 0; j--) {
-                if (list[j].name().compareTo(list[j - 1].getName()) < 0) {
+                if (list[j].getName().compareTo(list[j - 1].getName()) < 0) {
                     Girl temp = list[i];
                     list[j] = list[j - 1];
                     list[j - 1] = temp;
