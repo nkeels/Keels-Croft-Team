@@ -48,6 +48,9 @@ public class GameMenuView extends View {
                 break;
             case "SA":
                 this.inArea();
+            case "SL":
+                SpiritPromptView list = new SpiritPromptView();
+                list.display();
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
