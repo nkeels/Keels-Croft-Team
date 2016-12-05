@@ -16,7 +16,7 @@ public enum Girl implements Serializable {
 
     Stacy("Stacy","Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", 1, 3),
     Kytanna("Kytanna", "Avid scrapbooker, Loves david archuletta, angsty facebook posts about being single", 2, 5),
-    Brieaunah("Kytanna", "Classified in high school yearbook as most likely to be a cat lady", 0, 3),
+    Brieaunah("Brieaunuh", "Classified in high school yearbook as most likely to be a cat lady", 0, 3),
     Brielle("Brielle","Takes over 100 seflies, shakey convert that is a borderline rule breaker.", 3, 1),
     Michelle("Michelle", "Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", 4, 2);
 
