@@ -56,7 +56,6 @@ public class GameControl {
 
         } else if (usersGuess > actualNumber) {
             throw new GameControlException(usersGuess + " is too high.");
-
         }
 
     }
