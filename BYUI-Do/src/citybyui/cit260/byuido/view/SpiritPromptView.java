@@ -5,7 +5,9 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.GirlControl;
 import byui.cit260.BYUIDO.control.MapControl;
+import byui.cit260.BYUIDO.enumer.Girl;
 
 /**
  *
@@ -58,8 +60,12 @@ public class SpiritPromptView extends View {
     }
 
     private void girlList() {
-        GirlListView move = new GirlListView();
-        move.display();
+        Girl[] list = Girl.values();
+        Girl[] list2 = GirlControl.doInsertionSort(list);
+        for (Girl girl : list2) {
+            System.out.println(girl.getDescription());
+            
+        }
     }
 
     private void ignoreIt() {

@@ -17,18 +17,9 @@ public class GirlControl {
     
 
 
-    public static void printGirlList() {
+    
 
-        Girl[] list = Girl.values();
-        Girl[] list2 = doInsertionSort(list);
-        for (Girl i : list2) {
-            System.out.print(i);
-            System.out.print(", ");
-        }
-        
-    }
-
-    private static Girl[] doInsertionSort(Girl[] list) {
+    public static Girl[] doInsertionSort(Girl[] list) {
 
         
         for (int i = 1; i < list.length; i++)

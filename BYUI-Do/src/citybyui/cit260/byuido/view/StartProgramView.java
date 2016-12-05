@@ -24,7 +24,7 @@ public class StartProgramView extends View {
     private void displayBanner() {
 
         System.out.println(
-                "\n|------------------------------------------------|"
+                "\n|--------------------------------------------------|"
                 + "\n|                 Welcome!!!                     |"
                 + "\n|------------------------------------------------|"
                 + "\n| This is the game of BYU-I DO!!!                |"
