@@ -63,7 +63,7 @@ public class StartProgramView extends View {
     }
 
     private void displayNextView(Player player) {
-        System.out.println("\n=========================================="
+        System.out.println("\n==================================================="
                 + "\nWelcome to the school of BYUI " + player.getName() + "!"
                 + "\nMay your dreams of marriage ever be in your favor!"
                 + "\n===================================================");
