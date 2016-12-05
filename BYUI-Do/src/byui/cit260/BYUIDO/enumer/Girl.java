@@ -14,18 +14,19 @@ import java.io.Serializable;
  */
 public enum Girl implements Serializable {
 
-    Stacy("Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", 1, 3),
-    Kytanna("Avid scrapbooker, Loves david archuletta, angsty facebook posts about being single", 2, 5),
-    Brieaunah("Classified in high school yearbook as most likely to be a cat lady", 0, 3),
-    Brielle("Takes over 100 seflies, shakey convert that is a borderline rule breaker.", 3, 1),
-    Michelle("Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", 4, 2);
+    Stacy("Stacy","Super passive aggresive, loves stadium singing, and long walks at night in the gardens ", 1, 3),
+    Kytanna("Kytanna", "Avid scrapbooker, Loves david archuletta, angsty facebook posts about being single", 2, 5),
+    Brieaunah("Kytanna", "Classified in high school yearbook as most likely to be a cat lady", 0, 3),
+    Brielle("Brielle","Takes over 100 seflies, shakey convert that is a borderline rule breaker.", 3, 1),
+    Michelle("Michelle", "Loves starbucks hot chocolate, uggs, yoga pants, aviators, and her iPhone.", 4, 2);
 
     private final Point coordinates;
     private final String description;
-
-    Girl(String description, int row, int column) {
+    private final String name;
+    Girl(String name, String description, int row, int column) {
         this.description = description;
         this.coordinates = new Point(row, column);
+        this.name = name;
 
     }
 
@@ -37,6 +38,9 @@ public enum Girl implements Serializable {
         return description;
     }
 
+    public String getName() {
+        return name;
+    }
     
 
 }
