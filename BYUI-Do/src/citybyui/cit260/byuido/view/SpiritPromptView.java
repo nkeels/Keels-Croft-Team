@@ -65,7 +65,7 @@ public class SpiritPromptView extends View {
         Girl[] list = Girl.values();
         Girl[] list2 = GirlControl.doInsertionSort(list);
         for (Girl girl : list2) {
-            System.out.println(girl.getDescription());
+            System.out.println(girl.getName());
             
         }
     }
