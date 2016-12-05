@@ -5,6 +5,8 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.MapControl;
+
 /**
  *
  * @author Scotty
@@ -56,9 +58,8 @@ public class SpiritPromptView extends View {
     }
 
     private void girlList() {
-        System.out.println("\n You receive a list of the eligible ladies in your area,"
-                + "\n which also shows where you are able to find them. "
-                + "\n You make your decision and try to find one of these girls.");
+        GirlListView move = new GirlListView();
+        move.display();
     }
 
     private void ignoreIt() {
