@@ -7,7 +7,7 @@ package byui.cit260.BYUIDO.control;
 
 import byui.cit260.BYUIDO.model.Location;
 import byui.cit260.BYUIDO.model.Map;
-import byui.cit260.BYUIDO.control.enumeration.Scene;
+import byui.cit260.BYUIDO.enumer.Scene;
 import citybyui.cit260.byuido.view.InArea;
 
 /**
@@ -77,5 +77,6 @@ public class MapControl {
         choice.display();
 
     }
+    
 
 }

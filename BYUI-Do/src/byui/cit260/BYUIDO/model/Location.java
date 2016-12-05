@@ -5,8 +5,8 @@
  */
 package byui.cit260.BYUIDO.model;
 
-import byui.cit260.BYUIDO.control.enumeration.Scene;
-import byui.cit260.BYUIDO.control.enumeration.Girl;
+import byui.cit260.BYUIDO.enumer.Scene;
+import byui.cit260.BYUIDO.enumer.Girl;
 import java.awt.Point;
 import java.io.Serializable;
 import java.util.ArrayList;
