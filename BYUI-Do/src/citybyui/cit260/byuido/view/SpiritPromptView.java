@@ -6,7 +6,6 @@
 package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.GirlControl;
-import byui.cit260.BYUIDO.control.MapControl;
 import byui.cit260.BYUIDO.enumer.Girl;
 
 /**
