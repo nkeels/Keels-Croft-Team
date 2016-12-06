@@ -25,8 +25,9 @@ public class GameMenuView extends View {
                 + "\n----------------------------------------------------"
                 + "\n|N - Name of Character                             |"
                 + "\n|Y - Confirm                                       |"
-                + "\n|W - Whatever                                      |"
-                + "\n|SA - Search Area                                  |"
+                + "\n|T - Talk to friend"
+               // + "\n|W - Whatever                                      |"
+               // + "\n|SA - Search Area                                  |"
                 + "\n|Q - Main Menu                                     |"
                 + "\n----------------------------------------------------");
     }
@@ -48,6 +49,9 @@ public class GameMenuView extends View {
                 break;
             case "SA":
                 this.inArea();
+            case "T":
+                SpiritPromptView list = new SpiritPromptView();
+                list.display();
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;

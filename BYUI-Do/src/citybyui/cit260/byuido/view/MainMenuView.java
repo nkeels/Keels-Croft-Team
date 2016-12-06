@@ -42,7 +42,6 @@ public class MainMenuView extends View {
                 this.startExistingGame();
                 break;
             case "H":
-                this.displayHelpMenu();
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.display();
                 break;
@@ -69,9 +68,7 @@ public class MainMenuView extends View {
         System.out.println("***startExisting Game function called ***");
     }
 
-    private void displayHelpMenu() {
-        System.out.println("***helpMenu function called ***");
-    }
+    
 
     private void saveGame() {
         System.out.println("***saveGame function called ***");

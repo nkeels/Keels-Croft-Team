@@ -7,7 +7,7 @@ package byui.cit260.BYUIDO.control;
 
 import byui.cit260.BYUIDO.model.Location;
 import byui.cit260.BYUIDO.model.Map;
-import byui.cit260.BYUIDO.model.Scene;
+import byui.cit260.BYUIDO.enumer.Scene;
 import citybyui.cit260.byuido.view.InArea;
 
 /**
@@ -100,6 +100,7 @@ public class MapControl {
         }
         System.out.println("\n");
     }
+    
 
     public static Scene[] bubbleSort(Scene[] sceneList) {
         int n = sceneList.length;
