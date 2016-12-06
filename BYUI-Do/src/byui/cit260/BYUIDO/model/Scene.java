@@ -62,5 +62,5 @@ public enum Scene implements Serializable {
     public String getSceneType() {
         return sceneType;
     }
-
+    
 }

@@ -70,43 +70,57 @@ public class MapControl {
 
         getDisplayMap(locations);
     }
-    
-    public static void sceneSort(int scenes[]) {
-    Scene[] scenes = Scene.values();
-    int n = scenes.length;
-    int k;
-    for(int o = m; m >= 0; o--){
-        for(int i = 0; i < m-1; i++) {
-            k = i + 1;
-            if(scenes[i] > scenes[k]) {
-                swapNumbers(i,k, scenes);
-            }
+
+    public static void sceneSort() {
+        Scene[] scenes = Scene.values();
+        int n = scenes.length;
+        int k;
+        //sort the enum
+        Scene[] places = MapControl.bubbleSort(scenes);
+        //print a report of locations (place in the view layer)
+        for (Scene nextScene : places) {
+            String sym = nextScene.getDisplaySymbol();
+            String scene = nextScene.name();
+            System.out.println(sym + " " + scene);
         }
-        printNumbers(scenes);
+
     }
+
+    public static void swapNumbers(int s1, int j, Scene[] sceneList) {
+        Scene temp;
+        temp = sceneList[s1];
+        sceneList[s1] = sceneList[j];
+        sceneList[j] = temp;
     }
-    
-    public void swapNumbers(int i, int j, int[] scenes){
-           int temp;
-           temp = scenes[i];
-           scenes[i] = scenes[j];
-           scenes[j] = temp;
-    }
-    
+
     public void printNumbers(int[] input) {
-        
-        for (int i = 0; i < input.length; i++){
+
+        for (int i = 0; i < input.length; i++) {
             System.out.print(input[i] + ", ");
         }
         System.out.println("\n");
-        }
-    }    
-
-// this function is for character movement    
-    public void move() {
-        InArea choice = new InArea();
-        choice.display();
-
     }
 
+    public static Scene[] bubbleSort(Scene[] sceneList) {
+        int n = sceneList.length;
+        int k;
+        for (int s2 = n; s2 >= 0; s2--) {
+            for (int s1 = 0; s1 < s2 - 1; s1++) {
+                k = s1 + 1;
+                if (sceneList[s1].getDisplaySymbol().compareTo(sceneList[k].getDisplaySymbol()) > 0) {
+                    swapNumbers(s1, k, sceneList);
+                }
+            }
+        }
+        return sceneList;
+
+    }
 }
+
+// this function is for character movement    
+////    public void move() {
+//        InArea choice = new InArea();
+//        choice.display();
+//
+//    }
+
