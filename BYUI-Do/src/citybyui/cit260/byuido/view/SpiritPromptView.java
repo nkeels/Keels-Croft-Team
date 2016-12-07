@@ -18,7 +18,7 @@ public class SpiritPromptView extends View {
 
     public SpiritPromptView() {
         super   ( "\n|------------------------------------------------------------------------------------|"
-                + "\n|Welcome!!!                                                                          |"
+                + "\n|Welcome !!!                                                                          |"
                 + "\n|------------------------------------------------------------------------------------|"
                 + "\n|You wake up right when the teacher declares the end of your class on Marriage.      |"
                 + "\n|You pack up your books and walk out of the classroom. totally set for grabbing      |"

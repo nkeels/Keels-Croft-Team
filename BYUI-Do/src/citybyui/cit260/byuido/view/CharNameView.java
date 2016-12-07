@@ -43,7 +43,7 @@ public class CharNameView extends View {
     private void displayNextView(Player player) {
         System.out.println("\n=========================================="
                 + "\n The Name " + player.getName()
-                + "\n has been saved."
+                + "\n has been saved.  THIS IS A TEST"
                 + "\n==========================================");
 
         CharNameView nameMenu = new CharNameView();
