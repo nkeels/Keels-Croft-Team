@@ -71,20 +71,7 @@ public class MapControl {
         getDisplayMap(locations);
     }
 
-    public static void sceneSort() {
-        Scene[] scenes = Scene.values();
-        int n = scenes.length;
-        int k;
-        //sort the enum
-        Scene[] places = MapControl.bubbleSort(scenes);
-        //print a report of locations (place in the view layer)
-        for (Scene nextScene : places) {
-            String sym = nextScene.getDisplaySymbol();
-            String scene = nextScene.name();
-            System.out.println(sym + " " + scene);
-        }
-
-    }
+    
 
     public static void swapNumbers(int s1, int j, Scene[] sceneList) {
         Scene temp;

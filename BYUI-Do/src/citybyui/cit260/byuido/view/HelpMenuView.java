@@ -90,7 +90,7 @@ public class HelpMenuView extends View {
         Scene[] places = MapControl.bubbleSort(scenes);
         //print a report of locations (place in the view layer)
         for (Scene nextScene : places) {
-            String sym = nextScene.getDisplaySymbol();
+            String sym = nextScene.getDescription();
             String scene = nextScene.name();
             System.out.println(sym + " " + scene);
         }
