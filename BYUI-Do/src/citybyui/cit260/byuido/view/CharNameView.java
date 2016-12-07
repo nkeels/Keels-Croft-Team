@@ -35,7 +35,7 @@ public class CharNameView extends View {
             return false;
         }
 
-        System.out.println(playersName + " was saved correctly.");
+        System.out.println(playersName + " was saved correctly. THIS IS A TEST TOO");
         return true;
 
     }
