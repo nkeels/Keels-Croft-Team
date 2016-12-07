@@ -101,6 +101,12 @@ public class MapControl {
         System.out.println("\n");
     }
     
+       public void move() {
+        InArea choice = new InArea();
+        choice.display();
+
+    }
+
 
     public static Scene[] bubbleSort(Scene[] sceneList) {
         int n = sceneList.length;
@@ -118,10 +124,5 @@ public class MapControl {
     }
 }
 
-// this function is for character movement    
-////    public void move() {
-//        InArea choice = new InArea();
-//        choice.display();
-//
-//    }
+   
 
