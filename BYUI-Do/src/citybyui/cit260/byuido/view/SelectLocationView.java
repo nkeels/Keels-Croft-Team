@@ -6,6 +6,7 @@
 package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.MapControl;
+import byui.cit260.BYUIDO.model.Location;
 
 /**
  *
@@ -47,40 +48,40 @@ class SelectLocationView extends View {
 
         switch (choice) {
             case "PP":
-                this.porterPark();
+                this.move("PP");
                 break;
             case "RI":
-                this.theRidge();
+                this.move("RI");
                 break;
             case "AV":
-                this.aspenVillage();
+                this.move("AV");
                 break;
             case "TP":
-                this.tuscanyPlace();
+                this.move("TP");
                 break;
             case "WM":
-                this.windsorManor();
+                this.move("WM");
                 break;
             case "NP":
-                this.northPoint();
+                this.move("NP");
                 break;
             case "TW":
-                this.theWillows();
+                this.move("TW");
                 break;
             case "RB":
-                this.ricksBuilding();
+                this.move("RB");
                 break;
             case "TB":
-                this.taylorBuilding();
+                this.move("TB");
                 break;
             case "MC":
-                this.manwaringCenter();
+                this.move("MC");
                 break;
             case "RM":
-                this.romneyBuilding();
+                this.move("RM");
                 break;
             case "SB":
-                this.sporiBuilding();
+                this.move("SR");
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
@@ -89,64 +90,11 @@ class SelectLocationView extends View {
         return false;
     }
 
-    private void porterPark() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void theRidge() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void aspenVillage() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void tuscanyPlace() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void windsorManor() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void northPoint() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void theWillows() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void ricksBuilding() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void taylorBuilding() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void manwaringCenter() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void romneyBuilding() {
-        MapControl move = new MapControl();
-        move.move();
-    }
-
-    private void sporiBuilding() {
-        MapControl move = new MapControl();
-        move.move();
+    private static void move(String building) {
+       Location building = Location.getCharacter();
+       character = null;
+       Location building = location.setCharacter();
+       
     }
 
 }
