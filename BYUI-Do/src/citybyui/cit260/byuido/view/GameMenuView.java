@@ -42,16 +42,15 @@ public class GameMenuView extends View {
                 this.charaName();
                 break;
             case "Y":
-                this.confirm();
+               SpiritPromptView list = new SpiritPromptView();
+                list.display();
                 break;
             case "W":
                 this.actionMenuView();
                 break;
             case "SA":
                 this.inArea();
-            case "T":
-                SpiritPromptView list = new SpiritPromptView();
-                list.display();
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
