@@ -50,6 +50,7 @@ public class SpiritPromptView extends View {
                 this.ignoreIt();
                 break;
             case "SL":
+                this.girlList();
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
