@@ -17,11 +17,11 @@ import citybyui.cit260.byuido.view.InArea;
 public class MapControl {
 
     static void moveActorsToStartingLocation(Map map) {
-        System.out.println("blah");
+        
     }
 
     private static void getDisplayMap(Location[][] locations) {
-        System.out.println("hello");
+        
     }
 
     public MapControl() {
