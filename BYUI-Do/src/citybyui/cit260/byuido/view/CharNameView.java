@@ -5,7 +5,9 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.GameControl;
 import byui.cit260.BYUIDO.control.SaveControl;
+import byui.cit260.BYUIDO.model.Character;
 import byui.cit260.BYUIDO.model.Player;
 
 /**
@@ -22,20 +24,16 @@ public class CharNameView extends View {
     }
 
     @Override
-    public boolean doAction(String playersName) {
-        if (playersName.length() < 2) {
-            System.out.println("\nInvalid players name: "
+    public boolean doAction(String charName) {
+        if (charName.length() < 2) {
+            System.out.println("\nInvalid characters name: "
                     + "The name must be greater than one character in length");
             return false;
         }
-        int player = SaveControl.createCharName(playersName);
 
-        if (player < 0) {
-            System.out.println("\nError creating the character's name.");
-            return false;
-        }
+        GameControl.createCharacter(charName);
 
-        System.out.println(playersName + " was saved correctly. THIS IS A TEST TOO");
+        System.out.println(charName + " was saved correctly. THIS IS A TEST TOO");
         return true;
 
     }
