@@ -7,6 +7,7 @@ package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.MapControl;
 import byui.cit260.BYUIDO.model.Location;
+import byui.pkgdo.BYUIDo;
 
 /**
  *
@@ -60,7 +61,7 @@ class SelectLocationView extends View {
                 this.move("TP");
                 break;
             case "WM":
-                this.move("WM");
+                this.("WM");
                 break;
             case "NP":
                 this.move("NP");
