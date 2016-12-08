@@ -10,7 +10,6 @@ import byui.cit260.BYUIDO.enumer.Girl;
 import java.awt.Point;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Objects;
 
 /**

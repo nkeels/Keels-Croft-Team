@@ -7,7 +7,6 @@ package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.GirlControl;
 import byui.cit260.BYUIDO.enumer.Girl;
-import byui.pkgdo.BYUIDo;
 
 /**
  *
@@ -15,12 +14,12 @@ import byui.pkgdo.BYUIDo;
  */
 public class SpiritPromptView extends View {
 
-    public String message = BYUIDo.getCurrentGame().getPlayerName();
+    public String message;
     
 
     public SpiritPromptView() {
         super   ( "\n|------------------------------------------------------------------------------------|"
-                + "\n|Welcome" + message + "!!!                                                           |"
+                + "\n|Welcome!!!                                                                          |"
                 + "\n|------------------------------------------------------------------------------------|"
                 + "\n|You wake up right when the teacher declares the end of your class on Marriage.      |"
                 + "\n|You pack up your books and walk out of the classroom. totally set for grabbing      |"
@@ -37,6 +36,7 @@ public class SpiritPromptView extends View {
                 + "\n|I - Ignore his advice                                                               |"
                 + "\n|Q - Quit                                                                            |"
                 + "\n-------------------------------------------------------------------------------------|");
+        
 
     }
 

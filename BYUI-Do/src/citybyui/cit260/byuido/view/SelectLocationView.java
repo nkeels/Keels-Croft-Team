@@ -6,6 +6,8 @@
 package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.MapControl;
+import byui.cit260.BYUIDO.model.Location;
+import byui.pkgdo.BYUIDo;
 
 /**
  *
@@ -90,13 +92,16 @@ class SelectLocationView extends View {
     }
 
     private void porterPark() {
-        MapControl move = new MapControl();
-        move.move();
+        Location location = MapControl.GetLocation(0,3);
+        
+        BYUIDo.getCurrentGame().getCharacter().setPlace(location);
+        
+        InArea inAreaView = new InArea();
+        inAreaView.display();
     }
 
     private void theRidge() {
-        MapControl move = new MapControl();
-        move.move();
+        Location location = MapControl.GetLocation(0, 1);
     }
 
     private void aspenVillage() {

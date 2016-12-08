@@ -91,4 +91,8 @@ public class GameControl {
     static void assignScenesToLocations(Map map) {
         System.out.println("\n Suh dude");
     }
+
+    public static void setCurrentLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
