@@ -90,11 +90,35 @@ class SelectLocationView extends View {
         return false;
     }
 
-    private static void move(String building) {
-       Location building = Location.getCharacter();
-       character = null;
-       Location building = location.setCharacter();
-       
+    private static void move(Location[][] locations, Character mc, point coordinate) throw GameControl(){
+        //error control
+        if (locations == null);{
+            System.out.println("\nWe can't find your location.");
+            return false;
+    }
+        if(mc == null){
+            System.out.println("\nWe can't find your character.");
+            return false;
+        }
+        if(coordinate == null || coordinate.x < 0 || coordinate.x > 5 || coordinate.y < 0 || coordinate.y > 5){
+            System.out.println("\nCoordinates are invalid.");
+            return false;
+    }
+        //get old location info of character
+        Location oldLoc = Character.getLocation();
+        //get new location coordinates
+        Location newLoc = Location[coordinate.x][coordinate.y];
+        //set character to null
+        oldLoc.setCharacter(null);
+        //assign character to new location
+        newLoc.setCharacter(mc);
+        //set character location to newLoc
+        Character.setLocation(newLoc);
+        //ignore below unless necessary for syntax control
+//       Location building = Location.getCharacter(); 
+//       character = null;
+//       Location building = location.setCharacter();
+//       
     }
 
 }
