@@ -5,9 +5,7 @@
  */
 package citybyui.cit260.byuido.view;
 
-import byui.cit260.BYUIDO.control.MapControl;
 import byui.cit260.BYUIDO.model.Location;
-import byui.cit260.BYUIDO.model.Map;
 import byui.pkgdo.BYUIDo;
 
 /**

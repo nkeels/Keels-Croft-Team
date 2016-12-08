@@ -6,8 +6,6 @@
 package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.GameControl;
-import byui.cit260.BYUIDO.control.SaveControl;
-import byui.cit260.BYUIDO.model.Character;
 import byui.cit260.BYUIDO.model.Player;
 import byui.pkgdo.BYUIDo;
 
