@@ -45,14 +45,17 @@ public class GameControl {
         int charisma = 0;
         int personality = 0;
         int stress = 0;
+        String gender = "Male";
 
         character.setCharName(name);
         character.setConfide(confide);
         character.setStress(stress);
         character.setCharisma(charisma);
-
+        character.setGender(gender);
         character.setPersonalityQual(personality);
 
+        BYUIDo.getCurrentGame().setCharacter(character);
+        
         return character;
     }
 

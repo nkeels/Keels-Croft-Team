@@ -9,6 +9,7 @@ import byui.cit260.BYUIDO.control.GameControl;
 import byui.cit260.BYUIDO.control.SaveControl;
 import byui.cit260.BYUIDO.model.Character;
 import byui.cit260.BYUIDO.model.Player;
+import byui.pkgdo.BYUIDo;
 
 /**
  *
@@ -33,7 +34,9 @@ public class CharNameView extends View {
 
         GameControl.createCharacter(charName);
 
-        System.out.println(charName + " was saved correctly. THIS IS A TEST TOO");
+        String characterName = BYUIDo.getCurrentGame().getCharacter().getCharName();
+        
+        System.out.println(characterName + " was saved correctly!!!!");
         return true;
 
     }
