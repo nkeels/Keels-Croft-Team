@@ -8,6 +8,7 @@ package byui.cit260.BYUIDO.control;
 import byui.cit260.BYUIDO.model.Location;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.enumer.Scene;
+import byui.pkgdo.BYUIDo;
 import citybyui.cit260.byuido.view.InArea;
 
 /**
@@ -20,8 +21,12 @@ public class MapControl {
         
     }
 
-    private static void getDisplayMap(Location[][] locations) {
-        
+
+
+    public static Location GetLocation(int row, int column) {
+       Location[][] location = BYUIDo.getCurrentGame().getMap().getLocations();
+       
+       return location[row][column];
     }
 
     public MapControl() {
@@ -68,7 +73,7 @@ public class MapControl {
         locations[4][3].setScene(Scene.FC);
         locations[4][4].setScene(Scene.MD);
 
-        getDisplayMap(locations);
+        BYUIDo.getCurrentGame().getMap().setLocations(locations);
     }
 
     public static void sceneSort() {
