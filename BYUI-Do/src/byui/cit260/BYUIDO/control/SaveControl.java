@@ -11,9 +11,13 @@ package byui.cit260.BYUIDO.control;
  */
 public class SaveControl {
 
-    public static int createCharName(String playersName) {
+    public static int createCharName(Character character) {
         System.out.println("\n*** createCharName function has been called ***");
         return 1;
+    }
+
+    public static int createCharName(int character) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

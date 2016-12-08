@@ -7,6 +7,7 @@ package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.MapControl;
 import byui.cit260.BYUIDO.model.Location;
+import byui.pkgdo.BYUIDo;
 
 /**
  *
@@ -60,7 +61,7 @@ class SelectLocationView extends View {
                 this.move("TP");
                 break;
             case "WM":
-                this.move("WM");
+                this.("WM");
                 break;
             case "NP":
                 this.move("NP");
@@ -119,6 +120,67 @@ class SelectLocationView extends View {
 //       character = null;
 //       Location building = location.setCharacter();
 //       
+    private void porterPark() {
+        Location location = MapControl.GetLocation(0,3);
+        
+        BYUIDo.getCurrentGame().getCharacter().setPlace(location);
+        
+        InArea inAreaView = new InArea();
+        inAreaView.display();
+    }
+
+    private void theRidge() {
+        Location location = MapControl.GetLocation(0, 1);
+    }
+
+    private void aspenVillage() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void tuscanyPlace() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void windsorManor() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void northPoint() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void theWillows() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void ricksBuilding() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void taylorBuilding() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void manwaringCenter() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void romneyBuilding() {
+        MapControl move = new MapControl();
+        move.move();
+    }
+
+    private void sporiBuilding() {
+        MapControl move = new MapControl();
+        move.move();
     }
 
 }

@@ -8,6 +8,7 @@ package byui.cit260.BYUIDO.control;
 import byui.cit260.BYUIDO.model.Game;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.model.Player;
+import byui.cit260.BYUIDO.model.Character;
 import byui.pkgdo.BYUIDo;
 import citbyui.cit260.BYUIDO.exceptions.GameControlException;
 
@@ -17,6 +18,8 @@ import citbyui.cit260.BYUIDO.exceptions.GameControlException;
  */
 public class GameControl {
 
+    
+    
     public static Player createPlayer(String name) {
 
         if (name == null) {
@@ -29,6 +32,31 @@ public class GameControl {
         BYUIDo.setPlayer(player);
 
         return player;
+    }
+
+    public static Character createCharacter(String name) {
+
+        if (name == null) {
+            return null;
+        }
+
+        Character character = new Character();
+        int confide = 0;
+        int charisma = 0;
+        int personality = 0;
+        int stress = 0;
+        String gender = "Male";
+
+        character.setCharName(name);
+        character.setConfide(confide);
+        character.setStress(stress);
+        character.setCharisma(charisma);
+        character.setGender(gender);
+        character.setPersonalityQual(personality);
+
+        BYUIDo.getCurrentGame().setCharacter(character);
+        
+        return character;
     }
 
     public static void createNewGame(Player player) {
@@ -62,5 +90,9 @@ public class GameControl {
 
     static void assignScenesToLocations(Map map) {
         System.out.println("\n Suh dude");
+    }
+
+    public static void setCurrentLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

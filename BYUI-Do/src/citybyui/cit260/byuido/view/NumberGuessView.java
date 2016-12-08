@@ -26,15 +26,15 @@ public class NumberGuessView extends View {
     }
 
     @Override
-    public boolean doAction(String playersNumber) {
+    public boolean doAction(String charactersNumber) {
 
         try {
-            int numberChoice = Integer.parseInt(playersNumber);
+            int numberChoice = Integer.parseInt(charactersNumber);
         } catch (NumberFormatException nf) {
             System.out.println("Enter a whole number between 1 and 10, or enter Q to quit");
             return false;
         }
-        int numberChoice = Integer.parseInt(playersNumber);
+        int numberChoice = Integer.parseInt(charactersNumber);
         try {
             GameControl.numberGuessingGame(numberChoice);
             System.out.println("\nYou got it!!!!");

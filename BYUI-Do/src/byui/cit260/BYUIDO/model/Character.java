@@ -14,16 +14,16 @@ import java.util.Objects;
  */
 public class Character implements Serializable {
 
-    private String charName;
-    private Integer charisma;
-    private Integer stress;
-    private Integer confide;
+    private String charName; //
+    private Integer charisma;//
+    private Integer stress;//
+    private Integer confide;//
     private String gender;
     private Integer personalityQual;
 
     private Game character;
 
-    private Location[] place;
+    private Location place;
     private Character[] person;
 
     public Character() {
@@ -86,11 +86,11 @@ public class Character implements Serializable {
         this.character = character;
     }
 
-    public Location[] getPlace() {
+    public Location getPlace() {
         return place;
     }
 
-    public void setPlace(Location[] place) {
+    public void setPlace(Location place) {
         this.place = place;
     }
 

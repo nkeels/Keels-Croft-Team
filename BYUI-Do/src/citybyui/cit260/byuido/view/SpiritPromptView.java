@@ -15,6 +15,7 @@ import byui.cit260.BYUIDO.enumer.Girl;
 public class SpiritPromptView extends View {
 
     public String message;
+    
 
     public SpiritPromptView() {
         super   ( "\n|------------------------------------------------------------------------------------|"
@@ -35,6 +36,7 @@ public class SpiritPromptView extends View {
                 + "\n|I - Ignore his advice                                                               |"
                 + "\n|Q - Quit                                                                            |"
                 + "\n-------------------------------------------------------------------------------------|");
+        
 
     }
 

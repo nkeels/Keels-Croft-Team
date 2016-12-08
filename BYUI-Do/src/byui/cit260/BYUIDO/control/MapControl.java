@@ -8,6 +8,7 @@ package byui.cit260.BYUIDO.control;
 import byui.cit260.BYUIDO.model.Location;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.enumer.Scene;
+import byui.pkgdo.BYUIDo;
 import citybyui.cit260.byuido.view.InArea;
 
 /**
@@ -17,11 +18,15 @@ import citybyui.cit260.byuido.view.InArea;
 public class MapControl {
 
     static void moveActorsToStartingLocation(Map map) {
-        System.out.println("blah");
+        
     }
 
-    private static void getDisplayMap(Location[][] locations) {
-        System.out.println("hello");
+
+
+    public static Location GetLocation(int row, int column) {
+       Location[][] location = BYUIDo.getCurrentGame().getMap().getLocations();
+       
+       return location[row][column];
     }
 
     public MapControl() {
@@ -68,7 +73,7 @@ public class MapControl {
         locations[4][3].setScene(Scene.FC);
         locations[4][4].setScene(Scene.MD);
 
-        getDisplayMap(locations);
+        BYUIDo.getCurrentGame().getMap().setLocations(locations);
     }
 
     
@@ -88,6 +93,12 @@ public class MapControl {
         System.out.println("\n");
     }
     
+       public void move() {
+        InArea choice = new InArea();
+        choice.display();
+
+    }
+
 
     public static Scene[] bubbleSort(Scene[] sceneList) {
         int n = sceneList.length;
@@ -105,10 +116,5 @@ public class MapControl {
     }
 }
 
-// this function is for character movement    
-////    public void move() {
-//        InArea choice = new InArea();
-//        choice.display();
-//
-//    }
+   
 

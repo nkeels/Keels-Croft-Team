@@ -5,6 +5,8 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.pkgdo.BYUIDo;
+
 /**
  *
  * @author Nick
@@ -54,7 +56,9 @@ public class InArea extends View {
     }
 
     private void searchTheArea() {
-        System.out.println("This function has been called");
+        String sceneDesc = BYUIDo.getCurrentGame().getMap().getLocal().getScene().getDescription();
+        System.out.println(sceneDesc);
+        
     }
 
     private void talkToOldMan() {
