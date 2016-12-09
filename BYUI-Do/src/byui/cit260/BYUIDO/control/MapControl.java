@@ -9,7 +9,10 @@ import byui.cit260.BYUIDO.model.Location;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.enumer.Scene;
 import byui.pkgdo.BYUIDo;
-import citybyui.cit260.byuido.view.InArea;
+import citbyui.cit260.BYUIDO.exceptions.MapControlException;
+import java.awt.Point;
+import byui.cit260.BYUIDO.model.Character;
+
 
 /**
  *
@@ -93,11 +96,38 @@ public class MapControl {
         System.out.println("\n");
     }
     
-       public void move() {
-        InArea choice = new InArea();
-        choice.display();
+     private static void move(Location[][] locations, Character mc, Point coordinates) throws MapControlException {
+        //error control
+        
+        if (locations == null) {
 
+            System.out.println("\nWe can't find your location.");
+            
+        } else if (mc == null) {
+            System.out.println("\nWe can't find your character.");
+            
+        }
+        if (coordinates == null || coordinates.x < 0 || coordinates.x > 5 || coordinates.y < 0 || coordinates.y > 5) {
+            System.out.println("\nCoordinates are invalid.");
+            
+        }
+        
+        //get old location info of character
+        Location oldLoc = BYUIDo.getCurrentGame().getCharacter().getPlace();
+        //get new location coordinates
+        Location newLoc = locations[coordinates.x][coordinates.y];
+        //set character to null
+        oldLoc.setCharacter(null);
+        //assign character to new location
+        newLoc.setCharacter(mc);
+        //set character location to newLoc
+        newLoc.setCharacter(mc);
     }
+        //ignore below unless necessary for syntax control
+        //       Location building = Location.getCharacter(); 
+        //       character = null;
+        //       Location building = location.setCharacter();
+        //  
 
 
     public static Scene[] bubbleSort(Scene[] sceneList) {

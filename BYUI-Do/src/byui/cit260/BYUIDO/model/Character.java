@@ -14,10 +14,10 @@ import java.util.Objects;
  */
 public class Character implements Serializable {
 
-    private String charName; //
-    private Integer charisma;//
-    private Integer stress;//
-    private Integer confide;//
+    private String charName; 
+    private Integer charisma;
+    private Integer stress;
+    private Integer confide;
     private String gender;
     private Integer personalityQual;
 

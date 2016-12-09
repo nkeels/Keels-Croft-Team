@@ -32,7 +32,7 @@ public class BYUIDo implements Serializable {
     }
 
     public static void setPlayer(Player player) {
-        BYUIDo.player = player;
+        BYUIDo.player = player;        
     }
 
     public static void main(String[] args) {
