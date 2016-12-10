@@ -56,7 +56,7 @@ public class MapControl {
         locations[1][1].setScene(Scene.TW); //
         locations[1][2].setScene(Scene.RK);//
         locations[1][3].setScene(Scene.TL); //
-        locations[1][4].setScene(Scene.MC);//
+        locations[1][4].setScene(Scene.MC);////
 
         locations[2][0].setScene(Scene.RN);
         locations[2][1].setScene(Scene.SR);//
