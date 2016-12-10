@@ -51,7 +51,7 @@ class SelectLocationView extends View {
     private void porterPark() {
         Location location = MapControl.GetLocation(0, 3);
 
-        BYUIDo.getCurrentGame().getCharacter().setPlace(location);
+        BYUIDo.getCurrentGame().getCharacter().
 
         InArea inAreaView = new InArea();
         inAreaView.display();

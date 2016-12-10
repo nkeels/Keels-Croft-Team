@@ -26,7 +26,6 @@ public enum BuildingEnum implements Serializable {
     MANWARING(new Point (1,4)),
     ROMNEY(new Point (2,0)),
     spori(new Point (2,1)),
-    
     pulse(new Point(2,2)),
     craze(new Point(2,3)),
     mcdonalds(new Point(2,4)),
