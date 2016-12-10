@@ -46,20 +46,20 @@ public class MapControl {
     private static void assignScenesToLocations(Map map) {
         Location[][] locations = map.getLocations();
 
-        locations[0][0].setScene(Scene.PP);
-        locations[0][1].setScene(Scene.RI);
-        locations[0][2].setScene(Scene.AV);
-        locations[0][3].setScene(Scene.TP);
-        locations[0][4].setScene(Scene.WM);
+        locations[0][0].setScene(Scene.PP); //
+        locations[0][1].setScene(Scene.RI); //
+        locations[0][2].setScene(Scene.AV); // 
+        locations[0][3].setScene(Scene.TP); // 
+        locations[0][4].setScene(Scene.WM); //
 
-        locations[1][0].setScene(Scene.NP);
-        locations[1][1].setScene(Scene.TW);
-        locations[1][2].setScene(Scene.RK);
-        locations[1][3].setScene(Scene.TL);
-        locations[1][4].setScene(Scene.MC);
+        locations[1][0].setScene(Scene.NP); //
+        locations[1][1].setScene(Scene.TW); //
+        locations[1][2].setScene(Scene.RK);//
+        locations[1][3].setScene(Scene.TL); //
+        locations[1][4].setScene(Scene.MC);//
 
         locations[2][0].setScene(Scene.RN);
-        locations[2][1].setScene(Scene.SR);
+        locations[2][1].setScene(Scene.SR);//
         locations[2][2].setScene(Scene.P);
         locations[2][3].setScene(Scene.CR);
         locations[2][4].setScene(Scene.RM);

@@ -47,51 +47,7 @@ class SelectLocationView extends View {
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
 
-        switch (choice) {
-            case "PP":
-                this.move("PP");
-                break;
-            case "RI":
-                this.move("RI");
-                break;
-            case "AV":
-                this.move("AV");
-                break;
-            case "TP":
-                this.move("TP");
-                break;
-            case "WM":
-                this.("WM");
-                break;
-            case "NP":
-                this.move("NP");
-                break;
-            case "TW":
-                this.move("TW");
-                break;
-            case "RB":
-                this.move("RB");
-                break;
-            case "TB":
-                this.move("TB");
-                break;
-            case "MC":
-                this.move("MC");
-                break;
-            case "RM":
-                this.move("RM");
-                break;
-            case "SB":
-                this.move("SR");
-                break;
-            default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
-        }
-        return false;
-    }
-
-         
+        
     private void porterPark() {
         Location location = MapControl.GetLocation(0, 3);
 
