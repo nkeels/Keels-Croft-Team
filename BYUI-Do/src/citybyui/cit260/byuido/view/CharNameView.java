@@ -25,7 +25,8 @@ public class CharNameView extends View {
     @Override
     public boolean doAction(String charName) {
         if (charName.length() < 2) {
-            System.out.println("\nInvalid characters name: "
+            ErrorView.display(this.getClass().getName(),
+                    "\nInvalid characters name: "
                     + "The name must be greater than one character in length");
             return false;
         }
