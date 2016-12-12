@@ -6,6 +6,7 @@
 package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.MapControl;
+import byui.cit260.BYUIDO.enumer.BuildingEnum;
 import byui.cit260.BYUIDO.model.Location;
 import byui.pkgdo.BYUIDo;
 
@@ -49,14 +50,14 @@ class SelectLocationView extends View {
 
         
     private void porterPark() {
-        Location location = MapControl.GetLocation(0, 3);
+        Location location = BuildingEnum.getCoordinates(0, 3);
 
         BYUIDo.getCurrentGame().getCharacter().
 
         InArea inAreaView = new InArea();
         inAreaView.display();
     }
-
+  
     private void theRidge() {
         Location location = MapControl.GetLocation(0, 1);
     }
