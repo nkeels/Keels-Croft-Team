@@ -5,6 +5,7 @@
  */
 package byui.cit260.BYUIDO.model;
 
+import citybyui.cit260.byuido.view.ErrorView;
 import java.awt.Point;
 import java.io.Serializable;
 
@@ -27,7 +28,8 @@ public class Map implements Serializable {
     public Map(int noOfRows, int noOfColumns) {
 
         if (noOfRows < 1 || noOfColumns < 1) {
-            System.out.println(" the # of rows/columns must be > zero");
+            ErrorView.display(this.getClass().getName(), 
+                            " the # of rows/columns must be > zero");
             return;
         }
 

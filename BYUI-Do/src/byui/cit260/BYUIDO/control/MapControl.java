@@ -88,9 +88,9 @@ public class MapControl {
     public void printNumbers(int[] input) {
 
         for (int i = 0; i < input.length; i++) {
-            System.out.print(input[i] + ", ");
+            this.console.print(input[i] + ", ");
         }
-        System.out.println("\n");
+        this.console.println("\n");
     }
     
        public void move() {

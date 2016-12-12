@@ -82,7 +82,7 @@ public class BYUIDo implements Serializable {
         BYUIDo.logFile = new PrintWriter(filePath);
         
         } catch (Throwable te) {
-            System.out.println(te.getMessage());
+            this.console.println(te.getMessage());
             te.printStackTrace();
             startProgramView.display();
         }
@@ -98,7 +98,8 @@ public class BYUIDo implements Serializable {
                 BYUIDo.logFile.close();
             
             } catch (IOException ex) {
-                System.out.println("\nError closing files");
+                ErrorView.display(this.getClass().getName(), 
+                        "\nError closing files");
                 return;
             }
             
