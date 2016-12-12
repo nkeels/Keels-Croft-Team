@@ -5,9 +5,18 @@
  */
 package citybyui.cit260.byuido.view;
 
-import byui.cit260.BYUIDO.control.MapControl;
-import byui.cit260.BYUIDO.enumer.BuildingEnum;
-import byui.cit260.BYUIDO.model.Location;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.ASPENVILLAGE;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.MANWARING;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.NORTHPOINT;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.PORTERPARK;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.RICKS;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.ROMNEY;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.TAYLOR;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.THERIDGE;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.THEWILLOWS;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.TUSCANYPLACE;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.WINDSORMANOR;
+import static byui.cit260.BYUIDO.enumer.BuildingEnum.spori;
 import byui.pkgdo.BYUIDo;
 
 /**
@@ -47,69 +56,103 @@ class SelectLocationView extends View {
     @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
-
+         switch (choice) {
+            case "PP":
+                this.porterPark();
+                break;
+            case "TR":
+                this.theRidge();
+                break;
+            case "AV":
+                this.aspenVillage();
+                break;
+            case "TP":
+                this.tuscanyPlace();
+                break;
+            case "WM":
+                this.windsorManor();
+                break;
+            case "NP":
+                this.northPoint();
+                break;
+            case "TW":
+                this.theWillows();
+                break;
+            case "RB":
+                this.ricksBuilding();
+                break;
+            case "TB":
+                this.taylorBuilding();
+                break;
+            case "MC":
+                this.manwaringCenter();
+                break;
+            case "RM":
+                this.romneyBuilding();
+                break;
+            case "SP":
+                this.sporiBuilding();
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
+         }
+        return true;
+    }
         
     private void porterPark() {
-        Location location = BuildingEnum.getCoordinates(0, 3);
-
-        BYUIDo.getCurrentGame().getCharacter().
-
-        InArea inAreaView = new InArea();
-        inAreaView.display();
+       //get point
+       PORTERPARK.getCoordinates();
+       //get character
+       BYUIDo.getCurrentGame().getCharacter();
+       //get location
+       BYUIDo.getCurrentGame().getMap().getLocations();
+       
+       
     }
   
     private void theRidge() {
-        Location location = MapControl.GetLocation(0, 1);
+        THERIDGE.getCoordinates();
     }
 
     private void aspenVillage() {
-        MapControl move = new MapControl();
-        move.move();
+       ASPENVILLAGE.getCoordinates();
     }
 
     private void tuscanyPlace() {
-        MapControl move = new MapControl();
-        move.move();
+        TUSCANYPLACE.getCoordinates();
     }
 
     private void windsorManor() {
-        MapControl move = new MapControl();
-        move.move();
+       WINDSORMANOR.getCoordinates();
     }
 
     private void northPoint() {
-        MapControl move = new MapControl();
-        move.move();
+        NORTHPOINT.getCoordinates();
     }
 
     private void theWillows() {
-        MapControl move = new MapControl();
-        move.move();
+        THEWILLOWS.getCoordinates();
     }
 
     private void ricksBuilding() {
-        MapControl move = new MapControl();
-        move.move();
+        RICKS.getCoordinates();
     }
 
     private void taylorBuilding() {
-        MapControl move = new MapControl();
-        move.move();
+       TAYLOR.getCoordinates();
     }
 
     private void manwaringCenter() {
-        MapControl move = new MapControl();
-        move.move();
+         MANWARING.getCoordinates();
     }
 
     private void romneyBuilding() {
-        MapControl move = new MapControl();
-        move.move();
+         ROMNEY.getCoordinates();
     }
 
     private void sporiBuilding() {
-        MapControl move = new MapControl();
-        move.move();
+        spori.getCoordinates();
     }
 
 }
