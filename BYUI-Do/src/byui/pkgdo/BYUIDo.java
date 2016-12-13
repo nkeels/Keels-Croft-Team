@@ -22,11 +22,11 @@ import java.util.logging.Logger;
  */
 public class BYUIDo implements Serializable {
 
-    private static Game currentGame;
-    private static Player player;
-    private static PrintWriter outFile;
-    private static BufferedReader inFile;
-    private static PrintWriter logFile;
+    private static Game currentGame = null;
+    private static Player player = null;
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    private static PrintWriter logFile = null;
     
     public static Game getCurrentGame() {
         return currentGame;
