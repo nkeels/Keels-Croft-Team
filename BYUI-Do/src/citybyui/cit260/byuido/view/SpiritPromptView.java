@@ -60,7 +60,7 @@ public class SpiritPromptView extends View {
         SelectLocationView searchLocation = new SelectLocationView();
         searchLocation.display();
 
-        return true;
+        return false;
     }
 
     private void girlList() {

@@ -6,6 +6,7 @@
 package citybyui.cit260.byuido.view;
 
 import byui.cit260.BYUIDO.control.GameControl;
+import byui.cit260.BYUIDO.model.Character;
 import byui.cit260.BYUIDO.model.Player;
 import byui.pkgdo.BYUIDo;
 
@@ -31,7 +32,7 @@ public class CharNameView extends View {
             return false;
         }
 
-        GameControl.createCharacter(charName);
+      Character character = GameControl.createCharacter(charName);
 
         String characterName = BYUIDo.getCurrentGame().getCharacter().getCharName();
         
@@ -43,7 +44,7 @@ public class CharNameView extends View {
     private void displayNextView(Player player) {
         this.console.println("\n=========================================="
                 + "\n The Name " + player.getName()
-                + "\n has been saved.  THIS IS A TEST"
+                + "\n has been saved."
                 + "\n==========================================");
 
         CharNameView nameMenu = new CharNameView();

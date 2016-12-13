@@ -29,7 +29,7 @@ public enum BuildingEnum implements Serializable {
     pulse(new Point(2,2)),
     craze(new Point(2,3)),
     mcdonalds(new Point(2,4)),
-    rmountain(new Point(3,0)), //
+    rmountain(new Point(3,0)), 
     paintball(new Point (3,1)),
     newYorkBurrito(new Point (3,2)), 
     fongs(new Point(3,3)),

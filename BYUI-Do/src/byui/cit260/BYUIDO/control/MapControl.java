@@ -77,7 +77,7 @@ public class MapControl {
         locations[4][3].setScene(Scene.FC);
         locations[4][4].setScene(Scene.MD);
 
-        BYUIDo.getCurrentGame().getCharacter().getPlace();
+//        BYUIDo.getCurrentGame().getCharacter().getPlace();
     }
 
     

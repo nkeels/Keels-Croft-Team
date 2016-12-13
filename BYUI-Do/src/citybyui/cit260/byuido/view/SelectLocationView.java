@@ -105,11 +105,12 @@ class SelectLocationView extends View {
                             "\n*** Invalid Selection *** Try Again");
                     break;
             }
-            return true;
+            InArea searchLocation = new InArea();
+            searchLocation.display();
         } catch (MapControlException ex) {
-            Logger.getLogger(SelectLocationView.class.getName()).log(Level.SEVERE, null, ex);
+            ErrorView.display("SelectLoctaionView", "Invalid location");
         }
-        return false;
+        return true;
     }
 
     private void porterPark() throws MapControlException {

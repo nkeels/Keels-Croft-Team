@@ -37,7 +37,7 @@ public class InArea extends View {
                 break;
             case "T":
                 this.talkToOldMan();
-                break;
+                 break;
             case "A":
                 this.goAdventure();
                 break;
