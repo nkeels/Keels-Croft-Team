@@ -45,7 +45,7 @@ public class MainMenuView extends View {
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.display();
                 break;
-            case "S":
+             case "S":
                 this.saveGame();
                 break;
             default:
