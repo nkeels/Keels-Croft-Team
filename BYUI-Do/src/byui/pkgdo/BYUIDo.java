@@ -7,6 +7,7 @@ package byui.pkgdo;
 
 import byui.cit260.BYUIDO.model.Game;
 import byui.cit260.BYUIDO.model.Player;
+import citybyui.cit260.byuido.view.ErrorView;
 import citybyui.cit260.byuido.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -83,7 +84,7 @@ public class BYUIDo implements Serializable {
         BYUIDo.logFile = new PrintWriter(filePath);
         
         } catch (Throwable te) {
-            System.out.println(te.getMessage());
+            ErrorView.display("BYUIDo",te.getMessage());
             te.printStackTrace();
             startProgramView.display();
         }
@@ -99,7 +100,8 @@ public class BYUIDo implements Serializable {
                 BYUIDo.logFile.close();
             
             } catch (IOException ex) {
-                System.out.println("\nError closing files");
+                ErrorView.display("BYUIDo", 
+                        "\nError closing files");
                 return;
             }
             

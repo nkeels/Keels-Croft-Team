@@ -23,7 +23,7 @@ public class StartProgramView extends View {
 
     private void displayBanner() {
 
-        System.out.println(
+        this.console.println(
                   "\n|------------------------------------------------|"
                 + "\n|                 Welcome!!!                     |"
                 + "\n|------------------------------------------------|"
@@ -46,14 +46,16 @@ public class StartProgramView extends View {
     @Override
     public boolean doAction(String playersName) {
         if (playersName.length() < 2) {
-            System.out.println("\nInvalid players name: "
+            ErrorView.display(this.getClass().getName(),
+                    "\nInvalid players name: "
                     + "The name must be greater than one character in length");
             return false;
         }
         Player player = GameControl.createPlayer(playersName);
 
         if (player == null) {
-            System.out.println("\nError creating the player.");
+            ErrorView.display(this.getClass().getName(),
+                    "\nError creating the player.");
             return false;
         }
 
@@ -63,7 +65,7 @@ public class StartProgramView extends View {
     }
 
     private void displayNextView(Player player) {
-        System.out.println("\n==================================================="
+        this.console.println("\n==================================================="
                 + "\nWelcome to the school of BYU-I, " + player.getName() + "! May your"
                 + "\ndreams of marriage ever be in your favor!"
                 + "\n===================================================");

@@ -36,6 +36,7 @@ public abstract class View implements ViewInterface {
     public void display() {
         boolean done = false;
         do {
+            this.console.println(this.displayMessage);
             String value = this.getInput();
             if (value.toUpperCase().equals("Q")) {
                 return;
@@ -52,9 +53,9 @@ public abstract class View implements ViewInterface {
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + this.displayMessage);
+            this.console.println("\n" + this.displayMessage);
 
-            try { // does this go here based on page 15?
+            try { // does this go here based on page
                 value = this.keyboard.readLine();
             } catch (IOException ex) {
                 Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
@@ -62,7 +63,8 @@ public abstract class View implements ViewInterface {
             value = value.trim();
 
             if (value.length() < 1) {
-                System.out.println("\nInvalid value: value cannot be blank");
+                ErrorView.display(this.getClass().getName(), 
+                                "\nInvalid value: value cannot be blank");
                 continue;
             }
             break;

@@ -26,7 +26,8 @@ public class CharNameView extends View {
     @Override
     public boolean doAction(String charName) {
         if (charName.length() < 2) {
-            System.out.println("\nInvalid characters name: "
+            ErrorView.display(this.getClass().getName(),
+                    "\nInvalid characters name: "
                     + "The name must be greater than one character in length");
             return false;
         }
@@ -35,13 +36,13 @@ public class CharNameView extends View {
 
         String characterName = BYUIDo.getCurrentGame().getCharacter().getCharName();
         
-        System.out.println(characterName + " was saved correctly!!!!");
+        this.console.println(characterName + " was saved correctly!!!!");
         return true;
 
     }
 
     private void displayNextView(Player player) {
-        System.out.println("\n=========================================="
+        this.console.println("\n=========================================="
                 + "\n The Name " + player.getName()
                 + "\n has been saved."
                 + "\n==========================================");
