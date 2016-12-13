@@ -11,8 +11,11 @@ import byui.cit260.BYUIDO.model.Player;
 import byui.cit260.BYUIDO.model.Character;
 import byui.pkgdo.BYUIDo;
 import citbyui.cit260.BYUIDO.exceptions.GameControlException;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import static jdk.nashorn.tools.ShellFunctions.input;
 
 /**
  *
@@ -108,5 +111,17 @@ public class GameControl {
         }
 
 }
+    public static void getSavedGame(String filepath) throws GameControlException{
+        Game game = null;
+        
+        try(FileInputStream fops = new FileInputStream(filepath)) {
+            ObjectInputStream input = new ObjectInputStream(fops);
+            
+            game = (Game) input.readObject();
+        } catch (Exception ex) {
+            throw new GameControlException(ex.getMessage());
+        }
+        BYUIDo.setCurrentGame(game);
     
+        }
 }
