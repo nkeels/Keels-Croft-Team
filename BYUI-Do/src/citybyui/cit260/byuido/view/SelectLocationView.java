@@ -5,6 +5,7 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.MapControl;
 import static byui.cit260.BYUIDO.enumer.BuildingEnum.ASPENVILLAGE;
 import static byui.cit260.BYUIDO.enumer.BuildingEnum.MANWARING;
 import static byui.cit260.BYUIDO.enumer.BuildingEnum.NORTHPOINT;
@@ -17,7 +18,12 @@ import static byui.cit260.BYUIDO.enumer.BuildingEnum.THEWILLOWS;
 import static byui.cit260.BYUIDO.enumer.BuildingEnum.TUSCANYPLACE;
 import static byui.cit260.BYUIDO.enumer.BuildingEnum.WINDSORMANOR;
 import static byui.cit260.BYUIDO.enumer.BuildingEnum.spori;
+import byui.cit260.BYUIDO.model.Location;
 import byui.pkgdo.BYUIDo;
+import citbyui.cit260.BYUIDO.exceptions.MapControlException;
+import java.awt.Point;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -55,104 +61,183 @@ class SelectLocationView extends View {
 
     @Override
     public boolean doAction(String choice) {
-        choice = choice.toUpperCase();
-         switch (choice) {
-            case "PP":
-                this.porterPark();
-                break;
-            case "TR":
-                this.theRidge();
-                break;
-            case "AV":
-                this.aspenVillage();
-                break;
-            case "TP":
-                this.tuscanyPlace();
-                break;
-            case "WM":
-                this.windsorManor();
-                break;
-            case "NP":
-                this.northPoint();
-                break;
-            case "TW":
-                this.theWillows();
-                break;
-            case "RB":
-                this.ricksBuilding();
-                break;
-            case "TB":
-                this.taylorBuilding();
-                break;
-            case "MC":
-                this.manwaringCenter();
-                break;
-            case "RM":
-                this.romneyBuilding();
-                break;
-            case "SP":
-                this.sporiBuilding();
-                break;
-            default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
-         }
-        return true;
-    }
-        
-    private void porterPark() {
-       //get point
-       PORTERPARK.getCoordinates();
-       //get character
-       BYUIDo.getCurrentGame().getCharacter();
-       //get location
-       BYUIDo.getCurrentGame().getMap().getLocations();
-       
-       
-    }
-  
-    private void theRidge() {
-        THERIDGE.getCoordinates();
+        try {
+            choice = choice.toUpperCase();
+            switch (choice) {
+                case "PP":
+                    this.porterPark();
+                    break;
+                case "TR":
+                    this.theRidge();
+                    break;
+                case "AV":
+                    this.aspenVillage();
+                    break;
+                case "TP":
+                    this.tuscanyPlace();
+                    break;
+                case "WM":
+                    this.windsorManor();
+                    break;
+                case "NP":
+                    this.northPoint();
+                    break;
+                case "TW":
+                    this.theWillows();
+                    break;
+                case "RB":
+                    this.ricksBuilding();
+                    break;
+                case "TB":
+                    this.taylorBuilding();
+                    break;
+                case "MC":
+                    this.manwaringCenter();
+                    break;
+                case "RM":
+                    this.romneyBuilding();
+                    break;
+                case "SP":
+                    this.sporiBuilding();
+                    break;
+                default:
+                    System.out.println("\n*** Invalid Selection *** Try Again");
+                    break;
+            }
+            return true;
+        } catch (MapControlException ex) {
+            Logger.getLogger(SelectLocationView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
 
-    private void aspenVillage() {
-       ASPENVILLAGE.getCoordinates();
+    private void porterPark() throws MapControlException {
+        //get point
+        Point coordinates = PORTERPARK.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
+
     }
 
-    private void tuscanyPlace() {
-        TUSCANYPLACE.getCoordinates();
+    private void theRidge() throws MapControlException {
+        Point coordinates = THERIDGE.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
     }
 
-    private void windsorManor() {
-       WINDSORMANOR.getCoordinates();
+    private void aspenVillage() throws MapControlException {
+        Point coordinates = ASPENVILLAGE.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
     }
 
-    private void northPoint() {
-        NORTHPOINT.getCoordinates();
+    private void tuscanyPlace() throws MapControlException {
+        Point coordinates = TUSCANYPLACE.getCoordinates();
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
     }
 
-    private void theWillows() {
-        THEWILLOWS.getCoordinates();
+    private void windsorManor() throws MapControlException {
+
+        Point coordinates = WINDSORMANOR.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+         MapControl.move(locations, mc, coordinates);
     }
 
-    private void ricksBuilding() {
-        RICKS.getCoordinates();
+    private void northPoint() throws MapControlException {
+
+        Point coordinates = NORTHPOINT.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+         MapControl.move(locations, mc, coordinates);
     }
 
-    private void taylorBuilding() {
-       TAYLOR.getCoordinates();
+    private void theWillows() throws MapControlException {
+
+        Point coordinates = THEWILLOWS.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+         MapControl.move(locations, mc, coordinates);
     }
 
-    private void manwaringCenter() {
-         MANWARING.getCoordinates();
+    private void ricksBuilding() throws MapControlException {
+
+        Point coordinates = RICKS.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
     }
 
-    private void romneyBuilding() {
-         ROMNEY.getCoordinates();
+    private void taylorBuilding() throws MapControlException {
+
+        Point coordinates = TAYLOR.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
     }
 
-    private void sporiBuilding() {
+    private void manwaringCenter() throws MapControlException {
+
+        Point coordinates = MANWARING.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
+    }
+
+    private void romneyBuilding() throws MapControlException {
+        ROMNEY.getCoordinates();
+        Point coordinates = THERIDGE.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
+    }
+
+    private void sporiBuilding() throws MapControlException {
         spori.getCoordinates();
+        Point coordinates = THERIDGE.getCoordinates();
+        //get character
+        byui.cit260.BYUIDO.model.Character mc = BYUIDo.getCurrentGame().getCharacter();
+        //get location
+        Location[][] locations = BYUIDo.getCurrentGame().getMap().getLocations();
+        //call move function
+        MapControl.move(locations, mc, coordinates);
     }
 
 }

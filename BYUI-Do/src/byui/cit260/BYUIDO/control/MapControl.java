@@ -96,7 +96,7 @@ public class MapControl {
         System.out.println("\n");
     }
     
-     private static void move(Location[][] locations, Character mc, Point coordinates) throws MapControlException {
+     public static void move(Location[][] locations, Character mc, Point coordinates) throws MapControlException {
         //error control
         
         if (locations == null) {
