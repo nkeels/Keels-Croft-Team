@@ -11,6 +11,8 @@ import byui.cit260.BYUIDO.model.Player;
 import byui.cit260.BYUIDO.model.Character;
 import byui.pkgdo.BYUIDo;
 import citbyui.cit260.BYUIDO.exceptions.GameControlException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 /**
  *
@@ -95,4 +97,16 @@ public class GameControl {
     public static void setCurrentLocation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    public static void saveGame(Game game, String filepath) throws GameControlException{
+        try(FileOutputStream fops = new FileOutputStream(filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(game);
+        } catch (Exception ex) {
+            throw new GameControlException(ex.getMessage());
+        }
+
+}
+    
 }

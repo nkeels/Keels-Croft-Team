@@ -42,7 +42,7 @@ public class HelpMenuView extends View {
                 break;
             case "M":
                 this.howToMove();
-                this.sceneSort();
+
                 break;
             case "L":
                 this.listStats();
@@ -80,21 +80,12 @@ public class HelpMenuView extends View {
         this.console.println("\n You move your character by choosing"
                 + "\n a date location, or a general location"
                 + "\n and select people within areas to talk to.");
-    }
 
-    public static void sceneSort() {
-        Scene[] scenes = Scene.values();
-        int n = scenes.length;
-        int k;
-        //sort the enum
-        Scene[] places = MapControl.bubbleSort(scenes);
-        //print a report of locations (place in the view layer)
-        for (Scene nextScene : places) {
-            String description = nextScene.getDescription();
-            String scene = nextScene.name();
-            System.out.println(scene + " " + description);
+        Scene[] scenes = MapControl.sceneSort();
+        for (Scene scene : scenes) {
+            this.console.println(scene.getDisplaySymbol() + " " + scene.getDescription());
         }
-
+        return;
     }
 
     private void listStats() {
