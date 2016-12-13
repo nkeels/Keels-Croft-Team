@@ -46,7 +46,8 @@ public class MainMenuView extends View {
                 helpMenu.display();
                 break;
              case "S":
-                this.saveGame();
+                SaveGameView saveGame = new SaveGameView();
+                saveGame.display();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -83,15 +84,6 @@ public class MainMenuView extends View {
 
     
 
-        private void saveGame() {
-        this.console.println("\n\nEnter the file Path for the file where the game "
-                        + "is to be saved");
-        String filePath = this.getInput();
         
-        try{
-            GameControl.saveGame(BYUIDo.getCurrentGame(), filePath);
-        }catch (Exception ex) {
-            ErrorView.display("MainMenuView", ex.getMessage());
-        }
-    }
-}
+    
+
