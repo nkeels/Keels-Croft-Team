@@ -35,13 +35,13 @@ public class CharNameView extends View {
 
         String characterName = BYUIDo.getCurrentGame().getCharacter().getCharName();
         
-        System.out.println(characterName + " was saved correctly!!!!");
+        this.console.println(characterName + " was saved correctly!!!!");
         return true;
 
     }
 
     private void displayNextView(Player player) {
-        System.out.println("\n=========================================="
+        this.console.println("\n=========================================="
                 + "\n The Name " + player.getName()
                 + "\n has been saved.  THIS IS A TEST"
                 + "\n==========================================");
