@@ -89,7 +89,7 @@ public class GameControl {
     }
 
     static void assignScenesToLocations(Map map) {
-        System.out.println("\n Suh dude");
+       System.out.println("\n Suh dude");
     }
 
     public static void setCurrentLocation() {

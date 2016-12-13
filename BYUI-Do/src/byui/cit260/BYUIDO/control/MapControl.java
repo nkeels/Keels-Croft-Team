@@ -12,6 +12,7 @@ import byui.pkgdo.BYUIDo;
 import citbyui.cit260.BYUIDO.exceptions.MapControlException;
 import java.awt.Point;
 import byui.cit260.BYUIDO.model.Character;
+import citybyui.cit260.byuido.view.ErrorView;
 
 
 /**
@@ -91,7 +92,7 @@ public class MapControl {
     public void printNumbers(int[] input) {
 
         for (int i = 0; i < input.length; i++) {
-            this.console.print(input[i] + ", ");
+            this.console.println(input[i] + ", ");
         }
         this.console.println("\n");
     }
@@ -101,14 +102,17 @@ public class MapControl {
         
         if (locations == null) {
 
-            System.out.println("\nWe can't find your location.");
+            ErrorView.display("MapControl",
+                    "\nWe can't find your location.");
             
         } else if (mc == null) {
-            System.out.println("\nWe can't find your character.");
+            ErrorView.display("MapControl",
+                    "\nWe can't find your character.");
             
         }
         if (coordinates == null || coordinates.x < 0 || coordinates.x > 5 || coordinates.y < 0 || coordinates.y > 5) {
-            System.out.println("\nCoordinates are invalid.");
+            ErrorView.display("MapControl",
+                    "\nCoordinates are invalid.");
             
         }
         

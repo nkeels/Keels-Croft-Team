@@ -49,7 +49,8 @@ public class MainMenuView extends View {
                 this.saveGame();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 break;
 
         }
@@ -65,12 +66,12 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        System.out.println("***startExisting Game function called ***");
+        this.console.println("***startExisting Game function called ***");
     }
 
     
 
     private void saveGame() {
-        System.out.println("***saveGame function called ***");
+        this.console.println("***saveGame function called ***");
     }
 }

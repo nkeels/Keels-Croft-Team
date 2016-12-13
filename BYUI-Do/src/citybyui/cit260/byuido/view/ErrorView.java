@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 public class ErrorView {
     private static final PrintWriter errorFile = BYUIDo.getOutFile();
     private static final PrintWriter logFile = BYUIDo.getLogFile();
+    
     public static void display(String className, String errorMessage) {
         
         errorFile.println(

@@ -52,7 +52,8 @@ public class SpiritPromptView extends View {
                 this.ignoreIt();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 break;
 
         }
@@ -66,13 +67,13 @@ public class SpiritPromptView extends View {
         Girl[] list = Girl.values();
         Girl[] list2 = GirlControl.doInsertionSort(list);
         for (Girl girl : list2) {
-            System.out.println(girl.getName());
+            this.console.println(girl.getName());
             
         }
     }
 
     private void ignoreIt() {
-        System.out.println("\n You thank your friend but decline their offer for information,"
+        this.console.println("\n You thank your friend but decline their offer for information,"
                 + "\n instead deciding to go and look for yourself.");
     }
 }

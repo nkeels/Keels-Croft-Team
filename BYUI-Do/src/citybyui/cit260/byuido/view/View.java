@@ -53,7 +53,7 @@ public abstract class View implements ViewInterface {
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + this.displayMessage);
+            this.console.println("\n" + this.displayMessage);
 
             try { // does this go here based on page
                 value = this.keyboard.readLine();
