@@ -5,10 +5,12 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import byui.cit260.BYUIDO.enumer.BuildingEnum;
 import byui.cit260.BYUIDO.model.Game;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.model.Player;
 import byui.cit260.BYUIDO.model.Character;
+import byui.cit260.BYUIDO.model.Location;
 import byui.pkgdo.BYUIDo;
 import citbyui.cit260.BYUIDO.exceptions.GameControlException;
 
@@ -46,6 +48,7 @@ public class GameControl {
         int personality = 0;
         int stress = 0;
         String gender = "Male";
+        
 
         character.setCharName(name);
         character.setConfide(confide);
@@ -53,6 +56,11 @@ public class GameControl {
         character.setCharisma(charisma);
         character.setGender(gender);
         character.setPersonalityQual(personality);
+        
+        
+        Location[][] array = BYUIDo.getCurrentGame().getMap().getLocations();
+        Location startLocation = array[BuildingEnum.TAYLOR.getCoordinates().x][BuildingEnum.TAYLOR.getCoordinates().y];
+        character.setPlace(startLocation);
 
         BYUIDo.getCurrentGame().setCharacter(character);
         
