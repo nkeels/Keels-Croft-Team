@@ -23,7 +23,7 @@ public class Character implements Serializable {
 
     private Game character;
 
-    private Point cooordinate;
+    private Location place;
     private Character[] person;
 
     public Character() {
