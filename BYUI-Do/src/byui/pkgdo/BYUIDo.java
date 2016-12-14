@@ -84,7 +84,7 @@ public class BYUIDo implements Serializable {
         BYUIDo.logFile = new PrintWriter(filePath);
         
         } catch (Throwable te) {
-            ErrorView.display("BYUIDo",te.getMessage());
+          ErrorView.display("BYUIDo",te.getMessage());
             te.printStackTrace();
             startProgramView.display();
         }
