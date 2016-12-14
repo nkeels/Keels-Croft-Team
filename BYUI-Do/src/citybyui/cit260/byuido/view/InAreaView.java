@@ -11,9 +11,9 @@ import byui.pkgdo.BYUIDo;
  *
  * @author Nick
  */
-public class InArea extends View {
+public class InAreaView extends View {
 
-    public InArea() {
+    public InAreaView() {
         super("\n"
                 + "\n----------------------------------------------------"
                 + "\n| What do you do?                                  |"
