@@ -108,7 +108,7 @@ class SelectLocationView extends View {
                             "\n*** Invalid Selection *** Try Again");
                     break;
             }
-            InArea searchLocation = new InArea();
+            InAreaView searchLocation = new InAreaView();
             searchLocation.display();
         } catch (MapControlException ex) {
             ErrorView.display("SelectLoctaionView", "Invalid location");

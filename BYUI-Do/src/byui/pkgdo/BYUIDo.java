@@ -10,6 +10,7 @@ import byui.cit260.BYUIDO.model.Player;
 import citybyui.cit260.byuido.view.ErrorView;
 import citybyui.cit260.byuido.view.StartProgramView;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -70,34 +71,36 @@ public class BYUIDo implements Serializable {
     }
 
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 //open character stream files for end user input/output
         BYUIDo.inFile = new BufferedReader(new InputStreamReader(System.in));
         BYUIDo.outFile = new PrintWriter(System.out, true);
         
+        String filePath = "log.txt";
+        BYUIDo.logFile = new PrintWriter(filePath);
         
         StartProgramView startProgramView = new StartProgramView();
         try {
             startProgramView.display();
 //open log file
-        String filePath = "log.txt";
-        BYUIDo.logFile = new PrintWriter(filePath);
+        
         
         } catch (Throwable te) {
             ErrorView.display("BYUIDo",te.getMessage());
-            te.printStackTrace();
             startProgramView.display();
         }
         finally {
             try {
-                if (BYUIDo.inFile != null)
+                if (BYUIDo.inFile != null){
                 BYUIDo.inFile.close();
+                }
                 
-                if (BYUIDo.outFile != null)
+                else if (BYUIDo.outFile != null){
                 BYUIDo.outFile.close();
-            
-                if (BYUIDo.logFile != null)
+                }
+                else if (BYUIDo.logFile != null){
                 BYUIDo.logFile.close();
+                }
             
             } catch (IOException ex) {
                 ErrorView.display("BYUIDo", 

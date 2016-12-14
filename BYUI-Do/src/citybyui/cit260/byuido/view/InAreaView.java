@@ -5,15 +5,16 @@
  */
 package citybyui.cit260.byuido.view;
 
+import byui.cit260.BYUIDO.control.GirlControl;
 import byui.pkgdo.BYUIDo;
 
 /**
  *
  * @author Nick
  */
-public class InArea extends View {
+public class InAreaView extends View {
 
-    public InArea() {
+    public InAreaView() {
         super("\n"
                 + "\n----------------------------------------------------"
                 + "\n| What do you do?                                  |"
@@ -22,6 +23,7 @@ public class InArea extends View {
                 + "\n|T - Talk a random person                          |"
                 + "\n|A - Adventure the area                            |"
                 + "\n|H - Get help on how to play the game              |"
+                + "\n|P - Print out list                                |"
                 + "\n|S - Save game                                     |"
                 + "\n|Q - Quit                                          |"
                 + "\n----------------------------------------------------");
@@ -46,11 +48,12 @@ public class InArea extends View {
                 helpMenu.display();
             case "S":
                 this.saveGame();
+            case "P":
+                GirlControl.PrintGirlReport(choice);
                 break;
-            default:
+                default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
-
         }
         return false;
     }
