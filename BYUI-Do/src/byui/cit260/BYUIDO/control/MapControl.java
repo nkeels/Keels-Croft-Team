@@ -121,11 +121,7 @@ public class MapControl {
         //set character location to newLoc
         newLoc.setCharacter(mc);
     }
-        //ignore below unless necessary for syntax control
-        //       Location building = Location.getCharacter(); 
-        //       character = null;
-        //       Location building = location.setCharacter();
-        //  
+          
 
 
     public static Scene[] bubbleSort(Scene[] sceneList) {
