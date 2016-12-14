@@ -20,9 +20,9 @@ import java.util.logging.Logger;
 public abstract class View implements ViewInterface {
 
     protected String displayMessage;
-    
+
     protected final BufferedReader keyboard = BYUIDo.getInFile();
-    
+
     protected final PrintWriter console = BYUIDo.getOutFile();
 
     public View() {
@@ -34,9 +34,10 @@ public abstract class View implements ViewInterface {
 
     @Override
     public void display() {
-        boolean done = false;
+        boolean done = true;
+       
         do {
-            this.console.println(this.displayMessage);
+//            this.console.println(this.displayMessage);
             String value = this.getInput();
             if (value.toUpperCase().equals("Q")) {
                 return;
@@ -44,11 +45,12 @@ public abstract class View implements ViewInterface {
 
             done = this.doAction(value);
         } while (!done);
+        
     }
 
     @Override
     public String getInput() {
-      
+
         String value = "";
         boolean valid = false;
 
@@ -63,8 +65,8 @@ public abstract class View implements ViewInterface {
             value = value.trim();
 
             if (value.length() < 1) {
-               ErrorView.display(this.getClass().getName(), 
-                                "\nInvalid value: value cannot be blank");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid value: value cannot be blank");
                 continue;
             }
             break;
