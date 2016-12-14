@@ -51,7 +51,7 @@ public class ActionMenuView extends View {
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
-                                "\n*** Invalid Selection *** Try Again");
+                        "\n*** Invalid Selection *** Try Again");
                 break;
 
         }

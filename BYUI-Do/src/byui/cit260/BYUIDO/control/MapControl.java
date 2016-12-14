@@ -14,7 +14,6 @@ import java.awt.Point;
 import byui.cit260.BYUIDO.model.Character;
 import citybyui.cit260.byuido.view.ErrorView;
 
-
 /**
  *
  * @author Nick
@@ -22,15 +21,13 @@ import citybyui.cit260.byuido.view.ErrorView;
 public class MapControl {
 
     static void moveActorsToStartingLocation(Map map) {
-        
+
     }
 
-
-
     public static Location GetLocation(int row, int column) {
-       Location[][] location = BYUIDo.getCurrentGame().getMap().getLocations();
-       
-       return location[row][column];
+        Location[][] location = BYUIDo.getCurrentGame().getMap().getLocations();
+
+        return location[row][column];
     }
 
     public MapControl() {
@@ -47,16 +44,16 @@ public class MapControl {
     private static void assignScenesToLocations(Map map) {
         Location[][] locations = map.getLocations();
 
-        locations[0][0].setScene(Scene.PP); 
-        locations[0][1].setScene(Scene.RI); 
-        locations[0][2].setScene(Scene.AV); 
-        locations[0][3].setScene(Scene.TP); 
-        locations[0][4].setScene(Scene.WM); 
+        locations[0][0].setScene(Scene.PP);
+        locations[0][1].setScene(Scene.RI);
+        locations[0][2].setScene(Scene.AV);
+        locations[0][3].setScene(Scene.TP);
+        locations[0][4].setScene(Scene.WM);
 
-        locations[1][0].setScene(Scene.NP); 
-        locations[1][1].setScene(Scene.TW); 
+        locations[1][0].setScene(Scene.NP);
+        locations[1][1].setScene(Scene.TW);
         locations[1][2].setScene(Scene.RK);
-        locations[1][3].setScene(Scene.TL); 
+        locations[1][3].setScene(Scene.TL);
         locations[1][4].setScene(Scene.MC);
 
         locations[2][0].setScene(Scene.RN);
@@ -77,10 +74,7 @@ public class MapControl {
         locations[4][3].setScene(Scene.FC);
         locations[4][4].setScene(Scene.MD);
 
-
     }
-
-    
 
     public static void swapNumbers(int s1, int j, Scene[] sceneList) {
         Scene temp;
@@ -89,27 +83,25 @@ public class MapControl {
         sceneList[j] = temp;
     }
 
-   
-    
-     public static void move(Location[][] locations, Character mc, Point coordinates) throws MapControlException {
+    public static void move(Location[][] locations, Character mc, Point coordinates) throws MapControlException {
         //error control
-        
+
         if (locations == null) {
 
             ErrorView.display("MapControl",
                     "\nWe can't find your location.");
-            
+
         } else if (mc == null) {
             ErrorView.display("MapControl",
                     "\nWe can't find your character.");
-            
+
         }
         if (coordinates == null || coordinates.x < 0 || coordinates.x > 5 || coordinates.y < 0 || coordinates.y > 5) {
             ErrorView.display("MapControl",
                     "\nCoordinates are invalid.");
-            
+
         }
-        
+
         //get old location info of character
         Location oldLoc = BYUIDo.getCurrentGame().getCharacter().getPlace();
         //get new location coordinates
@@ -121,8 +113,6 @@ public class MapControl {
         //set character location to newLoc
         newLoc.setCharacter(mc);
     }
-          
-
 
     public static Scene[] bubbleSort(Scene[] sceneList) {
         int n = sceneList.length;
@@ -138,7 +128,8 @@ public class MapControl {
         return sceneList;
 
     }
-      public static Scene[] sceneSort() {
+
+    public static Scene[] sceneSort() {
         Scene[] scenes = Scene.values();
         int n = scenes.length;
         int k;
@@ -148,11 +139,8 @@ public class MapControl {
         for (Scene nextScene : places) {
             String description = nextScene.getDescription();
             String scene = nextScene.name();
-        
+
         }
         return scenes;
     }
 }
-
-   
-

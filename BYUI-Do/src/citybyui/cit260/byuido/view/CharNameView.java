@@ -32,10 +32,10 @@ public class CharNameView extends View {
             return false;
         }
 
-      Character character = GameControl.createCharacter(charName);
+        Character character = GameControl.createCharacter(charName);
 
         String characterName = BYUIDo.getCurrentGame().getCharacter().getCharName();
-        
+
         this.console.println(characterName + " was saved correctly!!!!");
         return true;
 

@@ -34,7 +34,7 @@ public class GirlControl {
 
     public static void PrintGirlReport(String outputLocation) {
         Girl[] girls = Girl.values();
-        
+
         try (PrintWriter out = new PrintWriter(outputLocation)) {
 
             out.println("\n\n         Girl List Report         ");

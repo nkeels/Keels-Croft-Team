@@ -24,8 +24,6 @@ import java.io.ObjectOutputStream;
  */
 public class GameControl {
 
-    
-    
     public static Player createPlayer(String name) {
 
         if (name == null) {
@@ -52,7 +50,6 @@ public class GameControl {
         int personality = 0;
         int stress = 0;
         String gender = "Male";
-        
 
         character.setCharName(name);
         character.setConfide(confide);
@@ -60,14 +57,13 @@ public class GameControl {
         character.setCharisma(charisma);
         character.setGender(gender);
         character.setPersonalityQual(personality);
-        
-        
+
         Location[][] array = BYUIDo.getCurrentGame().getMap().getLocations();
         Location startLocation = array[BuildingEnum.TAYLOR.getCoordinates().x][BuildingEnum.TAYLOR.getCoordinates().y];
         character.setPlace(startLocation);
 
         BYUIDo.getCurrentGame().setCharacter(character);
-        
+
         return character;
     }
 
@@ -101,34 +97,35 @@ public class GameControl {
     }
 
     static void assignScenesToLocations(Map map) {
-       System.out.println("\n Suh dude");
+        System.out.println("\n Suh dude");
     }
 
     public static void setCurrentLocation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public static void saveGame(Game game, String filepath) throws GameControlException{
-        try(FileOutputStream fops = new FileOutputStream(filepath)) {
+
+    public static void saveGame(Game game, String filepath) throws GameControlException {
+        try (FileOutputStream fops = new FileOutputStream(filepath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
-            
+
             output.writeObject(game);
         } catch (Exception ex) {
             throw new GameControlException(ex.getMessage());
         }
 
-}
-    public static void getSavedGame(String filepath) throws GameControlException{
+    }
+
+    public static void getSavedGame(String filepath) throws GameControlException {
         Game game = null;
-        
-        try(FileInputStream fops = new FileInputStream(filepath)) {
+
+        try (FileInputStream fops = new FileInputStream(filepath)) {
             ObjectInputStream input = new ObjectInputStream(fops);
-            
+
             game = (Game) input.readObject();
         } catch (Exception ex) {
             throw new GameControlException(ex.getMessage());
         }
         BYUIDo.setCurrentGame(game);
-    
-        }
+
+    }
 }
