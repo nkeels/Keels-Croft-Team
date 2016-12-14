@@ -10,6 +10,7 @@ import byui.cit260.BYUIDO.model.Game;
 import byui.cit260.BYUIDO.model.Map;
 import byui.cit260.BYUIDO.model.Player;
 import byui.cit260.BYUIDO.model.Character;
+import byui.cit260.BYUIDO.model.Girl;
 import byui.cit260.BYUIDO.model.Location;
 import byui.pkgdo.BYUIDo;
 import citbyui.cit260.BYUIDO.exceptions.GameControlException;
@@ -66,6 +67,28 @@ public class GameControl {
 
         return character;
     }
+    
+    public static Girl createGirl(String name) {
+        //Was this what you were wanting/envisioning? 
+        if (name == null) {
+            return null;
+        }
+
+        Girl chick = new Girl();
+        
+        String location = "location";
+
+        Girl.setGirlName(girlName);
+     
+        Location[][] array = BYUIDo.getCurrentGame().getMap().getLocations();
+        Location startLocation = array[BuildingEnum.THERIDGE.getCoordinates().x][BuildingEnum.TAYLOR.getCoordinates().y];
+        Girl.setPlace(startLocation);
+
+        BYUIDo.getCurrentGame().setCharacter(character);
+
+        return chick;
+    }
+    
 
     public static void createNewGame(Player player) {
 
