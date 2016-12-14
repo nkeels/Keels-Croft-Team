@@ -100,6 +100,9 @@ class SelectLocationView extends View {
                 case "SP":
                     this.sporiBuilding();
                     break;
+                case "Print":
+                    MapControl.print(choice);
+                    break;
                 default:
                     ErrorView.display(this.getClass().getName(),
                             "\n*** Invalid Selection *** Try Again");

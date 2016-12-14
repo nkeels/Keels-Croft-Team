@@ -13,6 +13,8 @@ import citbyui.cit260.BYUIDO.exceptions.MapControlException;
 import java.awt.Point;
 import byui.cit260.BYUIDO.model.Character;
 import citybyui.cit260.byuido.view.ErrorView;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -113,6 +115,11 @@ public class MapControl {
         //set character location to newLoc
         newLoc.setCharacter(mc);
     }
+    //ignore below unless necessary for syntax control
+    //       Location building = Location.getCharacter(); 
+    //       character = null;
+    //       Location building = location.setCharacter();
+    //  
 
     public static Scene[] bubbleSort(Scene[] sceneList) {
         int n = sceneList.length;
@@ -143,4 +150,25 @@ public class MapControl {
         }
         return scenes;
     }
-}
+
+    public static void print(String outputLocation) {
+
+        Scene[] scenes = Scene.values();
+
+        try (PrintWriter out = new PrintWriter(outputLocation)) {
+
+            out.println("\n\n         Scene Report                    ");
+            out.printf("%n%-20s%10s", "Location Tag", "Description");
+            out.printf("%n%-20s%10s", "------------", "-----------");
+
+            for (Scene scene : scenes) {
+                out.printf("%n%-20s%10s", scene.getDisplaySymbol(), scene.getDescription());
+            }
+        }catch (IOException ex){
+        ErrorView.display("MapControl", ex.getMessage());
+    }
+        }
+    }
+
+
+
