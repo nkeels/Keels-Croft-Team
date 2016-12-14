@@ -50,7 +50,6 @@ public class InArea extends View {
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
-
         }
         return false;
     }
