@@ -10,7 +10,6 @@ import byui.cit260.BYUIDO.model.Player;
 import citybyui.cit260.byuido.view.ErrorView;
 import citybyui.cit260.byuido.view.StartProgramView;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -29,7 +28,7 @@ public class BYUIDo implements Serializable {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
-
+    
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -43,7 +42,7 @@ public class BYUIDo implements Serializable {
     }
 
     public static void setPlayer(Player player) {
-        BYUIDo.player = player;
+        BYUIDo.player = player;        
     }
 
     public static PrintWriter getOutFile() {
@@ -70,52 +69,42 @@ public class BYUIDo implements Serializable {
         BYUIDo.logFile = logFile;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        
-        try {
+    
+    public static void main(String[] args) {
 //open character stream files for end user input/output
-            BYUIDo.inFile = new BufferedReader(new InputStreamReader(System.in));
-            BYUIDo.outFile = new PrintWriter(System.out, true);
-            
-            String filePath = "log.txt";
-            BYUIDo.logFile = new PrintWriter(filePath);
-
-            StartProgramView startProgramView = new StartProgramView();
+        BYUIDo.inFile = new BufferedReader(new InputStreamReader(System.in));
+        BYUIDo.outFile = new PrintWriter(System.out, true);
+        
+        
+        StartProgramView startProgramView = new StartProgramView();
+        try {
             startProgramView.display();
-            
-            
+//open log file
+        String filePath = "log.txt";
+        BYUIDo.logFile = new PrintWriter(filePath);
         
-
-        } catch (Throwable e) {
-            
-            System.out.println("Exception: " + e.toString() +
-                              "\nCause: " + e.getCause() +
-                              "\nMessage: " + e.getMessage());
-            e.printStackTrace();
-        
-//            ErrorView.display("BYUIDo", te.getMessage());
-//            te.printStackTrace();
-//            startProgramView.display();
-        } finally {
+        } catch (Throwable te) {
+            ErrorView.display("BYUIDo",te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
+        finally {
             try {
-                if (BYUIDo.inFile != null) {
-                    BYUIDo.inFile.close();
-                }
-
-                if (BYUIDo.outFile != null) {
-                    BYUIDo.outFile.close();
-                }
-
-                if (BYUIDo.logFile != null) {
-                    BYUIDo.logFile.close();
-                }
-
+                if (BYUIDo.inFile != null)
+                BYUIDo.inFile.close();
+                
+                if (BYUIDo.outFile != null)
+                BYUIDo.outFile.close();
+            
+                if (BYUIDo.logFile != null)
+                BYUIDo.logFile.close();
+            
             } catch (IOException ex) {
-                ErrorView.display("BYUIDo",
+                ErrorView.display("BYUIDo", 
                         "\nError closing files");
                 return;
             }
-
+            
         }
     }
 }
