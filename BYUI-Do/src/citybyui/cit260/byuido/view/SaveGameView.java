@@ -15,7 +15,7 @@ import byui.pkgdo.BYUIDo;
 public class SaveGameView extends View {
 
     public SaveGameView() {
-        super("\n Where do you wnat to save your game?");
+        super("\n Where do you want to save your game?");
     }
 
     @Override
