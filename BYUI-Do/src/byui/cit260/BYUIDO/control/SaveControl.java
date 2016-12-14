@@ -5,11 +5,19 @@
  */
 package byui.cit260.BYUIDO.control;
 
+import byui.cit260.BYUIDO.model.Game;
+import citybyui.cit260.byuido.view.ErrorView;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 /**
  *
  * @author Scotty
  */
-public class SaveControl {
+public class SaveControl implements Serializable {
 
     public static int createCharName(Character character) {
         System.out.println("\n*** createCharName function has been called ***");
@@ -20,4 +28,17 @@ public class SaveControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public static void saveGame(Game game, String filePath) {
+
+        try (ObjectOutputStream out
+                = new ObjectOutputStream(new FileOutputStream(filePath))){ // create the file stream
+
+            out.writeObject(game);
+
+        } catch (IOException ex) {
+            ErrorView.display("SaveControl", "Error saving the game");
+        }
+    }
 }
+
+

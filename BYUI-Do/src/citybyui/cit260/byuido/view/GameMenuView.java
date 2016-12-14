@@ -102,5 +102,12 @@ public class GameMenuView extends View {
         }
         this.console.println("==");
     }
+     public void printNumbers(int[] input) {
+
+        for (int i = 0; i < input.length; i++) {
+            this.console.println(input[i] + ", ");
+        }
+        this.console.println("\n");
+    }
 
 }

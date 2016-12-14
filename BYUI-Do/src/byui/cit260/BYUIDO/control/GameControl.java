@@ -13,6 +13,11 @@ import byui.cit260.BYUIDO.model.Character;
 import byui.cit260.BYUIDO.model.Location;
 import byui.pkgdo.BYUIDo;
 import citbyui.cit260.BYUIDO.exceptions.GameControlException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import static jdk.nashorn.tools.ShellFunctions.input;
 
 /**
  *
@@ -103,4 +108,28 @@ public class GameControl {
     public static void setCurrentLocation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    public static void saveGame(Game game, String filepath) throws GameControlException{
+        try(FileOutputStream fops = new FileOutputStream(filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(game);
+        } catch (Exception ex) {
+            throw new GameControlException(ex.getMessage());
+        }
+
+}
+    public static void getSavedGame(String filepath) throws GameControlException{
+        Game game = null;
+        
+        try(FileInputStream fops = new FileInputStream(filepath)) {
+            ObjectInputStream input = new ObjectInputStream(fops);
+            
+            game = (Game) input.readObject();
+        } catch (Exception ex) {
+            throw new GameControlException(ex.getMessage());
+        }
+        BYUIDo.setCurrentGame(game);
+    
+        }
 }

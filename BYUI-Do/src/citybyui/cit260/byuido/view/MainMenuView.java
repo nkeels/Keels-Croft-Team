@@ -45,8 +45,9 @@ public class MainMenuView extends View {
                 HelpMenuView helpMenu = new HelpMenuView();
                 helpMenu.display();
                 break;
-            case "S":
-                this.saveGame();
+             case "S":
+                SaveGameView saveGame = new SaveGameView();
+                saveGame.display();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -66,12 +67,23 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        this.console.println("***startExisting Game function called ***");
+        this.console.println("\n\nEneter the FilePath for the file where the game "
+                        + "is saved");
+        String filePath = this.getInput();
+        
+        try{
+            GameControl.getSavedGame(filePath);
+        }catch (Exception ex) {
+            ErrorView.display("mainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+        }
     }
 
     
 
-    private void saveGame() {
-        this.console.println("***saveGame function called ***");
-    }
-}
+        
+    
+

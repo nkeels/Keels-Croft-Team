@@ -89,13 +89,7 @@ public class MapControl {
         sceneList[j] = temp;
     }
 
-    public void printNumbers(int[] input) {
-
-        for (int i = 0; i < input.length; i++) {
-            this.console.println(input[i] + ", ");
-        }
-        this.console.println("\n");
-    }
+   
     
      public static void move(Location[][] locations, Character mc, Point coordinates) throws MapControlException {
         //error control
@@ -147,6 +141,20 @@ public class MapControl {
         }
         return sceneList;
 
+    }
+      public static Scene[] sceneSort() {
+        Scene[] scenes = Scene.values();
+        int n = scenes.length;
+        int k;
+        //sort the enum
+        Scene[] places = MapControl.bubbleSort(scenes);
+        //print a report of locations (place in the view layer)
+        for (Scene nextScene : places) {
+            String description = nextScene.getDescription();
+            String scene = nextScene.name();
+        
+        }
+        return scenes;
     }
 }
 
