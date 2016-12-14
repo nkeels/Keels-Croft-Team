@@ -6,6 +6,7 @@
 package byui.cit260.BYUIDO.control;
 
 import byui.cit260.BYUIDO.enumer.Girl;
+import citybyui.cit260.byuido.view.ErrorView;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -44,7 +45,7 @@ public class GirlControl {
 
             }
         } catch (IOException ex) {
-            System.out.println("I/O Error: " + ex.getMessage());
+            ErrorView.display("GirlControl", ex.getMessage());
         }
     }
 }
