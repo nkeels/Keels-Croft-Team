@@ -70,7 +70,9 @@ public class InAreaView extends View {
     }
 
     private void goAdventure() {
-        System.out.println("This function has been called");
+        this.console.println("You found one of the Girls!");
+        ActionMenuView act = new ActionMenuView();
+        act.display();
     }
 
     private void saveGame() {
