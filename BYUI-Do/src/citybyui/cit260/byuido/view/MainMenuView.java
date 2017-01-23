@@ -82,6 +82,8 @@ public class MainMenuView extends View {
         }
     }
 
+    //int[][] placeholders = new int[5];
+    //int[] timers = {7, 20, 14};
     
 
         

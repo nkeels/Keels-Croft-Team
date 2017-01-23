@@ -149,6 +149,7 @@ public class MapControl {
 
         }
         return scenes;
+        
     }
 
     public static void print(String outputLocation) {
